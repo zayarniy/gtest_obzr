@@ -1,0 +1,479 @@
+2025-10-06 19:16:55 [INFO] Start authentication
+2025-10-06 19:16:55 [Error] Invalid JSON data
+2025-10-06 19:16:55 [ERROR] Invalid JSON data
+2025-10-06 19:19:56 [INFO] Start authentication
+2025-10-06 19:19:56 [INFO] Authenticating user: tete
+2025-10-06 19:19:56 [INFO] Authentication successful for user: tete
+2025-10-06 19:25:20 [INFO] Start authentication
+2025-10-06 19:25:20 [INFO] Authenticating user: 1
+2025-10-06 19:25:20 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:25:20 [ERROR] Authentication failed: Invalid login or password
+2025-10-06 19:30:56 [INFO] Start authentication
+2025-10-06 19:30:56 [INFO] Authenticating user: 1
+2025-10-06 19:30:56 [INFO] Authentication successful for user: 1
+2025-10-06 19:31:03 [INFO] Start authentication
+2025-10-06 19:31:04 [INFO] Authenticating user: 1
+2025-10-06 19:31:04 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:31:22 [INFO] Start authentication
+2025-10-06 19:31:22 [INFO] Authenticating user: 1
+2025-10-06 19:31:22 [INFO] Authentication successful for user: 1
+2025-10-06 19:32:50 [INFO] Start authentication
+2025-10-06 19:32:50 [INFO] Authenticating user: 1
+2025-10-06 19:32:50 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:32:59 [INFO] Start authentication
+2025-10-06 19:32:59 [INFO] Authenticating user: 1
+2025-10-06 19:32:59 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:33:05 [INFO] Start authentication
+2025-10-06 19:33:05 [INFO] Authenticating user: 1
+2025-10-06 19:33:05 [INFO] Authentication successful for user: 1
+2025-10-07 12:13:43 [INFO] Start authentication
+2025-10-07 12:13:43 [INFO] Authenticating user: 123
+2025-10-07 12:13:43 [Error] Authentication failed: Invalid login or password
+2025-10-07 12:13:56 [INFO] Start authentication
+2025-10-07 12:13:56 [INFO] Authenticating user: 1
+2025-10-07 12:13:56 [INFO] Authentication successful for user: 1
+2025-10-07 12:15:09 [INFO] Start authentication
+2025-10-07 12:15:09 [INFO] Authenticating user: 1
+2025-10-07 12:15:09 [INFO] Authentication successful for user: 1
+2025-10-08 13:20:07 [INFO] Start authentication
+2025-10-08 13:20:07 [INFO] Authenticating user: 1
+2025-10-08 13:20:07 [INFO] Authentication successful for user: 1
+2025-10-08 13:52:43 [INFO] Start registration
+2025-10-08 13:52:43 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 13:53:09 [INFO] Start registration
+2025-10-08 13:53:09 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 13:53:55 [INFO] Start registration
+2025-10-08 13:53:56 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 14:04:08 [INFO] Start registration
+2025-10-08 14:04:08 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 14:07:27 [INFO] Start registration
+2025-10-08 14:07:27 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 14:10:03 [INFO] Start registration
+2025-10-08 14:10:03 [INFO] User registered successfully: ewq
+2025-10-08 14:17:31 [INFO] Start authentication
+2025-10-08 14:17:31 [INFO] Authenticating user: 1
+2025-10-08 14:17:31 [Error] Authentication failed: Invalid login or password
+2025-10-08 14:36:14 [INFO] Start registration
+2025-10-08 14:36:14 [INFO] User registered successfully: 11
+2025-10-08 14:36:31 [INFO] Start authentication
+2025-10-08 14:36:31 [INFO] Authenticating user: 1
+2025-10-08 14:36:31 [Error] Authentication failed: User not found
+2025-10-08 14:36:46 [INFO] Start authentication
+2025-10-08 14:36:46 [INFO] Authenticating user: 11
+2025-10-08 14:36:46 [INFO] Authentication successful for user: 11
+2025-10-08 14:39:45 [INFO] Start authentication
+2025-10-08 14:39:45 [INFO] Authenticating user: 11
+2025-10-08 14:39:45 [INFO] Authentication successful for user: 11
+2025-10-11 08:06:00 [INFO] Start registration
+2025-10-11 08:06:00 [Error] User with this login or email already exists
+2025-10-11 08:06:00 [ERROR] Пользователь с таким логином или почтой уже существует.
+2025-10-11 08:06:13 [INFO] Start registration
+2025-10-11 08:06:13 [INFO] User registered successfully: 1
+2025-10-11 08:18:00 [INFO] Start login
+2025-10-11 08:18:00 [Error] Login failed
+2025-10-11 08:20:07 [INFO] Start registration
+2025-10-11 08:20:07 [INFO] User registered successfully: 1
+2025-10-11 08:20:11 [INFO] Start login
+2025-10-11 08:20:11 [Error] Login failed. Wrong login or password
+2025-10-11 08:20:46 [INFO] Start registration
+2025-10-11 08:20:46 [INFO] User registered successfully: 1
+2025-10-11 08:20:54 [INFO] Start login
+2025-10-11 08:20:54 [Error] Login failed. Wrong login or password
+2025-10-11 08:23:37 [INFO] Start login
+2025-10-11 08:23:37 [Error] Login failed. Wrong login or password(1:.1
+2025-10-11 08:28:14 [INFO] Start login
+2025-10-11 08:28:14 [INFO] Array
+2025-10-11 08:28:14 [Error] Login failed. Wrong login or password(1:1)
+2025-10-11 08:29:13 [INFO] Start login
+2025-10-11 08:29:13 [Error] Login failed. Wrong login or password(1:1)
+2025-10-11 08:30:06 [INFO] Start login
+2025-10-11 08:30:06 [INFO] 1
+2025-10-11 08:30:06 [Error] Login failed. Wrong login or password(1:1)
+2025-10-11 08:41:14 [INFO] Start registration
+2025-10-11 08:41:14 [INFO] User registered successfully: 2
+2025-10-14 12:59:53 [INFO] Start registration
+2025-10-14 12:59:54 [INFO] User registered successfully: 3
+2025-10-15 13:16:16 [INFO] Start registration
+2025-10-15 13:16:19 [INFO] Start registration
+2025-10-15 13:16:20 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:16:23 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:16:32 [INFO] Start registration
+2025-10-15 13:16:36 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:16:40 [INFO] Start registration
+2025-10-15 13:16:44 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:17:04 [INFO] Start registration
+2025-10-15 13:17:08 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:17:35 [INFO] Start registration
+2025-10-15 13:17:39 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:17:47 [INFO] Start registration
+2025-10-15 13:17:51 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:24:51 [INFO] Start registration
+2025-10-15 13:24:55 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:27:00 [INFO] Start registration
+2025-10-15 13:27:04 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:27:27 [INFO] Start registration
+2025-10-15 13:27:27 [Error] User with this login or email already exists
+2025-10-15 13:27:41 [INFO] Start registration
+2025-10-15 13:27:41 [Error] User with this login or email already exists
+2025-10-15 13:28:04 [INFO] Start registration
+2025-10-15 13:28:04 [Error] User with this login or email already exists
+2025-10-15 13:29:13 [INFO] Start registration
+2025-10-15 13:29:13 [Error] User with this login or email already exists
+2025-10-15 13:29:13 [ERROR] Пользователь с таким логином или почтой уже существует.
+2025-10-15 13:32:28 [INFO] Start registration
+2025-10-15 13:32:29 [Error] User with this login or email already exists
+2025-10-15 14:06:18 [INFO] get_user_data.php started
+2025-10-15 14:07:14 [INFO] get_user_data.php started
+2025-10-15 14:07:14 [INFO]  = getDbConnection();
+2025-10-15 14:08:25 [INFO] get_user_data.php started
+2025-10-15 14:08:25 [INFO] !!!
+2025-10-15 14:08:57 [INFO] get_user_data.php started
+2025-10-15 14:10:05 [INFO] get_user_data.php started
+2025-10-15 14:11:29 [INFO] get_user_data.php started
+2025-10-15 14:12:56 [INFO] get_user_data.php started
+2025-10-15 14:13:47 [INFO] get_user_data.php started
+2025-10-15 14:13:47 [INFO] 5
+2025-10-15 14:14:26 [INFO] get_user_data.php started
+2025-10-15 14:14:26 [INFO] 5
+2025-10-15 14:15:40 [INFO] get_user_data.php started
+2025-10-15 14:17:26 [INFO] get_user_data.php started
+2025-10-15 14:20:50 [INFO] get_user_data.php started
+2025-10-15 14:20:50 [INFO] 5
+2025-10-15 14:23:25 [INFO] get_user_data.php started
+2025-10-15 14:23:25 [INFO] 5
+2025-10-15 14:25:21 [INFO] !!
+2025-10-15 14:25:44 [INFO] !!
+2025-10-15 14:26:23 [INFO] !!
+2025-10-15 14:29:07 [INFO] !!
+2025-10-18 07:46:08 [INFO] Start login attempt
+2025-10-18 07:46:08 [INFO] Received login: '3', password length: 1
+2025-10-18 07:46:08 [INFO] User found in DB. Checking password...
+2025-10-18 07:46:08 [INFO] Login successful for user: 3
+2025-10-18 07:46:20 [INFO] get_user_data.php started
+2025-10-18 07:46:20 [INFO] 7
+2025-10-18 08:05:10 [INFO] Start login attempt
+2025-10-18 08:05:10 [INFO] Received login: '1', password length: 1
+2025-10-18 08:05:10 [Error] User not found: 1
+2025-10-18 08:05:23 [INFO] Start login attempt
+2025-10-18 08:05:23 [INFO] Received login: '2', password length: 1
+2025-10-18 08:05:23 [INFO] User found in DB. Checking password...
+2025-10-18 08:05:23 [INFO] Login successful for user: 2
+2025-10-18 08:44:02 [INFO] Start saving test result
+2025-10-18 08:44:02 [INFO] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+2025-10-18 08:44:02 [INFO] Test result saved successfully
+2025-10-20 18:06:18 [INFO] Start login attempt
+2025-10-20 18:06:18 [INFO] Received login: '3', password length: 1
+2025-10-20 18:06:18 [INFO] User found in DB. Checking password...
+2025-10-20 18:06:18 [INFO] Login successful for user: 3
+2025-10-20 18:06:35 [INFO] Start saving test result
+2025-10-20 18:06:35 [INFO] Data: user_id=7, test_name=тест по С#, correct_answers=0, total_questions=20, attempts_left=2
+2025-10-20 18:06:35 [INFO] Test result saved successfully
+2025-10-20 18:06:40 [INFO] get_user_data.php started
+2025-10-20 18:06:40 [INFO] 7
+2025-10-21 12:06:48 [INFO] Start login attempt
+2025-10-21 12:06:48 [INFO] Received login: '3', password length: 1
+2025-10-21 12:06:48 [INFO] User found in DB. Checking password...
+2025-10-21 12:06:48 [INFO] Login successful for user: 3
+2025-10-21 12:07:03 [INFO] Start saving test result
+2025-10-21 12:07:03 [INFO] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+2025-10-21 12:07:03 [INFO] Test result saved successfully
+2025-10-21 12:07:08 [INFO] get_user_data.php started
+2025-10-21 12:07:08 [INFO] 7
+2025-10-21 12:36:27 [INFO] Start login attempt
+2025-10-21 12:36:27 [INFO] Received login: '3', password length: 1
+2025-10-21 12:36:27 [INFO] User found in DB. Checking password...
+2025-10-21 12:36:27 [INFO] Login successful for user: 3
+2025-10-21 12:36:44 [INFO] Start saving test result
+2025-10-21 12:36:44 [INFO] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+2025-10-21 12:36:44 [INFO] Test result saved successfully
+2025-10-21 12:36:48 [INFO] get_user_data.php started
+2025-10-21 12:36:48 [INFO] 7
+2025-10-21 12:36:55 [INFO] get_user_data.php started
+2025-10-21 12:36:55 [INFO] 7
+2025-10-21 12:41:58 [INFO] Start login attempt
+2025-10-21 12:41:58 [INFO] Received login: '3', password length: 1
+2025-10-21 12:41:58 [INFO] User found in DB. Checking password...
+2025-10-21 12:41:58 [INFO] Login successful for user: 3
+2025-10-22 13:20:07 [INFO] Start login attempt
+2025-10-22 13:20:07 [INFO] Received login: '1', password length: 1
+2025-10-22 13:20:07 [Error] User not found: 1
+2025-10-22 13:20:12 [INFO] Start login attempt
+2025-10-22 13:20:12 [INFO] Received login: '1', password length: 2
+2025-10-22 13:20:12 [Error] User not found: 1
+2025-10-22 13:20:28 [INFO] Start login attempt
+2025-10-22 13:20:28 [INFO] Received login: '2', password length: 1
+2025-10-22 13:20:28 [INFO] User found in DB. Checking password...
+2025-10-22 13:20:28 [INFO] Login successful for user: 2
+2025-10-22 13:20:35 [INFO] get_user_data.php started
+2025-10-22 13:20:35 [INFO] 6
+2025-10-22 13:30:55 [INFO] Start registration
+2025-10-22 13:30:55 [ERROR] Access denied for user 'root'@'localhost' (using password: NO)
+2025-10-22 13:32:29 [INFO] Start registration
+2025-10-22 13:32:29 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:33:28 [INFO] Start registration
+2025-10-22 13:33:28 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:37:45 [INFO] Start registration
+2025-10-22 13:37:45 [INFO] User registered successfully: admin
+2025-10-22 13:38:19 [INFO] Start registration
+2025-10-22 13:38:19 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:38:26 [INFO] Start registration
+2025-10-22 13:38:26 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:38:31 [INFO] Start registration
+2025-10-22 13:38:31 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:44:36 [INFO] Start registration
+2025-10-22 13:44:36 [INFO] User registered successfully: admin2
+2025-10-22 13:55:24 [INFO] Start login attempt
+2025-10-22 13:55:24 [INFO] Received login: 'admin', password length: 6
+2025-10-22 13:55:24 [INFO] User found in DB. Checking password...
+2025-10-22 13:55:24 [INFO] Login successful for user: admin
+2025-10-22 14:17:01 [INFO] get_user_data.php started
+2025-10-22 14:17:01 [INFO] 8
+2025-10-22 14:17:59 [INFO] Start login attempt
+2025-10-22 14:17:59 [INFO] Received login: '2', password length: 1
+2025-10-22 14:17:59 [INFO] User found in DB. Checking password...
+2025-10-22 14:18:00 [Error] Wrong password for user: 2
+2025-10-22 14:18:32 [INFO] Start login attempt
+2025-10-22 14:18:32 [INFO] Received login: '2', password length: 1
+2025-10-22 14:18:32 [INFO] User found in DB. Checking password...
+2025-10-22 14:18:32 [Error] Wrong password for user: 2
+2025-10-22 14:18:42 [INFO] Start login attempt
+2025-10-22 14:18:42 [INFO] Received login: '3', password length: 1
+2025-10-22 14:18:42 [INFO] User found in DB. Checking password...
+2025-10-22 14:18:42 [INFO] Login successful for user: 3
+2025-10-22 14:23:12 [INFO] Start login attempt
+2025-10-22 14:23:12 [INFO] Received login: 'admin', password length: 5
+2025-10-22 14:23:12 [INFO] User found in DB. Checking password...
+2025-10-22 14:23:12 [Error] Wrong password for user: admin
+2025-10-22 14:23:17 [INFO] Start login attempt
+2025-10-22 14:23:17 [INFO] Received login: 'admin', password length: 6
+2025-10-22 14:23:17 [INFO] User found in DB. Checking password...
+2025-10-22 14:23:17 [INFO] Login successful for user: admin
+2025-10-24 08:35:54 [INFO] Start login attempt
+2025-10-24 08:35:54 [INFO] Received login: '3', password length: 1
+2025-10-24 08:35:54 [INFO] User found in DB. Checking password...
+2025-10-24 08:35:55 [INFO] Login successful for user: 3
+2025-10-24 08:36:22 [INFO] Start login attempt
+2025-10-24 08:36:22 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:36:22 [INFO] User found in DB. Checking password...
+2025-10-24 08:36:22 [Error] Wrong password for user: admin
+2025-10-24 08:36:31 [INFO] Start login attempt
+2025-10-24 08:36:31 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:36:31 [INFO] User found in DB. Checking password...
+2025-10-24 08:36:31 [Error] Wrong password for user: admin
+2025-10-24 08:36:51 [INFO] Start login attempt
+2025-10-24 08:36:51 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:36:51 [INFO] User found in DB. Checking password...
+2025-10-24 08:36:51 [Error] Wrong password for user: admin
+2025-10-24 08:41:01 [INFO] Start registration
+2025-10-24 08:41:01 [Error] User with this login or email already exists
+2025-10-24 08:41:35 [INFO] Start registration
+2025-10-24 08:41:35 [Error] User with this login or email already exists
+2025-10-24 08:41:58 [INFO] Start registration
+2025-10-24 08:41:58 [Error] User with this login or email already exists
+2025-10-24 08:42:20 [INFO] Start login attempt
+2025-10-24 08:42:20 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:42:20 [INFO] User found in DB. Checking password...
+2025-10-24 08:42:20 [Error] Wrong password for user: admin
+2025-10-24 08:45:22 [INFO] Start login attempt
+2025-10-24 08:45:22 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:45:22 [INFO] User found in DB. Checking password...
+2025-10-24 08:45:23 [Error] Wrong password for user: admin
+2025-10-24 08:45:43 [INFO] Start login attempt
+2025-10-24 08:45:43 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:45:43 [INFO] User found in DB. Checking password...
+2025-10-24 08:45:43 [Error] Wrong password for user: admin
+2025-10-24 08:48:04 [INFO] Start login attempt
+2025-10-24 08:48:04 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:48:04 [INFO] User found in DB. Checking password...
+2025-10-24 08:48:04 [Error] Wrong password for user: admin
+2025-10-24 08:48:16 [INFO] Start login attempt
+2025-10-24 08:48:16 [INFO] Received login: 'admin', password length: 6
+2025-10-24 08:48:16 [INFO] User found in DB. Checking password...
+2025-10-24 08:48:16 [INFO] Login successful for user: admin
+2025-10-24 08:53:00 [INFO] Start login attempt
+2025-10-24 08:53:00 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:53:00 [INFO] User found in DB. Checking password...
+2025-10-24 08:53:00 [Error] Wrong password for user: admin
+2025-10-24 08:53:07 [INFO] Start login attempt
+2025-10-24 08:53:07 [INFO] Received login: 'admin', password length: 6
+2025-10-24 08:53:07 [INFO] User found in DB. Checking password...
+2025-10-24 08:53:08 [INFO] Login successful for user: admin
+2025-10-24 08:54:30 [INFO] Start login attempt
+2025-10-24 08:54:30 [INFO] Received login: '3', password length: 1
+2025-10-24 08:54:30 [INFO] User found in DB. Checking password...
+2025-10-24 08:54:31 [INFO] Login successful for user: 3
+2025-10-24 08:54:36 [INFO] get_user_data.php started
+2025-10-24 08:54:36 [INFO] 7
+2025-10-24 08:54:43 [INFO] get_user_data.php started
+2025-10-24 08:54:43 [INFO] 7
+2025-10-26 07:14:06 [INFO] Start login attempt
+2025-10-26 07:14:06 [INFO] Received login: 'admin', password length: 5
+2025-10-26 07:14:07 [INFO] User found in DB. Checking password...
+2025-10-26 07:14:07 [Error] Wrong password for user: admin
+2025-10-26 07:14:16 [INFO] Start login attempt
+2025-10-26 07:14:16 [INFO] Received login: 'admin', password length: 6
+2025-10-26 07:14:16 [INFO] User found in DB. Checking password...
+2025-10-26 07:14:16 [INFO] Login successful for user: admin
+2025-10-26 07:14:43 [INFO] get_user_data.php started
+2025-10-26 07:14:43 [INFO] 8
+2025-10-26 07:14:55 [INFO] get_user_data.php started
+2025-10-26 07:14:55 [INFO] 8
+2025-10-27 17:31:22 [INFO] Start login attempt
+2025-10-27 17:31:22 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:24 [INFO] Start login attempt
+2025-10-27 17:31:24 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:26 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:31:28 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:31:38 [INFO] Start login attempt
+2025-10-27 17:31:38 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:42 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:31:42 [INFO] Start login attempt
+2025-10-27 17:31:42 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:46 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:32:03 [INFO] Start login attempt
+2025-10-27 17:32:03 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:32:07 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:32:21 [INFO] Start login attempt
+2025-10-27 17:32:21 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:32:25 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:35:01 [INFO] Start login attempt
+2025-10-27 17:35:01 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:35:02 [INFO] User found in DB. Checking password...
+2025-10-27 17:35:02 [INFO] Login successful for user: admin
+2025-11-01 00:03:00 [INFO] Start registration
+2025-11-01 00:03:00 [INFO] User registered successfully: admin
+2025-11-01 00:03:10 [INFO] Start login attempt
+2025-11-01 00:03:10 [INFO] Received login: 'admin', password length: 12
+2025-11-01 00:03:10 [INFO] User found in DB. Checking password...
+2025-11-01 00:03:10 [INFO] Login successful for user: admin
+2025-11-01 00:21:25 [INFO] Start saving test result
+2025-11-01 00:21:25 [INFO] Data: user_id=1, test_name=ОБЗР "Комплексная безопасность", correct_answers=19, total_questions=20, attempts_left=2
+2025-11-01 00:21:25 [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'host1340522_gtests2025.test_result' doesn't exist
+2025-11-01 00:24:56 [INFO] Start saving test result
+2025-11-01 00:24:56 [INFO] Data: user_id=1, test_name=ОБЗР "Комплексная безопасность", correct_answers=19, total_questions=20, attempts_left=1
+2025-11-01 00:24:56 [INFO] Test result saved successfully
+2025-11-01 00:47:16 [INFO] Start saving test result
+2025-11-01 00:47:16 [INFO] Data: user_id=1, test_name=10-2. ОБЗР "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=1, total_questions=20, attempts_left=2
+2025-11-01 00:47:16 [INFO] Test result saved successfully
+2025-11-01 00:47:28 [INFO] Start saving test result
+2025-11-01 00:47:28 [INFO] Data: user_id=1, test_name=10-2. ОБЗР "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=2, total_questions=20, attempts_left=1
+2025-11-01 00:47:28 [INFO] Test result saved successfully
+2025-11-01 00:47:34 [INFO] Start saving test result
+2025-11-01 00:47:34 [INFO] Data: user_id=1, test_name=10-2. ОБЗР "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=3, total_questions=20, attempts_left=0
+2025-11-01 00:47:34 [INFO] Test result saved successfully
+2025-11-01 00:54:19 [INFO] Start login attempt
+2025-11-01 00:54:19 [INFO] Received login: 'admin', password length: 12
+2025-11-01 00:54:19 [INFO] User found in DB. Checking password...
+2025-11-01 00:54:19 [INFO] Login successful for user: admin
+2025-11-01 00:54:51 [INFO] Start login attempt
+2025-11-01 00:54:51 [INFO] Received login: 'admin', password length: 12
+2025-11-01 00:54:51 [INFO] User found in DB. Checking password...
+2025-11-01 00:54:51 [INFO] Login successful for user: admin
+2025-11-01 00:57:41 [INFO] Start registration
+2025-11-01 00:57:41 [Error] User with this login or email already exists
+2025-11-01 00:57:48 [INFO] Start registration
+2025-11-01 00:57:48 [INFO] User registered successfully: test
+2025-11-01 00:57:56 [INFO] Start login attempt
+2025-11-01 00:57:56 [INFO] Received login: 'test', password length: 4
+2025-11-01 00:57:56 [INFO] User found in DB. Checking password...
+2025-11-01 00:57:56 [INFO] Login successful for user: test
+2025-11-01 00:58:53 [INFO] Start saving test result
+2025-11-01 00:58:53 [INFO] Data: user_id=2, test_name=10-3. ОБЗР "Основы медицинских знаний и оказание первой медицинской помощи", correct_answers=19, total_questions=20, attempts_left=2
+2025-11-01 00:58:53 [INFO] Test result saved successfully
+2025-11-01 00:59:01 [INFO] get_user_data.php started
+2025-11-01 00:59:01 [INFO] 2
+2025-11-01 01:00:41 [INFO] Start login attempt
+2025-11-01 01:00:41 [INFO] Received login: 'admin', password length: 12
+2025-11-01 01:00:41 [INFO] User found in DB. Checking password...
+2025-11-01 01:00:41 [INFO] Login successful for user: admin
+2025-11-01 01:56:56 [INFO] Start saving test result
+2025-11-01 01:56:56 [INFO] Data: user_id=1, test_name=11-11. ОБЗР 11 класс "Терроризм и экстремизм: их причины и последствия, correct_answers=9, total_questions=20, attempts_left=2
+2025-11-01 01:56:56 [INFO] Test result saved successfully
+2025-11-01 01:58:12 [INFO] Start saving test result
+2025-11-01 01:58:12 [INFO] Data: user_id=1, test_name=11-12. ОБЗР 11 класс: "Курение убивает. Алкоголь разрушает личность", correct_answers=10, total_questions=20, attempts_left=2
+2025-11-01 01:58:12 [INFO] Test result saved successfully
+2025-11-01 01:59:22 [INFO] Start saving test result
+2025-11-01 01:59:22 [INFO] Data: user_id=1, test_name=11-13. ОБЗР 11 класс: Здоровье — условие благополучия человека. Правовые основы сохранения и укрепления репродуктивного здоровья. Факторы, разрушающие репродуктивное здоровье, correct_answers=20, total_questions=20, attempts_left=2
+2025-11-01 01:59:22 [INFO] Test result saved successfully
+2025-11-01 12:03:34 [INFO] Start login attempt
+2025-11-01 12:03:34 [INFO] Received login: 'admin', password length: 12
+2025-11-01 12:03:34 [INFO] User found in DB. Checking password...
+2025-11-01 12:03:34 [INFO] Login successful for user: admin
+2025-11-02 09:28:21 [INFO] Start login attempt
+2025-11-02 09:28:21 [INFO] Received login: 'admin', password length: 12
+2025-11-02 09:28:21 [INFO] User found in DB. Checking password...
+2025-11-02 09:28:22 [Error] Wrong password for user: admin
+2025-11-02 09:28:30 [INFO] Start login attempt
+2025-11-02 09:28:30 [INFO] Received login: 'admin', password length: 12
+2025-11-02 09:28:30 [INFO] User found in DB. Checking password...
+2025-11-02 09:28:30 [Error] Wrong password for user: admin
+2025-11-02 09:28:43 [INFO] Start login attempt
+2025-11-02 09:28:43 [INFO] Received login: 'test', password length: 4
+2025-11-02 09:28:43 [INFO] User found in DB. Checking password...
+2025-11-02 09:28:43 [INFO] Login successful for user: test
+2025-11-02 09:30:16 [INFO] get_user_data.php started
+2025-11-02 09:30:16 [INFO] 2
+2025-11-04 22:09:53 [INFO] Start login attempt
+2025-11-04 22:09:53 [INFO] Received login: 'est280109@gmail.com', password length: 12
+2025-11-04 22:09:53 [Error] User not found: est280109@gmail.com
+2025-11-07 12:49:18 [INFO] Start registration
+2025-11-07 12:49:18 [INFO] User registered successfully: shsh
+2025-11-07 12:49:29 [INFO] Start login attempt
+2025-11-07 12:49:29 [INFO] Received login: 'shsh', password length: 12
+2025-11-07 12:49:29 [INFO] User found in DB. Checking password...
+2025-11-07 12:49:29 [INFO] Login successful for user: shsh
+2025-11-07 13:07:20 [INFO] Start saving test result
+2025-11-07 13:07:20 [INFO] Data: user_id=3, test_name=10-13. ОБЗР 10 класс "Основы медицинских знаний и оказание первой медицинской помощи", correct_answers=20, total_questions=20, attempts_left=2
+2025-11-07 13:07:20 [INFO] Test result saved successfully
+2025-11-11 12:22:55 [INFO] Start login attempt
+2025-11-11 12:22:55 [INFO] Received login: 'admin', password length: 12
+2025-11-11 12:22:55 [INFO] User found in DB. Checking password...
+2025-11-11 12:22:55 [INFO] Login successful for user: admin
+2025-11-11 12:25:11 [INFO] Start login attempt
+2025-11-11 12:25:11 [INFO] Received login: 'Хоккайдо55', password length: 6
+2025-11-11 12:25:11 [Error] User not found: Хоккайдо55
+2025-11-14 13:00:34 [INFO] Start login attempt
+2025-11-14 13:00:34 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:00:34 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:01:37 [INFO] Start login attempt
+2025-11-14 13:01:37 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:01:37 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:01:47 [INFO] Start login attempt
+2025-11-14 13:01:47 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:01:47 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:02:59 [INFO] Start login attempt
+2025-11-14 13:02:59 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:02:59 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:03:01 [INFO] Start login attempt
+2025-11-14 13:03:01 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:03:01 [Error] User not found: redko.viktor@internet.ru
+2025-11-18 19:45:05 [INFO] Start registration
+2025-11-18 19:45:05 [INFO] User registered successfully: tuturoilfull
+2025-11-18 19:45:25 [INFO] Start login attempt
+2025-11-18 19:45:25 [INFO] Received login: 'tuturoilfull', password length: 13
+2025-11-18 19:45:25 [INFO] User found in DB. Checking password...
+2025-11-18 19:45:25 [INFO] Login successful for user: tuturoilfull
+2025-11-18 19:51:25 [INFO] Start saving test result
+2025-11-18 19:51:25 [INFO] Data: user_id=4, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=19, total_questions=20, attempts_left=2
+2025-11-18 19:51:25 [INFO] Test result saved successfully
+2025-11-18 19:51:59 [INFO] Start login attempt
+2025-11-18 19:51:59 [INFO] Received login: 'tuturoilfull', password length: 13
+2025-11-18 19:51:59 [INFO] User found in DB. Checking password...
+2025-11-18 19:52:00 [INFO] Login successful for user: tuturoilfull
+2025-11-18 19:58:34 [INFO] Start saving test result
+2025-11-18 19:58:34 [INFO] Data: user_id=4, test_name=10-12. ОБЗР 10 класс "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=20, total_questions=20, attempts_left=2
+2025-11-18 19:58:34 [INFO] Test result saved successfully
+2025-11-18 19:59:31 [INFO] Start login attempt
+2025-11-18 19:59:31 [INFO] Received login: 'tuturoilfull', password length: 13
+2025-11-18 19:59:31 [INFO] User found in DB. Checking password...
+2025-11-18 19:59:31 [INFO] Login successful for user: tuturoilfull
+2025-11-18 20:06:06 [INFO] Start saving test result
+2025-11-18 20:06:06 [INFO] Data: user_id=4, test_name=10-13. ОБЗР 10 класс "Основы медицинских знаний и оказание первой медицинской помощи", correct_answers=20, total_questions=20, attempts_left=2
+2025-11-18 20:06:06 [INFO] Test result saved successfully
+2026-01-11 16:24:29 [INFO] Start login attempt
+2026-01-11 16:24:29 [INFO] Received login: 'admin', password length: 12
+2026-01-11 16:24:29 [INFO] User found in DB. Checking password...
+2026-01-11 16:24:29 [INFO] Login successful for user: admin
+2026-01-11 16:25:06 [INFO] Start saving test result
+2026-01-11 16:25:06 [INFO] Data: user_id=1, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=0, total_questions=20, attempts_left=2
+2026-01-11 16:25:06 [INFO] Test result saved successfully

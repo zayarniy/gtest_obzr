@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #status {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            min-height: 30px;
+            margin-bottom: 10px;
+        }
+        #log {
+            height: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            padding: 10px;
+            overflow-y: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        #players {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Host Control Panel</h1>
+    <div class="container">
+        <div>
+            <h3>Текущий статус:</h3>
+            <div id="status">Не подключено к серверу</div>
+        </div>
+
+        <div>
+            <h3>Список игроков:</h3>
+            <div id="players">Нет игроков</div>
+        </div>
+
+        <div>
+            <h3>Управление:</h3>
+            <div class="controls">
+                <button id="registrationModeBtn">Режим регистрации</button>
+                <button id="playBtn">Запустить игру</button>
+                <button id="pauseBtn">Пауза</button>
+                <button id="stopBtn">Остановить игру</button>
+                <button id="resetBtn">Сбросить игру</button>
+                <button id="clearPlayersBtn">Очистить игроков</button>
+            </div>
+        </div>
+
+        <div>
+            <h3>Лог:</h3>
+            <div id="log"></div>
+        </div>
+    </div>
+
+    <script>
+        let socket;
+        let isHost = true;
+        let name = 'Host';
+
+        function connect() {
+            let address = 'ws://185.26.121.49:8080'
+            // let address = 'ws://localhost:8080';
+            socket = new WebSocket(address);
+            
+
+            socket.onopen = () => {
+                logMessage('Подключено к серверу');
+                registerHost();
+            };
+
+            socket.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                console.log('Received:', data);
+                handleMessage(data);
+            };
+
+            socket.onclose = () => {
+                logMessage('Отключено от сервера. Попытка переподключения...');
+                setTimeout(connect, 3000);
+            };
+
+            socket.onerror = (error) => {
+                logMessage('Ошибка соединения: ' + error.message);
+            };
+        }
+
+        function registerHost() {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({
+                    type: 'registrationHost',
+                    name: name,
+                    isHost: isHost
+                }));
+            }
+        }
+
+        function handleMessage(data) {
+            logMessage(`Получено: ${JSON.stringify(data)}`);
+
+            switch (data.type) {
+                case 'game_state':
+                    document.getElementById('status').textContent = `Состояние игры: ${data.message}`;
+                    break;
+                case 'registered':
+                    document.getElementById('status').textContent = data.message;
+                    break;
+                case 'playerList':
+                    const playersList = data.players.join(', ') || 'Нет игроков';
+                    document.getElementById('players').textContent = playersList;
+                    break;
+                case 'fastest':
+                    document.getElementById('status').textContent = `Самый быстрый игрок: ${data.fastest}`;
+                    break;
+                case 'name_taken':
+                case 'rejected':
+                case 'error':
+                    document.getElementById('status').textContent = data.message;
+                    break;
+                default:
+                    logMessage(`Неизвестный тип сообщения: ${data.type}`);
+            }
+        }
+
+        function logMessage(message) {
+            const logElement = document.getElementById('log');
+            logElement.innerHTML += message + '\n';
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+
+        function sendCommand(type) {
+            if (socket && socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({ type: type,isHost:true }));
+            } else {
+                logMessage('Нет соединения с сервером!');
+            }
+        }
+
+        document.getElementById('registrationModeBtn').addEventListener('click', () => sendCommand('registrationMode'));
+        document.getElementById('playBtn').addEventListener('click', () => sendCommand('play'));
+        document.getElementById('pauseBtn').addEventListener('click', () => sendCommand('pause'));
+        document.getElementById('stopBtn').addEventListener('click', () => sendCommand('stop'));
+        document.getElementById('resetBtn').addEventListener('click', () => sendCommand('reset'));
+        document.getElementById('clearPlayersBtn').addEventListener('click', () => sendCommand('clearPlayers'));
+
+        connect();
+    </script>
+</body>
+</html>

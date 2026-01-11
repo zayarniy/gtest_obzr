@@ -1,0 +1,21 @@
+        .test-item {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .test-item:hover {
+            background-color: #f8f9fa;
+        }
+        .test-item.selected {
+            background-color: #e3f2fd;
+            border-left: 4px solid #1976d2;
+        }
+        .question {
+            border-left: 4px solid #4CAF50;
+        }
+        .logo {
+            cursor: pointer;
+            max-height: 60px;
+        }
+        .logo:hover {
+            opacity: 0.8;
+        }

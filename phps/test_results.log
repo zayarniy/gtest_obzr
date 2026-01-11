@@ -1,0 +1,18 @@
+[2025-10-18 08:37:35] [Info] Start saving test result
+[2025-10-18 08:37:35] [Info] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=0
+[2025-10-18 08:37:35] [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_cs.tests_results' doesn't exist
+[2025-10-18 08:37:35] [Info] Start saving test result
+[2025-10-18 08:37:35] [Info] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=0
+[2025-10-18 08:37:35] [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_cs.tests_results' doesn't exist
+[2025-10-18 08:37:55] [Info] Start saving test result
+[2025-10-18 08:37:55] [Info] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+[2025-10-18 08:37:55] [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_cs.tests_results' doesn't exist
+[2025-10-18 08:37:55] [Info] Start saving test result
+[2025-10-18 08:37:55] [Info] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+[2025-10-18 08:37:55] [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_cs.tests_results' doesn't exist
+[2025-10-18 08:38:57] [Info] Start saving test result
+[2025-10-18 08:38:57] [Info] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=1
+[2025-10-18 08:38:57] [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_cs.tests_results' doesn't exist
+[2025-10-18 08:38:57] [Info] Start saving test result
+[2025-10-18 08:38:57] [Info] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=1
+[2025-10-18 08:38:57] [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test_cs.tests_results' doesn't exist
