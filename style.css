@@ -19,3 +19,82 @@
         .logo:hover {
             opacity: 0.8;
         }
+
+        /* Добавьте в стили в файле index.php */
+.test-info {
+    font-size: 0.85rem;
+}
+.test-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.test-description {
+    margin-bottom: 5px;
+}
+.test-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+.questions-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #6c757d;
+}
+
+/* Добавьте в существующие стили */
+.meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.test-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.test-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.filter-stats {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.test-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.test-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.test-item.selected {
+    background-color: #e7f1ff;
+    border-color: #0d6efd;
+}
+
+.list-group-item {
+    border-radius: 8px !important;
+    margin-bottom: 8px;
+}

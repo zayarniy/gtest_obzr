@@ -1,7 +1,12 @@
-// Ссылка на TSV-файл со списка тестов
+// Ссылка на TSV-файл со списком тестов
 const testsListUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRfEzIqVGlGPt7SS4JUP4tmVx3HiELICB-GbVsBa-acQfl2Yq0gheoEJyx-unEzjESPbzVN28Zv4y0s/pub?output=tsv";
 let tests = [];
 let selectedTest = null;
+let filters = {
+    class: 'all',
+    subject: 'all',
+    trimester: 'all'
+};
 
 // Текущие данные теста
 let currentTestData = {
@@ -12,6 +17,7 @@ let currentTestData = {
     userAnswers: [],
     currentQuestionIndex: 0,
     totalQuestions: 0,
+    questionsToShow: 0, // Сколько вопросов показывать
     timeLimit: 0, // Время на тест в секундах
     timer: null,
     timeLeft: 0
@@ -29,7 +35,7 @@ function shuffleArray(array) {
 
 // Обновление прогресс-бара
 function updateProgressBar() {
-    const progress = ((currentTestData.currentQuestionIndex + 1) / currentTestData.totalQuestions) * 100;
+    const progress = ((currentTestData.currentQuestionIndex + 1) / currentTestData.questionsToShow) * 100;
     const progressBar = document.getElementById('progress-bar');
     progressBar.style.width = `${progress}%`;
     progressBar.textContent = `${Math.round(progress)}%`;
@@ -114,41 +120,231 @@ async function loadTestsList() {
     }
 }
 
-// Парсинг списка тестов (теперь считываем 5-й столбец - время)
+// Парсинг списка тестов
 function parseTestsList(tsvData) {
-    const lines = tsvData.trim().split('\n').slice(1);
-    tests = lines.map(line => {
-        const [n, name, description, url, timeInSeconds] = line.split('\t');
+    const lines = tsvData.trim().split('\n');
+    
+    // Пропускаем заголовок
+    const headerLine = lines[0];
+    const dataLines = lines.slice(1);
+    
+    tests = dataLines.map(line => {
+        const columns = line.split('\t');
+        // Безопасно получаем значения, даже если столбцов меньше
+        const name = columns[1] || '';
+        const description = columns[2] || '';
+        const url = columns[3] || '';
+        const timeInSeconds = parseInt(columns[4]) || 0;
+        const questionsCount = parseInt(columns[5]) || 0;
+        const classNumber = columns[6] || ''; // 7-й столбец
+        const subject = columns[7] || ''; // 8-й столбец
+        const trimester = columns[8] || ''; // 9-й столбец
+        
         return { 
             name, 
             description, 
             url, 
-            timeLimit: parseInt(timeInSeconds) || 0 
+            timeLimit: timeInSeconds,
+            questionsCount: questionsCount,
+            class: classNumber,
+            subject: subject,
+            trimester: trimester
         };
     });
+    
+    renderFilters();
     renderTestsMenu();
 }
 
-// Отрисовка меню тестов
+// Создание фильтров
+function renderFilters() {
+    // Получаем уникальные значения для фильтров
+    const uniqueClasses = [...new Set(tests.map(test => test.class).filter(Boolean))].sort();
+    const uniqueSubjects = [...new Set(tests.map(test => test.subject).filter(Boolean))].sort();
+    const uniqueTrimesters = [...new Set(tests.map(test => test.trimester).filter(Boolean))].sort();
+    
+    // Создаем HTML для фильтров
+    let filtersHtml = `
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label class="form-label">Класс</label>
+                <select id="filter-class" class="form-select form-select-sm">
+                    <option value="all">Все классы</option>
+    `;
+    
+    uniqueClasses.forEach(className => {
+        filtersHtml += `<option value="${className}">${className}</option>`;
+    });
+    
+    filtersHtml += `
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Предмет</label>
+                <select id="filter-subject" class="form-select form-select-sm">
+                    <option value="all">Все предметы</option>
+    `;
+    
+    uniqueSubjects.forEach(subject => {
+        filtersHtml += `<option value="${subject}">${subject}</option>`;
+    });
+    
+    filtersHtml += `
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Триместр</label>
+                <select id="filter-trimester" class="form-select form-select-sm">
+                    <option value="all">Все триместры</option>
+    `;
+    
+    uniqueTrimesters.forEach(trimester => {
+        filtersHtml += `<option value="${trimester}">${trimester}</option>`;
+    });
+    
+    filtersHtml += `
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="filter-stats" id="filter-stats">
+                        Найдено тестов: ${tests.length}
+                    </div>
+                    <div>
+                        <button id="reset-filters" class="btn btn-outline-secondary btn-sm">
+                            <i class="fas fa-times"></i> Сбросить фильтры
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.getElementById('filters-container').innerHTML = filtersHtml;
+    
+    // Добавляем обработчики событий для фильтров
+    document.getElementById('filter-class').addEventListener('change', (e) => {
+        filters.class = e.target.value;
+        renderTestsMenu();
+        updateFilterStats();
+    });
+    
+    document.getElementById('filter-subject').addEventListener('change', (e) => {
+        filters.subject = e.target.value;
+        renderTestsMenu();
+        updateFilterStats();
+    });
+    
+    document.getElementById('filter-trimester').addEventListener('change', (e) => {
+        filters.trimester = e.target.value;
+        renderTestsMenu();
+        updateFilterStats();
+    });
+    
+    document.getElementById('reset-filters').addEventListener('click', () => {
+        document.getElementById('filter-class').value = 'all';
+        document.getElementById('filter-subject').value = 'all';
+        document.getElementById('filter-trimester').value = 'all';
+        filters = { class: 'all', subject: 'all', trimester: 'all' };
+        renderTestsMenu();
+        updateFilterStats();
+    });
+}
+
+// Обновление статистики фильтров
+function updateFilterStats() {
+    const filteredTests = getFilteredTests();
+    document.getElementById('filter-stats').innerHTML = `Найдено тестов: ${filteredTests.length}`;
+}
+
+// Получение отфильтрованных тестов
+function getFilteredTests() {
+    return tests.filter(test => {
+        // Фильтр по классу
+        if (filters.class !== 'all' && test.class !== filters.class) {
+            return false;
+        }
+        
+        // Фильтр по предмету
+        if (filters.subject !== 'all' && test.subject !== filters.subject) {
+            return false;
+        }
+        
+        // Фильтр по триместру
+        if (filters.trimester !== 'all' && test.trimester !== filters.trimester) {
+            return false;
+        }
+        
+        return true;
+    });
+}
+
+// Отрисовка меню тестов с учетом фильтров
 function renderTestsMenu() {
+    const filteredTests = getFilteredTests();
     const testList = document.getElementById('test-list');
     testList.innerHTML = '';
 
-    tests.forEach((test, index) => {
+    if (filteredTests.length === 0) {
+        testList.innerHTML = `
+            <div class="alert alert-info text-center">
+                <i class="fas fa-info-circle me-2"></i>
+                По выбранным фильтрам тестов не найдено.
+            </div>
+        `;
+        document.getElementById('start-test').style.display = 'none';
+        return;
+    }
+
+    filteredTests.forEach((test, index) => {
         const testItem = document.createElement('div');
         testItem.className = 'list-group-item test-item';
         
-        // Добавляем информацию о времени, если оно указано
-        let timeInfo = '';
-        if (test.timeLimit > 0) {
-            const minutes = Math.floor(test.timeLimit / 60);
-            const seconds = test.timeLimit % 60;
-            timeInfo = `<small class="text-muted d-block mt-1">⏱️ ${minutes} мин ${seconds > 0 ? `${seconds} сек` : ''}</small>`;
+        // Создаем бейджи для метаданных
+        let metaBadges = '<div class="meta-badges mb-2">';
+        
+        if (test.class) {
+            metaBadges += `<span class="badge bg-primary me-1">${test.class}</span>`;
+        }
+        
+        if (test.subject) {
+            metaBadges += `<span class="badge bg-success me-1">${test.subject}</span>`;
+        }
+        
+        if (test.trimester) {
+            metaBadges += `<span class="badge bg-warning text-dark">${test.trimester}</span>`;
+        }
+        
+        metaBadges += '</div>';
+        
+        // Добавляем информацию о времени и количестве вопросов
+        let infoHtml = '';
+        
+        if (test.timeLimit > 0 || test.questionsCount > 0) {
+            infoHtml += '<div class="test-info mt-2">';
+            
+            if (test.timeLimit > 0) {
+                const minutes = Math.floor(test.timeLimit / 60);
+                const seconds = test.timeLimit % 60;
+                infoHtml += `<small class="text-muted me-3"><i class="fas fa-clock"></i> ${minutes} мин ${seconds > 0 ? `${seconds} сек` : ''}</small>`;
+            }
+            
+            if (test.questionsCount > 0) {
+                infoHtml += `<small class="text-muted"><i class="fas fa-question-circle"></i> ${test.questionsCount} вопросов</small>`;
+            }
+            
+            infoHtml += '</div>';
         }
         
         testItem.innerHTML = `
-            <div>${test.name}</div>
-            ${timeInfo}
+            <div class="test-header d-flex justify-content-between align-items-start">
+                <div class="test-name">${test.name}</div>
+                ${test.description ? `<div class="text-muted small">${test.description}</div>` : ''}
+            </div>
+            ${metaBadges}
+            ${infoHtml}
         `;
         
         testItem.addEventListener('click', () => {
@@ -172,7 +368,7 @@ async function loadSelectedTest() {
 
     resetTestData();
     
-    // Начинаем тест без выбора режима
+    // Начинаем тест
     startTest();
 }
 
@@ -187,6 +383,7 @@ function resetTestData() {
         userAnswers: [],
         currentQuestionIndex: 0,
         totalQuestions: 0,
+        questionsToShow: 0,
         timeLimit: 0,
         timer: null,
         timeLeft: 0
@@ -197,7 +394,46 @@ function resetTestData() {
 async function startTest() {
     document.getElementById('test-menu').style.display = 'none';
     document.getElementById('test-container').style.display = 'block';
-    document.getElementById('test-description').textContent = selectedTest.description;
+    
+    // Показываем информацию о тесте
+    let descriptionHtml = `<strong>${selectedTest.name}</strong>`;
+    if (selectedTest.description) {
+        descriptionHtml += `<br>${selectedTest.description}`;
+    }
+    
+    // Добавляем метаданные теста
+    let metaInfo = '<div class="test-meta mt-2">';
+    
+    if (selectedTest.class) {
+        metaInfo += `<span class="badge bg-primary me-2">${selectedTest.class}</span>`;
+    }
+    
+    if (selectedTest.subject) {
+        metaInfo += `<span class="badge bg-success me-2">${selectedTest.subject}</span>`;
+    }
+    
+    if (selectedTest.trimester) {
+        metaInfo += `<span class="badge bg-warning text-dark me-2">${selectedTest.trimester}</span>`;
+    }
+    
+    metaInfo += '</div>';
+    
+    // Добавляем информацию о количестве вопросов и времени
+    let detailsHtml = '<div class="test-details mt-2">';
+    
+    if (selectedTest.questionsCount > 0) {
+        detailsHtml += `<span class="badge bg-info me-2"><i class="fas fa-question-circle"></i> ${selectedTest.questionsCount} вопросов</span>`;
+    }
+    
+    if (selectedTest.timeLimit > 0) {
+        const minutes = Math.floor(selectedTest.timeLimit / 60);
+        const seconds = selectedTest.timeLimit % 60;
+        detailsHtml += `<span class="badge bg-warning"><i class="fas fa-clock"></i> ${minutes} мин ${seconds > 0 ? `${seconds} сек` : ''}</span>`;
+    }
+    
+    detailsHtml += '</div>';
+    
+    document.getElementById('test-description').innerHTML = descriptionHtml + metaInfo + detailsHtml;
     document.getElementById('result-container').style.display = 'none';
 
     try {
@@ -235,11 +471,26 @@ function parseAndPrepareTest(tsvData) {
     });
 
     currentTestData.totalQuestions = currentTestData.questions.length;
+    
+    // Определяем сколько вопросов показывать
+    if (selectedTest.questionsCount > 0 && selectedTest.questionsCount < currentTestData.totalQuestions) {
+        currentTestData.questionsToShow = selectedTest.questionsCount;
+    } else {
+        currentTestData.questionsToShow = currentTestData.totalQuestions;
+    }
+    
+    // Перемешиваем вопросы
     currentTestData.shuffledQuestions = shuffleArray([...currentTestData.questions]);
-    currentTestData.userAnswers = new Array(currentTestData.totalQuestions).fill(null);
+    
+    // Берем только нужное количество вопросов
+    currentTestData.shuffledQuestions = currentTestData.shuffledQuestions.slice(0, currentTestData.questionsToShow);
+    
+    // Подготавливаем массивы для ответов
+    currentTestData.userAnswers = new Array(currentTestData.questionsToShow).fill(null);
     currentTestData.correctAnswersMap = [];
     currentTestData.shuffledOptions = [];
     
+    // Перемешиваем варианты ответов для каждого вопроса и сохраняем правильные индексы
     currentTestData.shuffledQuestions.forEach((q, i) => {
         const shuffledOptions = shuffleArray([...q.options]);
         const correctIndex = shuffledOptions.indexOf(q.options[q.correct]);
@@ -254,10 +505,15 @@ function showQuestion() {
     const currentQuestion = currentTestData.shuffledQuestions[currentTestData.currentQuestionIndex];
     const shuffledOpts = currentTestData.shuffledOptions[currentTestData.currentQuestionIndex];
     
+    // Информация о количестве вопросов
+    const totalInfo = currentTestData.questionsToShow !== currentTestData.totalQuestions ? 
+        ` (${currentTestData.questionsToShow} из ${currentTestData.totalQuestions})` : 
+        '';
+    
     testContainer.innerHTML = `
         <div class="question card mb-3">
             <div class="card-body">
-                <h5 class="card-title">Вопрос ${currentTestData.currentQuestionIndex + 1} из ${currentTestData.totalQuestions}</h5>
+                <h5 class="card-title">Вопрос ${currentTestData.currentQuestionIndex + 1} из ${currentTestData.questionsToShow}${totalInfo}</h5>
                 <p class="question-text">${currentQuestion.question}</p>
                 <div class="options">
                     ${shuffledOpts.map((opt, j) => `
@@ -279,7 +535,7 @@ function showQuestion() {
                             ← Назад
                         </button>
                     ` : ''}
-                    ${currentTestData.currentQuestionIndex < currentTestData.totalQuestions - 1 ? `
+                    ${currentTestData.currentQuestionIndex < currentTestData.questionsToShow - 1 ? `
                         <button id="next-question" class="btn btn-primary">
                             Далее →
                         </button>
@@ -303,7 +559,7 @@ function showQuestion() {
         });
     }
 
-    if (currentTestData.currentQuestionIndex < currentTestData.totalQuestions - 1) {
+    if (currentTestData.currentQuestionIndex < currentTestData.questionsToShow - 1) {
         document.getElementById('next-question').addEventListener('click', () => {
             saveCurrentAnswer();
             currentTestData.currentQuestionIndex++;
@@ -343,6 +599,19 @@ function showResults(correctAnswers, totalQuestions, timeUsed = null) {
         colorClass = 'text-danger';
     }
     
+    // Информация о количестве вопросов
+    let questionsInfo = '';
+    if (currentTestData.questionsToShow !== currentTestData.totalQuestions) {
+        questionsInfo = `
+            <div class="questions-info mt-2">
+                <small class="text-muted">
+                    <i class="fas fa-info-circle"></i> 
+                    Тест содержал ${currentTestData.questionsToShow} случайных вопросов из ${currentTestData.totalQuestions} возможных
+                </small>
+            </div>
+        `;
+    }
+    
     // Формируем информацию о времени
     let timeInfo = '';
     if (timeUsed !== null && currentTestData.timeLimit > 0) {
@@ -372,6 +641,7 @@ function showResults(correctAnswers, totalQuestions, timeUsed = null) {
                     <p class="h5">Правильных ответов: <span class="fw-bold">${correctAnswers}</span> из <span class="fw-bold">${totalQuestions}</span></p>
                     <p class="h5">Оценка: <span class="fw-bold">${grade}</span></p>
                     ${timeInfo}
+                    ${questionsInfo}
                 </div>
             </div>
         </div>
@@ -390,7 +660,7 @@ async function submitTest() {
     
     // Подсчет правильных ответов
     let correctAnswers = 0;
-    for (let i = 0; i < currentTestData.totalQuestions; i++) {
+    for (let i = 0; i < currentTestData.questionsToShow; i++) {
         if (currentTestData.userAnswers[i] === currentTestData.correctAnswersMap[i]) {
             correctAnswers++;
         }
@@ -402,7 +672,7 @@ async function submitTest() {
         null;
 
     // Показать результаты
-    showResults(correctAnswers, currentTestData.totalQuestions, timeUsed);
+    showResults(correctAnswers, currentTestData.questionsToShow, timeUsed);
 
     // Сохранение результата на сервер
     try {
@@ -415,10 +685,10 @@ async function submitTest() {
                 user_id: currentUserId,
                 test_name: selectedTest.name,
                 correct_answers: correctAnswers,
-                total_questions: currentTestData.totalQuestions,
+                total_questions: currentTestData.questionsToShow,
+                total_possible_questions: currentTestData.totalQuestions,
                 time_limit: currentTestData.timeLimit,
-                time_used: timeUsed,
-                game_mode: 0
+                time_used: timeUsed
             }),
         });
 

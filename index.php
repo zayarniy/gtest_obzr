@@ -60,6 +60,10 @@ if (!isset($_SESSION['user_id'])) {
 
             <!-- Меню выбора теста -->
             <div id="test-menu" class="card shadow-sm p-4 mb-4" style="display: none;">
+                <!-- Фильтры -->
+                <div id="filters-container" class="mb-4">
+                    <!-- Фильтры будут вставлены сюда -->
+                </div>
                 <h3 class="mb-3">Выберите тест:</h3>
                 <div id="test-list" class="list-group"></div>
                 <button id="start-test" class="btn btn-primary mt-3" style="display: none;">Пуск</button>
