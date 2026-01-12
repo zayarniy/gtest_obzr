@@ -1,9 +1,24 @@
 <?php
 session_start();
+
+// Проверяем авторизацию
 if (!isset($_SESSION['user_id'])) {
     header("Location: registration.html");
     exit();
 }
+
+// Проверяем время активности сессии (1 час)
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > 3600)) {
+    // Сессия истекла
+    session_unset();
+    session_destroy();
+    header("Location: registration.html");
+    exit();
+}
+
+// Обновляем время активности
+$_SESSION['last_activity'] = time();
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">

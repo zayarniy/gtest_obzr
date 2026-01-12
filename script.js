@@ -1122,3 +1122,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         await loadSelectedTest();
     });
 });
+
+// В script.js или в <script> в index.php добавьте:
+// Проверка сессии каждые 5 минут
+setInterval(function() {
+    fetch('phps/check_session.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'expired') {
+                Swal.fire({
+                    title: 'Сессия истекла',
+                    text: 'Ваша сессия истекла из-за неактивности. Пожалуйста, войдите снова.',
+                    icon: 'warning',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = 'phps/logout.php';
+                });
+            }
+        })
+        .catch(error => console.error('Ошибка проверки сессии:', error));
+}, 300000); // 5 минут
