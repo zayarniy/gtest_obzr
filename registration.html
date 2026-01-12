@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
         body {
             background-color: #f8f9fa;
         }
+
         .auth-form {
             max-width: 600px;
             margin: 50px auto;
@@ -20,20 +22,24 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .nav-tabs {
             margin-bottom: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="auth-form">
             <ul class="nav nav-tabs" id="authTabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link  active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Войти</button>
+                    <button class="nav-link  active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login"
+                        type="button" role="tab">Войти</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Регистрация</button>
+                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register"
+                        type="button" role="tab">Регистрация</button>
                 </li>
             </ul>
             <div class="tab-content" id="authTabsContent">
@@ -53,6 +59,11 @@
                             <button type="submit" class="btn btn-primary">Войти</button>
                         </div>
                     </form>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="forgot_password.html" class="text-decoration-none">
+                        <i class="fas fa-question-circle me-1"></i>Забыли пароль?
+                    </a>
                 </div>
                 <!-- Форма регистрации -->
                 <div class="tab-pane fade" id="register" role="tabpanel">
@@ -120,8 +131,8 @@
 
     <script>
         // Обработчик формы регистрации
-        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
-            
+        document.getElementById('registrationForm').addEventListener('submit', async function (e) {
+
             e.preventDefault();
             // Получаем значения полей
             const surname = document.getElementById('surname').value.trim();
@@ -226,7 +237,7 @@
         });
 
         // Обработчик формы входа
-        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+        document.getElementById('loginForm').addEventListener('submit', async function (e) {
             e.preventDefault();
             const login = document.getElementById('loginLogin').value.trim();
             const password = document.getElementById('loginPassword').value;
@@ -280,4 +291,5 @@
         });
     </script>
 </body>
+
 </html>
