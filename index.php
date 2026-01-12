@@ -150,7 +150,7 @@ if (!isset($_SESSION['user_id'])) {
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" id="deleteAccount">Удалить аккаунт</button>
+                            <!--<button type="button" class="btn btn-danger" id="deleteAccount">Удалить аккаунт</button>-->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
                             <button type="button" class="btn btn-primary" id="saveProfile">Сохранить изменения</button>
                         </div>
@@ -266,6 +266,7 @@ if (!isset($_SESSION['user_id'])) {
                 });
 
                 // Удаление аккаунта
+                /*
                 document.getElementById('deleteAccount').addEventListener('click', async () => {
                     Swal.fire({
                         title: 'Вы уверены?',
@@ -312,7 +313,7 @@ if (!isset($_SESSION['user_id'])) {
                         }
                     });
                 });
-
+*/
                 // Открытие модального окна
                 document.getElementById('profile-button').addEventListener('click', () => {
                     loadUserData();

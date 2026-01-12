@@ -258,3 +258,27 @@
 .test-item:active {
     transform: scale(0.98);
 }
+
+/* Добавьте в существующие стили */
+.test-stats {
+    font-size: 0.85rem;
+    border-left: 3px solid #6c757d;
+}
+
+.test-stats .row {
+    margin-bottom: 2px;
+}
+
+.test-stats .badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+}
+
+.test-item .test-stats {
+    transition: all 0.3s ease;
+}
+
+.test-item:hover .test-stats {
+    border-left-color: #0d6efd;
+    background-color: #e7f1ff;
+}
