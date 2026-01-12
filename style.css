@@ -1,61 +1,55 @@
-        .test-item {
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .test-item:hover {
-            background-color: #f8f9fa;
-        }
-        .test-item.selected {
-            background-color: #e3f2fd;
-            border-left: 4px solid #1976d2;
-        }
-        .question {
-            border-left: 4px solid #4CAF50;
-        }
-        .logo {
-            cursor: pointer;
-            max-height: 60px;
-        }
-        .logo:hover {
-            opacity: 0.8;
-        }
+/* Основные стили для тестов */
+.test-item {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px !important;
+    margin-bottom: 8px;
+}
 
-        /* Добавьте в стили в файле index.php */
+.test-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.test-item.selected {
+    background-color: #e7f1ff;
+    border-color: #0d6efd !important;
+    border-left: 4px solid #1976d2;
+}
+
+.test-item.selected:hover {
+    background-color: #dbeafe;
+}
+
+/* Стили для отображения информации о тесте */
 .test-info {
     font-size: 0.85rem;
 }
+
 .test-name {
     font-weight: 600;
     margin-bottom: 5px;
 }
+
 .test-description {
     margin-bottom: 5px;
-}
-.test-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 10px;
-}
-.questions-info {
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-    border-left: 4px solid #6c757d;
-}
-
-/* Добавьте в существующие стили */
-.meta-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 8px;
+    color: #6c757d;
+    font-size: 0.9rem;
 }
 
 .test-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+/* Бейджи и метаданные */
+.meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     margin-bottom: 8px;
 }
 
@@ -73,28 +67,194 @@
     margin-top: 10px;
 }
 
+/* Стили для бейджей в тестах */
+.test-item .badge.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+.test-item .badge.bg-success {
+    background-color: #198754 !important;
+}
+
+.test-item .badge.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+.test-item .badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.test-item .badge.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* Фильтры */
 .filter-stats {
     font-size: 0.9rem;
     color: #6c757d;
 }
 
-.test-item {
-    cursor: pointer;
-    transition: all 0.2s ease;
+.filter-counts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.test-item:hover {
+.filter-counts .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #e9ecef !important;
+    color: #495057 !important;
+}
+
+.active-filters-container {
+    padding: 10px;
     background-color: #f8f9fa;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border-left: 4px solid #0d6efd;
+    margin-bottom: 15px;
 }
 
+/* Группировка тестов по классам */
+.class-group {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.class-group h5 {
+    font-size: 1.1rem;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 8px;
+}
+
+/* Дополнительные информационные блоки */
+.questions-info {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #6c757d;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Вопросы теста */
+.question {
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 20px;
+}
+
+.question .card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Логотип */
+.logo {
+    cursor: pointer;
+    max-height: 60px;
+    transition: opacity 0.2s;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+/* Прогресс-бар */
+.progress-bar {
+    transition: width 0.3s ease;
+}
+
+/* Таймер */
+.timer-display {
+    font-family: 'Courier New', monospace;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .test-header {
+        flex-direction: column;
+    }
+    
+    .meta-badges {
+        gap: 3px;
+    }
+    
+    .class-group {
+        padding: 10px;
+    }
+    
+    .class-group h5 {
+        font-size: 1rem;
+    }
+}
+
+/* Утилиты */
+.text-muted {
+    color: #6c757d !important;
+}
+
+.small {
+    font-size: 0.875em;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.test-item {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Стили для пустых состояний */
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffecb5;
+    color: #664d03;
+}
+
+.alert-info {
+    background-color: #cff4fc;
+    border-color: #b6effb;
+    color: #055160;
+}
+
+/* Улучшенные стили для выделения теста */
 .test-item.selected {
-    background-color: #e7f1ff;
-    border-color: #0d6efd;
+    background-color: #e7f1ff !important;
+    border-color: #0d6efd !important;
+    border-left: 4px solid #1976d2 !important;
+    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.2) !important;
 }
 
-.list-group-item {
-    border-radius: 8px !important;
-    margin-bottom: 8px;
+.test-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.test-item::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.test-item.selected::before {
+    background-color: #1976d2;
+}
+
+/* Анимация при клике */
+.test-item:active {
+    transform: scale(0.98);
 }
