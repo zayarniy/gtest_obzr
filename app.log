@@ -599,3 +599,36 @@
 2026-01-13 00:30:44 [Error] Failed to send reset email to: zaazaa@yandex.ru
 2026-01-13 00:30:56 [Error] Failed to send reset email to: zayarniy@gmail.com
 2026-01-13 00:31:04 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:46:58 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:48:11 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:49:52 [Security] Password reset requested for non-existent email: zayarni@gmail.com
+2026-01-13 00:50:07 [Security] Password reset requested for non-existent email: zayarni@gmail.com
+2026-01-13 00:50:15 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:23:40 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:23:40 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=aff11558409872ab0fdbfea40b66808e217353dad84f061e855bc5b4aeefb0c1
+2026-01-13 02:23:40 [Error] PHPMailer Error: Invalid address:  (From): 
+2026-01-13 02:23:40 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:28:11 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:28:11 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=975413a35cbef4d4069636474f3912b1ba87bb092fff9befaeb992ce929744a7
+2026-01-13 02:28:11 [Error] PHPMailer Error: Invalid address:  (From): 
+2026-01-13 02:28:11 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:28:23 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:28:23 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=dcb9e7bbf15998a60460c647c36473b6c0a83a34c28bb60aec55171732b974ce
+2026-01-13 02:28:23 [Error] PHPMailer Error: Invalid address:  (From): 
+2026-01-13 02:28:23 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:28:36 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:28:36 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=291d501cb24ed4d7bd5f1769aa8bcdf42a6981a690601eaa054c5d6c0aa2d759
+2026-01-13 02:28:36 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:28:36 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:29:58 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:29:58 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=46b7aa905bfe22d5ccb7b66268967dec1eac7b60bea3dcf1f3f64deda6cf49be
+2026-01-13 02:29:58 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:29:58 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:30:05 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:30:05 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=60704476a82ca0b4906e98bdb30dfa9122cf3a8f4d881c7874300554a5085a76
+2026-01-13 02:30:05 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:30:05 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:32:05 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:32:05 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=089ab4b402bcdcc277477100f266edfa57b2ba89bdab6bc5ccb6b23a01c8293c
+2026-01-13 02:32:05 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:32:05 [Error] Failed to send reset email to: zayarniy@gmail.com

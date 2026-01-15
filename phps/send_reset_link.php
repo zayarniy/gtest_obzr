@@ -1,7 +1,21 @@
 <?php
+// Включите это в самом начале файла
+error_reporting(0);
+ini_set('display_errors', 0);
+
 session_start();
 require_once 'db_connect.php';
 require_once 'log.php';
+
+// Подключаем PHPMailer
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+// Путь к PHPMailer (настройте под вашу структуру)
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
 
 header('Content-Type: application/json');
 
@@ -12,7 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 // Получаем данные из запроса
-$data = json_decode(file_get_contents('php://input'), true);
+$input = file_get_contents('php://input');
+$data = json_decode($input, true);
+
+if (json_last_error() !== JSON_ERROR_NONE) {
+    echo json_encode(['status' => 'error', 'message' => 'Неверный формат JSON в запросе']);
+    exit();
+}
+
 $email = isset($data['email']) ? trim($data['email']) : '';
 
 // Валидация email
@@ -44,9 +65,28 @@ try {
         exit();
     }
     
+    logMessage("Password reset requested for user: " . $user['login'] . " ($email)");
+    
     // Генерируем уникальный токен сброса
     $token = bin2hex(random_bytes(32));
-    $expires_at = date('Y-m-d H:i:s', strtotime('+1 hour')); // Действителен 1 час
+    $expires_at = date('Y-m-d H:i:s', strtotime('+1 hour'));
+    
+    // Создаем таблицу если она не существует
+    $createTableSql = "
+        CREATE TABLE IF NOT EXISTS password_reset_tokens (
+            id INT PRIMARY KEY AUTO_INCREMENT,
+            user_id INT NOT NULL,
+            token VARCHAR(64) NOT NULL,
+            expires_at DATETIME NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            used_at TIMESTAMP NULL,
+            UNIQUE KEY unique_token (token),
+            INDEX idx_user_id (user_id),
+            INDEX idx_expires_at (expires_at),
+            FOREIGN KEY (user_id) REFERENCES user_info(id) ON DELETE CASCADE
+        )
+    ";
+    $pdo->exec($createTableSql);
     
     // Сохраняем токен в базе данных
     $insertTokenSql = "
@@ -62,12 +102,17 @@ try {
     $tokenStmt->execute([$user['id'], $token, $expires_at]);
     
     // Формируем URL для сброса пароля
-    $reset_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http")
-        . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) 
-        . "/reset_password.php?token=" . $token;
+    $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    $script_dir = dirname($_SERVER['SCRIPT_NAME']);
     
-    // Отправляем email с ссылкой
-    $emailSent = sendResetEmail($email, $user['name'], $reset_url);
+    // Корректное формирование URL
+    $reset_url = $protocol . '://' . $host . $script_dir . '/reset_password.php?token=' . urlencode($token);
+    
+    logMessage("Reset URL generated: $reset_url");
+    
+    // Отправляем email с ссылкой через PHPMailer
+    $emailSent = sendResetEmailPHPMailer($email, $user['name'], $reset_url);
     
     if ($emailSent) {
         logMessage("Password reset link sent to: $email, user_id: " . $user['id']);
@@ -81,109 +126,96 @@ try {
             ->execute([$token]);
             
         logMessage("Failed to send reset email to: $email", "Error");
-        echo json_encode([
-            'status' => 'error', 
-            'message' => 'Не удалось отправить email. Пожалуйста, попробуйте позже.'
-        ]);
+        
+        // В режиме разработки можно показать ссылку
+        if ($_SERVER['HTTP_HOST'] === 'localhost' || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false) {
+            echo json_encode([
+                'status' => 'debug', 
+                'message' => 'В режиме разработки: не удалось отправить email',
+                'reset_url' => $reset_url
+            ]);
+        } else {
+            echo json_encode([
+                'status' => 'error', 
+                'message' => 'Не удалось отправить email. Пожалуйста, обратитесь к администратору.'
+            ]);
+        }
     }
     
 } catch (PDOException $e) {
-    error_log("Ошибка отправки ссылки сброса: " . $e->getMessage());
+    logMessage("Database error in send_reset_link: " . $e->getMessage(), "Error");
     echo json_encode(['status' => 'error', 'message' => 'Произошла ошибка при обработке запроса']);
     exit();
 } catch (Exception $e) {
-    error_log("Ошибка генерации токена: " . $e->getMessage());
-    echo json_encode(['status' => 'error', 'message' => 'Произошла ошибка при создании токена']);
+    logMessage("Error in send_reset_link: " . $e->getMessage(), "Error");
+    echo json_encode(['status' => 'error', 'message' => 'Произошла внутренняя ошибка']);
     exit();
 }
 
 /**
- * Отправка email со ссылкой сброса пароля
+ * Отправка email со ссылкой сброса пароля через PHPMailer
  */
-function sendResetEmail($to, $userName, $reset_url) {
-    $subject = 'Сброс пароля - Онлайн тесты';
-    
-    $message = "
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset='UTF-8'>
-        <title>Сброс пароля</title>
-        <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background-color: #4CAF50; color: white; padding: 15px; text-align: center; border-radius: 5px 5px 0 0; }
-            .content { padding: 20px; background-color: #f9f9f9; border: 1px solid #ddd; }
-            .reset-button { display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; margin: 15px 0; }
-            .warning { color: #d32f2f; font-weight: bold; background-color: #ffebee; padding: 10px; border-radius: 3px; }
-            .footer { margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
-            .link-box { word-break: break-all; background-color: #f5f5f5; padding: 10px; border-radius: 3px; margin: 10px 0; }
-        </style>
-    </head>
-    <body>
-        <div class='container'>
-            <div class='header'>
-                <h2>Сброс пароля</h2>
-            </div>
-            <div class='content'>
-                <p>Здравствуйте, " . htmlspecialchars($userName) . "!</p>
-                <p>Вы запросили сброс пароля для вашего аккаунта в системе онлайн-тестов.</p>
-                
-                <div style='text-align: center;'>
-                    <a href='$reset_url' class='reset-button' style='color: white;'>
-                        <strong>СБРОСИТЬ ПАРОЛЬ</strong>
-                    </a>
-                </div>
-                
-                <p>Или скопируйте ссылку вручную:</p>
-                <div class='link-box'>
-                    <small>$reset_url</small>
-                </div>
-                
-                <div class='warning'>
-                    ⚠️ <strong>Внимание!</strong> 
-                    <ul>
-                        <li>Эта ссылка будет активна в течение 1 часа</li>
-                        <li>Если вы не запрашивали сброс пароля, проигнорируйте это письмо</li>
-                        <li>Никому не передавайте эту ссылку</li>
-                    </ul>
-                </div>
-                
-                <p>Если кнопка выше не работает, скопируйте ссылку в адресную строку браузера.</p>
-            </div>
-            <div class='footer'>
-                <p>Это письмо было отправлено автоматически. Пожалуйста, не отвечайте на него.</p>
-                <p>&copy; " . date('Y') . " Онлайн тесты. Все права защищены.</p>
-            </div>
-        </div>
-    </body>
-    </html>
-    ";
-    
-    // Альтернативный текст для почтовых клиентов, не поддерживающих HTML
-    $altMessage = "Сброс пароля\n\n" .
-                  "Здравствуйте, " . $userName . "!\n\n" .
-                  "Вы запросили сброс пароля. Перейдите по ссылке:\n" .
-                  $reset_url . "\n\n" .
-                  "Ссылка будет активна 1 час.\n\n" .
-                  "Если вы не запрашивали сброс пароля, проигнорируйте это письмо.\n\n" .
-                  "© " . date('Y') . " Онлайн тесты";
-    
-    // Заголовки для HTML-письма
-    $headers = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: Онлайн тесты <noreply@" . $_SERVER['HTTP_HOST'] . ">\r\n";
-    $headers .= "Reply-To: noreply@" . $_SERVER['HTTP_HOST'] . "\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
-    $headers .= "X-Priority: 1 (Highest)\r\n";
-    $headers .= "Importance: High\r\n";
-    
-    // Отправляем email
+function sendResetEmailPHPMailer($to, $userName, $reset_url) {
     try {
-        return mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $message, $headers);
+        $mail = new PHPMailer(true);
+        
+        // ==== НАСТРОЙКИ SMTP (ЗАПОЛНИТЕ СВОИМИ ДАННЫМИ!) ====
+        $mail->isSMTP();
+        $mail->Host = 'smtp.yandex.ru';           // SMTP сервер
+        $mail->SMTPAuth = true;
+        $mail->Username = 'zaazaa@yandex.ru';  // Ваш полный email
+        $mail->Password = 'nfztswiuiqgysefd'; // Пароль приложения
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
+        $mail->Port = 465;                        // 465 для SSL
+        
+        // Для отладки (временно включите)
+        // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        
+        // Отправитель и получатель
+        $mail->setFrom('zaazaa@yandex.ru', 'Онлайн тесты');
+        $mail->addAddress($to, $userName);
+        $mail->addReplyTo('zaazaa@yandex.ru', 'Онлайн тесты');
+        
+        // Контент письма
+        $mail->isHTML(true);
+        $mail->CharSet = 'UTF-8';
+        $mail->Subject = 'Сброс пароля - Онлайн тесты';
+        
+        // HTML тело письма
+        $html_content = "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Сброс пароля</title></head><body style='font-family: Arial, sans-serif;'>
+            <div style='max-width: 600px; margin: 0 auto;'>
+                <div style='background-color: #4CAF50; color: white; padding: 20px; text-align: center;'>
+                    <h2>Сброс пароля</h2>
+                </div>
+                <div style='padding: 25px; background-color: #f9f9f9; border: 1px solid #ddd;'>
+                    <p>Здравствуйте, " . htmlspecialchars($userName) . "!</p>
+                    <p>Вы запросили сброс пароля для вашего аккаунта.</p>
+                    <div style='text-align: center; margin: 20px 0;'>
+                        <a href='" . htmlspecialchars($reset_url) . "' style='display: inline-block; padding: 12px 24px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;'>
+                            <strong>СБРОСИТЬ ПАРОЛЬ</strong>
+                        </a>
+                    </div>
+                    <p>Или скопируйте ссылку:</p>
+                    <div style='background-color: #f5f5f5; padding: 10px; border-radius: 3px; word-break: break-all; font-size: 12px;'>
+                        " . htmlspecialchars($reset_url) . "
+                    </div>
+                    <div style='color: #d32f2f; background-color: #ffebee; padding: 10px; border-radius: 3px; margin-top: 15px;'>
+                        <strong>Внимание!</strong> Ссылка активна 1 час.
+                    </div>
+                </div>
+            </div>
+        </body></html>";
+        
+        $mail->Body = $html_content;
+        
+        // Текстовое тело
+        $mail->AltBody = "Сброс пароля\n\nЗдравствуйте, $userName!\n\nВы запросили сброс пароля. Перейдите по ссылке:\n$reset_url\n\nСсылка активна 1 час.\n\n© " . date('Y') . " Онлайн тесты";
+        
+        // Отправляем
+        return $mail->send();
+        
     } catch (Exception $e) {
-        error_log("Ошибка отправки email: " . $e->getMessage());
+        logMessage("PHPMailer Error: " . $e->getMessage(), "Error");
         return false;
     }
 }
-?>
