@@ -62,7 +62,7 @@ $pageTitle = "Результаты тестов для $userLogin";
                     tr.correct_answers,
                     tr.total_questions,
                     tr.date,
-                    ui.name AS user_name
+                    ui.lastname AS user_name
                 FROM
                     test_result tr
                 JOIN
