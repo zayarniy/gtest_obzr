@@ -16,7 +16,7 @@ $pageTitle = "Статистика тестов пользователей";
 
 // Получаем параметры фильтрации
 $selected_user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : 0;
-$selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_single']) : '';
+$selected_class = isset($_GET['class']) ? trim($_GET['class']) : '';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -184,13 +184,13 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
         <!-- Навигационные вкладки -->
         <ul class="nav nav-tabs" id="statsTabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="detailed-tab" data-bs-toggle="tab" data-bs-target="#detailed"
+                <button class="nav-link" id="detailed-tab" data-bs-toggle="tab" data-bs-target="#detailed"
                     type="button" role="tab">
                     <i class="fas fa-chart-line me-2"></i>Детальная статистика
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="all-results-tab" data-bs-toggle="tab" data-bs-target="#all-results"
+                <button class="nav-link active" id="all-results-tab" data-bs-toggle="tab" data-bs-target="#all-results"
                     type="button" role="tab">
                     <i class="fas fa-list me-2"></i>Все результаты
                 </button>
@@ -199,8 +199,8 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
 
         <div class="tab-content" id="statsTabsContent">
             <!-- Вкладка с детальной статистикой -->
-            <div class="tab-pane fade show active" id="detailed" role="tabpanel">
-                <!-- Форма для выбора пользователя и теста -->
+            <div class="tab-pane fade show" id="detailed" role="tabpanel">
+                <!-- Форма для выбора пользователя и класса -->
                 <div class="statistics-panel">
                     <h4><i class="fas fa-filter me-2"></i>Выбор параметров для статистики</h4>
                     <form method="GET" action="all_test_results.php" id="detailedStatsForm">
@@ -229,21 +229,21 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label">Выберите тест</label>
-                                <select name="test_name_single" class="form-select select2-test" id="testSelect">
-                                    <option value="">Все тесты</option>
+                                <label class="form-label">Выберите класс</label>
+                                <select name="class" class="form-select" id="classSelect">
+                                    <option value="">Все классы</option>
                                     <?php
                                     try {
-                                        $testsSql = "SELECT DISTINCT test_name FROM test_result ORDER BY test_name";
-                                        $testsStmt = $pdo->query($testsSql);
-                                        $tests = $testsStmt->fetchAll(PDO::FETCH_COLUMN);
+                                        $classSql = "SELECT DISTINCT class FROM user_info WHERE class IS NOT NULL AND class != '' ORDER BY class";
+                                        $classStmt = $pdo->query($classSql);
+                                        $classes = $classStmt->fetchAll(PDO::FETCH_COLUMN);
 
-                                        foreach ($tests as $test) {
-                                            $selected = ($selected_test_name == $test) ? 'selected' : '';
-                                            echo "<option value='" . htmlspecialchars($test) . "' {$selected}>" . htmlspecialchars($test) . "</option>";
+                                        foreach ($classes as $class) {
+                                            $selected = ($selected_class == $class) ? 'selected' : '';
+                                            echo "<option value='" . htmlspecialchars($class) . "' {$selected}>" . htmlspecialchars($class) . "</option>";
                                         }
                                     } catch (PDOException $e) {
-                                        echo '<option value="">Ошибка загрузки тестов</option>';
+                                        echo '<option value="">Ошибка загрузки классов</option>';
                                     }
                                     ?>
                                 </select>
@@ -265,7 +265,7 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
 
                 <?php
                 // Отображаем статистику только если есть выбранные параметры
-                if ($selected_user_id > 0 || !empty($selected_test_name)) {
+                if ($selected_user_id > 0 || !empty($selected_class)) {
                     try {
                         $pdo = getDbConnection();
 
@@ -278,9 +278,9 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                             $params[] = $selected_user_id;
                         }
 
-                        if (!empty($selected_test_name)) {
-                            $whereConditions[] = "tr.test_name = ?";
-                            $params[] = $selected_test_name;
+                        if (!empty($selected_class)) {
+                            $whereConditions[] = "ui.class = ?";
+                            $params[] = $selected_class;
                         }
 
                         $whereClause = !empty($whereConditions) ? "WHERE " . implode(" AND ", $whereConditions) : "";
@@ -329,6 +329,7 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                                 ui.login as user_login,
                                 ui.name as user_name,
                                 ui.lastname as user_lastname,
+                                ui.class as user_class,
                                 ROUND((tr.correct_answers * 100.0 / tr.total_questions), 1) as percentage
                             FROM test_result tr
                             LEFT JOIN user_info ui ON tr.user_id = ui.id
@@ -372,8 +373,8 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                                         для пользователя: <span
                                             class="text-primary"><?php echo htmlspecialchars($userInfo['lastname'] . ' ' . $userInfo['name']); ?></span>
                                     <?php endif; ?>
-                                    <?php if (!empty($selected_test_name)): ?>
-                                        по тесту: <span class="text-primary"><?php echo htmlspecialchars($selected_test_name); ?></span>
+                                    <?php if (!empty($selected_class)): ?>
+                                        по классу: <span class="text-primary"><?php echo htmlspecialchars($selected_class); ?></span>
                                     <?php endif; ?>
                                 </h4>
 
@@ -506,6 +507,15 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                                                     </div>
                                                 <?php endif; ?>
 
+                                                <?php if (!empty($selected_class)): ?>
+                                                    <div class="stat-item">
+                                                        <div class="stat-label">Класс:</div>
+                                                        <div class="stat-value">
+                                                            <span class="badge bg-info"><?php echo htmlspecialchars($selected_class); ?></span>
+                                                        </div>
+                                                    </div>
+                                                <?php endif; ?>
+
                                                 <?php if (!empty($detailedStats['test_names_list']) && $detailedStats['unique_tests'] <= 5): ?>
                                                     <div class="stat-item">
                                                         <div class="stat-label">Тесты:</div>
@@ -561,9 +571,15 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                                                     <th>#</th>
                                                     <th>Дата</th>
                                                     <?php if (!$selected_user_id): ?>
-                                                        <th>Пользователь</th><?php endif; ?>
-                                                    <?php if (empty($selected_test_name)): ?>
-                                                        <th>Тест</th><?php endif; ?>
+                                                        <th class="sortable" onclick="sortTable(2)">
+                                                            Пользователь
+                                                            <span class="sort-icon"><i class="fas fa-sort"></i></span>
+                                                        </th>
+                                                    <?php endif; ?>
+                                                    <th>Тест</th>
+                                                    <?php if (empty($selected_class)): ?>
+                                                        <th>Класс</th>
+                                                    <?php endif; ?>
                                                     <th>Правильно</th>
                                                     <th>Всего</th>
                                                     <th>Результат</th>
@@ -591,8 +607,9 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                                                                     class="text-muted"><?php echo htmlspecialchars($attempt['user_login']); ?></small>
                                                             </td>
                                                         <?php endif; ?>
-                                                        <?php if (empty($selected_test_name)): ?>
-                                                            <td><?php echo htmlspecialchars($attempt['test_name']); ?></td>
+                                                        <td><?php echo htmlspecialchars($attempt['test_name']); ?></td>
+                                                        <?php if (empty($selected_class)): ?>
+                                                            <td><?php echo htmlspecialchars($attempt['user_class'] ?: 'Не указан'); ?></td>
                                                         <?php endif; ?>
                                                         <td><strong><?php echo $attempt['correct_answers']; ?></strong></td>
                                                         <td><?php echo $attempt['total_questions']; ?></td>
@@ -624,21 +641,218 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                         echo '<div class="alert alert-danger mt-4">Ошибка при получении статистики: ' . htmlspecialchars($e->getMessage()) . '</div>';
                     }
                 } else {
-                    echo '<div class="alert alert-info mt-4">Выберите пользователя и/или тест для просмотра статистики.</div>';
+                    echo '<div class="alert alert-info mt-4">Выберите пользователя и/или класс для просмотра статистики.</div>';
                 }
                 ?>
             </div>
 
-            <!-- Вкладка со всеми результатами (существующий код) -->
-            <div class="tab-pane fade" id="all-results" role="tabpanel">
-                <!-- Существующий код со всеми результатами -->
-                <!-- ... (весь ваш существующий код с фильтрами и таблицей) ... -->
+            <!-- Вкладка со всеми результатами -->
+            <div class="tab-pane fade show active" id="all-results" role="tabpanel">
+                <!-- Форма фильтрации -->
+                <div class="filter-form">
+                    <form method="GET" action="all_test_results.php">
+                        <input type="hidden" name="tab" value="all-results">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Пользователь</label>
+                                <select name="user_id_all" class="form-select select2-user-all">
+                                    <option value="">Все пользователи</option>
+                                    <?php
+                                    try {
+                                        $pdo = getDbConnection();
+                                        $usersSql = "SELECT id, login, name, lastname FROM user_info ORDER BY lastname, name";
+                                        $usersStmt = $pdo->query($usersSql);
+                                        $users = $usersStmt->fetchAll(PDO::FETCH_ASSOC);
 
-                <?php
-                // Вставьте сюда весь существующий код, начиная с формы фильтрации и заканчивая таблицей
-                // Я сохранил его в отдельной переменной для читаемости
-                include 'all_results_partial.php'; // или просто скопируйте весь существующий код сюда
-                ?>
+                                        $selected_user_id_all = isset($_GET['user_id_all']) ? intval($_GET['user_id_all']) : 0;
+                                        
+                                        foreach ($users as $user) {
+                                            $selected = ($selected_user_id_all == $user['id']) ? 'selected' : '';
+                                            $displayName = htmlspecialchars($user['lastname'] . ' ' . $user['name'] . ' (' . $user['login'] . ')');
+                                            echo "<option value='{$user['id']}' {$selected}>{$displayName}</option>";
+                                        }
+                                    } catch (PDOException $e) {
+                                        echo '<option value="">Ошибка загрузки пользователей</option>';
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Класс</label>
+                                <select name="class_all" class="form-select">
+                                    <option value="">Все классы</option>
+                                    <?php
+                                    try {
+                                        $classSql = "SELECT DISTINCT class FROM user_info WHERE class IS NOT NULL AND class != '' ORDER BY class";
+                                        $classStmt = $pdo->query($classSql);
+                                        $classes = $classStmt->fetchAll(PDO::FETCH_COLUMN);
+
+                                        $selected_class_all = isset($_GET['class_all']) ? trim($_GET['class_all']) : '';
+                                        
+                                        foreach ($classes as $class) {
+                                            $selected = ($selected_class_all == $class) ? 'selected' : '';
+                                            echo "<option value='" . htmlspecialchars($class) . "' {$selected}>" . htmlspecialchars($class) . "</option>";
+                                        }
+                                    } catch (PDOException $e) {
+                                        echo '<option value="">Ошибка загрузки классов</option>';
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">&nbsp;</label>
+                                <div class="d-grid gap-2 d-md-flex">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-filter me-2"></i>Фильтровать
+                                    </button>
+                                    <a href="all_test_results.php?tab=all-results" class="btn btn-outline-secondary">
+                                        <i class="fas fa-times me-2"></i>Сбросить
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Таблица со всеми результатами -->
+                <div class="table-responsive">
+                    <?php
+                    try {
+                        // Получаем параметры фильтрации для вкладки "все результаты"
+                        $filter_user_id = isset($_GET['user_id_all']) ? intval($_GET['user_id_all']) : 0;
+                        $filter_class = isset($_GET['class_all']) ? trim($_GET['class_all']) : '';
+                        
+                        // Определяем сортировку
+                        $sort_column = isset($_GET['sort']) ? $_GET['sort'] : 'date';
+                        $sort_order = isset($_GET['order']) ? $_GET['order'] : 'DESC';
+                        
+                        // Безопасный список колонок для сортировки
+                        $allowed_columns = ['date', 'user_name', 'test_name', 'correct_answers', 'total_questions', 'percentage'];
+                        $sort_column = in_array($sort_column, $allowed_columns) ? $sort_column : 'date';
+                        $sort_order = $sort_order === 'ASC' ? 'ASC' : 'DESC';
+                        
+                        // Формируем условия WHERE
+                        $whereConditions = [];
+                        $params = [];
+
+                        if ($filter_user_id > 0) {
+                            $whereConditions[] = "tr.user_id = ?";
+                            $params[] = $filter_user_id;
+                        }
+
+                        if (!empty($filter_class)) {
+                            $whereConditions[] = "ui.class = ?";
+                            $params[] = $filter_class;
+                        }
+
+                        $whereClause = !empty($whereConditions) ? "WHERE " . implode(" AND ", $whereConditions) : "";
+
+                        // Запрос для получения всех результатов с сортировкой
+                        $sql = "
+                            SELECT 
+                                tr.*,
+                                ui.login as user_login,
+                                ui.name as user_name,
+                                ui.lastname as user_lastname,
+                                ui.class as user_class,
+                                ROUND((tr.correct_answers * 100.0 / tr.total_questions), 1) as percentage
+                            FROM test_result tr
+                            LEFT JOIN user_info ui ON tr.user_id = ui.id
+                            {$whereClause}
+                            ORDER BY 
+                                CASE WHEN ? = 'user_name' THEN CONCAT(ui.lastname, ' ', ui.name) END {$sort_order},
+                                CASE WHEN ? = 'date' THEN tr.date END {$sort_order},
+                                CASE WHEN ? = 'test_name' THEN tr.test_name END {$sort_order},
+                                CASE WHEN ? = 'correct_answers' THEN tr.correct_answers END {$sort_order},
+                                CASE WHEN ? = 'total_questions' THEN tr.total_questions END {$sort_order},
+                                CASE WHEN ? = 'percentage' THEN (tr.correct_answers * 100.0 / tr.total_questions) END {$sort_order},
+                                tr.date DESC
+                        ";
+                        
+                        // Добавляем параметры сортировки (5 раз для каждого CASE)
+                        for ($i = 0; $i < 6; $i++) {
+                            $params[] = $sort_column;
+                        }
+                        
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->execute($params);
+                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        
+                        // Функция для создания ссылки сортировки
+                        function getSortLink($column, $label, $current_sort, $current_order) {
+                            $new_order = ($current_sort == $column && $current_order == 'DESC') ? 'ASC' : 'DESC';
+                            $icon = '';
+                            if ($current_sort == $column) {
+                                $icon = ($current_order == 'ASC') ? ' <i class="fas fa-sort-up"></i>' : ' <i class="fas fa-sort-down"></i>';
+                            } else {
+                                $icon = ' <i class="fas fa-sort"></i>';
+                            }
+                            $url = "?tab=all-results&sort={$column}&order={$new_order}";
+                            if (isset($_GET['user_id_all']) && $_GET['user_id_all']) $url .= "&user_id_all=" . $_GET['user_id_all'];
+                            if (isset($_GET['class_all']) && $_GET['class_all']) $url .= "&class_all=" . $_GET['class_all'];
+                            return "<a href='{$url}' class='text-decoration-none text-dark'>{$label}{$icon}</a>";
+                        }
+                    ?>
+                    
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th><?php echo getSortLink('date', 'Дата', $sort_column, $sort_order); ?></th>
+                                <th><?php echo getSortLink('user_name', 'Пользователь', $sort_column, $sort_order); ?></th>
+                                <th>Класс</th>
+                                <th><?php echo getSortLink('test_name', 'Тест', $sort_column, $sort_order); ?></th>
+                                <th><?php echo getSortLink('correct_answers', 'Правильно', $sort_column, $sort_order); ?></th>
+                                <th><?php echo getSortLink('total_questions', 'Всего', $sort_column, $sort_order); ?></th>
+                                <th><?php echo getSortLink('percentage', 'Результат', $sort_column, $sort_order); ?></th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (count($results) > 0): ?>
+                                <?php foreach ($results as $index => $row): ?>
+                                    <?php
+                                    $percentage = round(($row['correct_answers'] / $row['total_questions']) * 100, 1);
+                                    $badgeClass = 'badge-danger';
+                                    if ($percentage >= 75) $badgeClass = 'badge-success';
+                                    elseif ($percentage >= 60) $badgeClass = 'badge-warning';
+                                    ?>
+                                    <tr>
+                                        <td><?php echo $index + 1; ?></td>
+                                        <td><?php echo date("d.m.Y H:i", strtotime($row['date'])); ?></td>
+                                        <td>
+                                            <?php echo htmlspecialchars($row['user_lastname'] . ' ' . $row['user_name']); ?>
+                                            <br><small class="text-muted"><?php echo htmlspecialchars($row['user_login']); ?></small>
+                                        </td>
+                                        <td><?php echo htmlspecialchars($row['user_class'] ?: 'Не указан'); ?></td>
+                                        <td><?php echo htmlspecialchars($row['test_name']); ?></td>
+                                        <td><strong><?php echo $row['correct_answers']; ?></strong></td>
+                                        <td><?php echo $row['total_questions']; ?></td>
+                                        <td>
+                                            <span class="badge <?php echo $badgeClass; ?>">
+                                                <?php echo $percentage; ?>%
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-sm btn-outline-info"
+                                                onclick="showAttemptDetails(<?php echo $row['id']; ?>)">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="9" class="text-center">Нет данных для отображения</td>
+                                </tr>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                    
+                    <?php } catch (PDOException $e) { ?>
+                        <div class="alert alert-danger">Ошибка при получении данных: <?php echo htmlspecialchars($e->getMessage()); ?></div>
+                    <?php } ?>
+                </div>
             </div>
         </div>
 
@@ -686,9 +900,9 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                 allowClear: true,
                 width: 'resolve'
             });
-
-            $('.select2-test').select2({
-                placeholder: "Выберите тест",
+            
+            $('.select2-user-all').select2({
+                placeholder: "Выберите пользователя",
                 allowClear: true,
                 width: 'resolve'
             });
@@ -709,6 +923,59 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
                     const modal = new bootstrap.Modal(document.getElementById('attemptDetailsModal'));
                     modal.show();
                 });
+        }
+
+        // Функция сортировки таблицы (для детальной статистики)
+        function sortTable(columnIndex) {
+            const table = document.querySelector('.attempts-table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            
+            // Определяем направление сортировки
+            const isAscending = table.getAttribute('data-sort') === columnIndex && 
+                               table.getAttribute('data-order') === 'asc';
+            const newOrder = isAscending ? 'desc' : 'asc';
+            
+            // Сортируем строки
+            rows.sort((a, b) => {
+                const aText = a.cells[columnIndex].textContent.trim();
+                const bText = b.cells[columnIndex].textContent.trim();
+                
+                // Пытаемся сравнить как числа
+                const aNum = parseFloat(aText);
+                const bNum = parseFloat(bText);
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return isAscending ? bNum - aNum : aNum - bNum;
+                }
+                
+                // Иначе сравниваем как строки
+                return isAscending ? 
+                    bText.localeCompare(aText, 'ru') : 
+                    aText.localeCompare(bText, 'ru');
+            });
+            
+            // Обновляем порядок строк
+            rows.forEach(row => tbody.appendChild(row));
+            
+            // Сохраняем состояние сортировки
+            table.setAttribute('data-sort', columnIndex);
+            table.setAttribute('data-order', newOrder);
+            
+            // Обновляем иконки сортировки
+            updateSortIcons(columnIndex, newOrder);
+        }
+        
+        function updateSortIcons(columnIndex, order) {
+            const headers = document.querySelectorAll('.sortable');
+            headers.forEach((header, index) => {
+                const icon = header.querySelector('.sort-icon i');
+                if (index === columnIndex) {
+                    icon.className = order === 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down';
+                } else {
+                    icon.className = 'fas fa-sort';
+                }
+            });
         }
 
         // Создание графика (если нужно)
@@ -781,7 +1048,7 @@ $selected_test_name = isset($_GET['test_name_single']) ? trim($_GET['test_name_s
             let csv = [
                 ['Параметр', 'Значение'],
                 ['Пользователь', '<?php echo $userInfo ? htmlspecialchars($userInfo["lastname"] . " " . $userInfo["name"]) : "Все пользователи"; ?>'],
-                ['Тест', '<?php echo !empty($selected_test_name) ? htmlspecialchars($selected_test_name) : "Все тесты"; ?>'],
+                ['Класс', '<?php echo !empty($selected_class) ? htmlspecialchars($selected_class) : "Все классы"; ?>'],
                 ['Количество попыток', '<?php echo isset($detailedStats["attempts"]) ? $detailedStats["attempts"] : 0; ?>'],
                 ['Средний балл (%)', '<?php echo isset($avgScore) ? $avgScore : 0; ?>'],
                 ['Минимальный балл (%)', '<?php echo isset($minScore) ? $minScore : 0; ?>'],
