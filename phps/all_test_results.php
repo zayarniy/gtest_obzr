@@ -17,7 +17,7 @@ $pageTitle = "Статистика тестов пользователей";
 // Получаем параметры фильтрации
 $selected_user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : 0;
 $selected_class = isset($_GET['class']) ? trim($_GET['class']) : '';
-$selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
+$date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -176,38 +176,59 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
             background-color: #f8f9fa;
         }
         
-        .back-button-container {
+        .top-action-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
-        .date-filter {
-            margin-top: 10px;
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- Кнопка для возврата на главную страницу - ПЕРЕМЕЩЕНА НА ВЕРХ -->
-        <div class="back-button-container">
+        <!-- Верхняя панель действий -->
+        <div class="top-action-bar">
             <a href="../index.php" class="btn btn-primary">
                 <i class="fas fa-home me-2"></i>Вернуться на главную
             </a>
+            
+            <div class="export-buttons">
+                <button onclick="exportStatsToCSV()" class="btn btn-success">
+                    <i class="fas fa-file-csv me-2"></i>Экспорт статистики
+                </button>
+                <button onclick="exportAllResultsToCSV()" class="btn btn-outline-success">
+                    <i class="fas fa-file-export me-2"></i>Экспорт таблицы
+                </button>
+                <button onclick="window.print()" class="btn btn-outline-secondary">
+                    <i class="fas fa-print me-2"></i>Печать
+                </button>
+            </div>
         </div>
-        
+
         <h1><i class="fas fa-chart-bar me-2"></i><?php echo htmlspecialchars($pageTitle); ?></h1>
 
         <!-- Навигационные вкладки -->
         <ul class="nav nav-tabs" id="statsTabs" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="detailed-tab" data-bs-toggle="tab" data-bs-target="#detailed"
-                    type="button" role="tab">
+                <button class="nav-link <?php echo (!isset($_GET['tab']) || $_GET['tab'] == 'detailed') ? 'active' : ''; ?>" 
+                        id="detailed-tab" data-bs-toggle="tab" data-bs-target="#detailed"
+                        type="button" role="tab">
                     <i class="fas fa-chart-line me-2"></i>Детальная статистика
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="all-results-tab" data-bs-toggle="tab" data-bs-target="#all-results"
-                    type="button" role="tab">
+                <button class="nav-link <?php echo (isset($_GET['tab']) && $_GET['tab'] == 'all-results') ? 'active' : ''; ?>" 
+                        id="all-results-tab" data-bs-toggle="tab" data-bs-target="#all-results"
+                        type="button" role="tab">
                     <i class="fas fa-list me-2"></i>Все результаты
                 </button>
             </li>
@@ -215,13 +236,15 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
 
         <div class="tab-content" id="statsTabsContent">
             <!-- Вкладка с детальной статистикой -->
-            <div class="tab-pane fade show" id="detailed" role="tabpanel">
+            <div class="tab-pane fade <?php echo (!isset($_GET['tab']) || $_GET['tab'] == 'detailed') ? 'show active' : ''; ?>" 
+                 id="detailed" role="tabpanel">
                 <!-- Форма для выбора пользователя и класса -->
                 <div class="statistics-panel">
                     <h4><i class="fas fa-filter me-2"></i>Выбор параметров для статистики</h4>
                     <form method="GET" action="all_test_results.php" id="detailedStatsForm">
+                        <input type="hidden" name="tab" value="detailed">
                         <div class="row g-3">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label class="form-label">Выберите пользователя</label>
                                 <select name="user_id" class="form-select select2-user" id="userSelect">
                                     <option value="">Все пользователи</option>
@@ -244,7 +267,7 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                 </select>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <label class="form-label">Выберите класс</label>
                                 <select name="class" class="form-select" id="classSelect">
                                     <option value="">Все классы</option>
@@ -265,11 +288,11 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                 </select>
                             </div>
                             
-                            <!-- НОВЫЙ ФИЛЬТР ПО ДАТЕ -->
-                            <div class="col-md-6">
-                                <label class="form-label">Дата с</label>
-                                <input type="date" name="date_from" class="form-control" value="<?php echo htmlspecialchars($selected_date); ?>">
-                                <small class="text-muted">Показать записи начиная с указанной даты</small>
+                            <div class="col-md-4">
+                                <label class="form-label">Дата от</label>
+                                <input type="date" name="date_from" class="form-control" 
+                                       value="<?php echo htmlspecialchars($date_from); ?>">
+                                <small class="text-muted">Показывать попытки с указанной даты</small>
                             </div>
 
                             <div class="col-md-12">
@@ -277,7 +300,7 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                     <button type="submit" class="btn btn-primary">
                                         <i class="fas fa-chart-bar me-2"></i>Показать статистику
                                     </button>
-                                    <a href="all_test_results.php" class="btn btn-outline-secondary">
+                                    <a href="all_test_results.php?tab=detailed" class="btn btn-outline-secondary">
                                         <i class="fas fa-times me-2"></i>Сбросить фильтры
                                     </a>
                                 </div>
@@ -288,7 +311,7 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
 
                 <?php
                 // Отображаем статистику только если есть выбранные параметры
-                if ($selected_user_id > 0 || !empty($selected_class) || !empty($selected_date)) {
+                if ($selected_user_id > 0 || !empty($selected_class) || !empty($date_from)) {
                     try {
                         $pdo = getDbConnection();
 
@@ -305,11 +328,10 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                             $whereConditions[] = "ui.class = ?";
                             $params[] = $selected_class;
                         }
-                        
-                        // НОВОЕ УСЛОВИЕ ПО ДАТЕ
-                        if (!empty($selected_date)) {
-                            $whereConditions[] = "DATE(tr.date) >= ?";
-                            $params[] = $selected_date;
+
+                        if (!empty($date_from)) {
+                            $whereConditions[] = "tr.date >= ?";
+                            $params[] = $date_from . ' 00:00:00';
                         }
 
                         $whereClause = !empty($whereConditions) ? "WHERE " . implode(" AND ", $whereConditions) : "";
@@ -405,8 +427,8 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                     <?php if (!empty($selected_class)): ?>
                                         по классу: <span class="text-primary"><?php echo htmlspecialchars($selected_class); ?></span>
                                     <?php endif; ?>
-                                    <?php if (!empty($selected_date)): ?>
-                                        (с <?php echo date("d.m.Y", strtotime($selected_date)); ?>)
+                                    <?php if (!empty($date_from)): ?>
+                                        с даты: <span class="text-primary"><?php echo date("d.m.Y", strtotime($date_from)); ?></span>
                                     <?php endif; ?>
                                 </h4>
 
@@ -547,15 +569,6 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                                         </div>
                                                     </div>
                                                 <?php endif; ?>
-                                                
-                                                <?php if (!empty($selected_date)): ?>
-                                                    <div class="stat-item">
-                                                        <div class="stat-label">Период с:</div>
-                                                        <div class="stat-value">
-                                                            <span class="badge bg-secondary"><?php echo date("d.m.Y", strtotime($selected_date)); ?></span>
-                                                        </div>
-                                                    </div>
-                                                <?php endif; ?>
 
                                                 <?php if (!empty($detailedStats['test_names_list']) && $detailedStats['unique_tests'] <= 5): ?>
                                                     <div class="stat-item">
@@ -571,6 +584,15 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                                         <div class="stat-label">Пользователи:</div>
                                                         <div class="stat-value small">
                                                             <?php echo htmlspecialchars($detailedStats['users_list']); ?>
+                                                        </div>
+                                                    </div>
+                                                <?php endif; ?>
+
+                                                <?php if (!empty($date_from)): ?>
+                                                    <div class="stat-item">
+                                                        <div class="stat-label">Период с:</div>
+                                                        <div class="stat-value">
+                                                            <span class="badge bg-info"><?php echo date("d.m.Y", strtotime($date_from)); ?></span>
                                                         </div>
                                                     </div>
                                                 <?php endif; ?>
@@ -660,18 +682,14 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                                             </span>
                                                         </td>
                                                         <td>
-                                                            <button class="btn btn-sm btn-outline-info"
+                                                            <button  class="btn btn-sm btn-outline-info"
                                                                 onclick="showAttemptDetails(<?php echo $attempt['id']; ?>)">
                                                                 <i class="fas fa-eye"></i>
                                                             </button>
-                                                            <!-- НОВАЯ КНОПКА для открытия детальной статистики по пользователю -->
-                                                            <?php if (!$selected_user_id): ?>
-                                                                <button class="btn btn-sm btn-outline-primary ms-1"
-                                                                    onclick="openUserStatistics(<?php echo $attempt['user_id']; ?>)"
-                                                                    title="Статистика пользователя">
-                                                                    <i class="fas fa-chart-line"></i>
-                                                                </button>
-                                                            <?php endif; ?>
+                                                            <button class="btn btn-sm btn-outline-primary ms-1"
+                                                                onclick="showUserStats(<?php echo $attempt['user_id']; ?>)">
+                                                                <i class="fas fa-eye"></i>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>
@@ -690,13 +708,14 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                         echo '<div class="alert alert-danger mt-4">Ошибка при получении статистики: ' . htmlspecialchars($e->getMessage()) . '</div>';
                     }
                 } else {
-                    echo '<div class="alert alert-info mt-4">Выберите пользователя и/или класс для просмотра статистики.</div>';
+                    echo '<div class="alert alert-info mt-4">Выберите пользователя, класс или дату для просмотра статистики.</div>';
                 }
                 ?>
             </div>
 
             <!-- Вкладка со всеми результатами -->
-            <div class="tab-pane fade show active" id="all-results" role="tabpanel">
+            <div class="tab-pane fade <?php echo (isset($_GET['tab']) && $_GET['tab'] == 'all-results') ? 'show active' : ''; ?>" 
+                 id="all-results" role="tabpanel">
                 <!-- Форма фильтрации -->
                 <div class="filter-form">
                     <form method="GET" action="all_test_results.php">
@@ -748,14 +767,10 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                     ?>
                                 </select>
                             </div>
-                            <!-- НОВЫЙ ФИЛЬТР ПО ДАТЕ -->
                             <div class="col-md-3">
-                                <label class="form-label">Дата с</label>
-                                <?php
-                                $selected_date_all = isset($_GET['date_from_all']) ? $_GET['date_from_all'] : '';
-                                ?>
-                                <input type="date" name="date_from_all" class="form-control" value="<?php echo htmlspecialchars($selected_date_all); ?>">
-                                <small class="text-muted">Показать записи начиная с указанной даты</small>
+                                <label class="form-label">Дата от</label>
+                                <input type="date" name="date_from_all" class="form-control" 
+                                       value="<?php echo isset($_GET['date_from_all']) ? htmlspecialchars($_GET['date_from_all']) : ''; ?>">
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label">&nbsp;</label>
@@ -779,7 +794,7 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                         // Получаем параметры фильтрации для вкладки "все результаты"
                         $filter_user_id = isset($_GET['user_id_all']) ? intval($_GET['user_id_all']) : 0;
                         $filter_class = isset($_GET['class_all']) ? trim($_GET['class_all']) : '';
-                        $filter_date = isset($_GET['date_from_all']) ? $_GET['date_from_all'] : '';
+                        $filter_date_from = isset($_GET['date_from_all']) ? $_GET['date_from_all'] : '';
                         
                         // Определяем сортировку
                         $sort_column = isset($_GET['sort']) ? $_GET['sort'] : 'date';
@@ -803,11 +818,10 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                             $whereConditions[] = "ui.class = ?";
                             $params[] = $filter_class;
                         }
-                        
-                        // НОВОЕ УСЛОВИЕ ПО ДАТЕ
-                        if (!empty($filter_date)) {
-                            $whereConditions[] = "DATE(tr.date) >= ?";
-                            $params[] = $filter_date;
+
+                        if (!empty($filter_date_from)) {
+                            $whereConditions[] = "tr.date >= ?";
+                            $params[] = $filter_date_from . ' 00:00:00';
                         }
 
                         $whereClause = !empty($whereConditions) ? "WHERE " . implode(" AND ", $whereConditions) : "";
@@ -860,7 +874,7 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                         }
                     ?>
                     
-                    <table class="table table-striped table-hover">
+                    <table class="table table-striped table-hover" id="allResultsTable">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -904,14 +918,10 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                                 onclick="showAttemptDetails(<?php echo $row['id']; ?>)">
                                                 <i class="fas fa-eye"></i>
                                             </button>
-                                            <!-- НОВАЯ КНОПКА для открытия детальной статистики по пользователю -->
-                                            <?php if ($filter_user_id == 0): ?>
-                                                <button class="btn btn-sm btn-outline-primary ms-1"
-                                                    onclick="openUserStatistics(<?php echo $row['user_id']; ?>)"
-                                                    title="Статистика пользователя">
-                                                    <i class="fas fa-chart-line"></i>
-                                                </button>
-                                            <?php endif; ?>
+                                            <button class="btn btn-sm btn-outline-primary ms-1"
+                                                onclick="showUserStats(<?php echo $row['user_id']; ?>)">
+                                                <i class="fas fa-user-chart"></i>
+                                            </button>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -947,13 +957,6 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                 </div>
             </div>
         </div>
-
-        <!-- Дополнительная кнопка -->
-        <div class="mt-4">
-            <button onclick="window.print()" class="btn btn-outline-secondary ms-2">
-                <i class="fas fa-print me-2"></i>Печать статистики
-            </button>
-        </div>
     </div>
 
     <!-- Подключаем Bootstrap JS -->
@@ -977,6 +980,15 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                 allowClear: true,
                 width: 'resolve'
             });
+            
+            // Активируем нужную вкладку при загрузке
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab') || 'detailed';
+            const tabElement = document.querySelector(`#${tab}-tab`);
+            if (tabElement) {
+                const tabInstance = new bootstrap.Tab(tabElement);
+                tabInstance.show();
+            }
         });
 
         // Функция для показа деталей попытки
@@ -995,27 +1007,30 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                     modal.show();
                 });
         }
-        
-        // НОВАЯ ФУНКЦИЯ: открыть детальную статистику по пользователю
-        function openUserStatistics(userId) {
-            // Переходим на вкладку детальной статистики
-            const detailedTab = document.querySelector('#detailed-tab');
-            const allResultsTab = document.querySelector('#all-results-tab');
+
+        // Функция для показа статистики пользователя
+        function showUserStats(userId) {
+            // Переключаемся на вкладку детальной статистики
+            const tabElement = document.querySelector('#detailed-tab');
+            if (tabElement) {
+                const tabInstance = new bootstrap.Tab(tabElement);
+                tabInstance.show();
+            }
             
-            detailedTab.classList.remove('active');
-            allResultsTab.classList.remove('active');
-            detailedTab.classList.add('active');
-            
-            // Показываем соответствующую вкладку
-            document.getElementById('detailed').classList.add('show', 'active');
-            document.getElementById('all-results').classList.remove('show', 'active');
-            
-            // Устанавливаем выбранного пользователя в select
+            // Устанавливаем выбранного пользователя
             const userSelect = document.querySelector('#userSelect');
-            userSelect.value = userId;
+            if (userSelect) {
+                userSelect.value = userId;
+                // Инициализируем Select2 заново, если нужно
+                if ($(userSelect).hasClass('select2-hidden-accessible')) {
+                    $(userSelect).val(userId).trigger('change');
+                }
+            }
             
-            // Применяем фильтр
-            document.getElementById('detailedStatsForm').submit();
+            // Автоматически отправляем форму
+            setTimeout(() => {
+                document.getElementById('detailedStatsForm').submit();
+            }, 100);
         }
 
         // Функция сортировки таблицы (для детальной статистики)
@@ -1071,6 +1086,93 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
             });
         }
 
+        // Экспорт статистики в CSV
+        function exportStatsToCSV() {
+            <?php if (isset($detailedStats) && $detailedStats['attempts'] > 0): ?>
+                let csv = [
+                    ['Параметр', 'Значение'],
+                    ['Пользователь', '<?php echo isset($userInfo) ? htmlspecialchars($userInfo["lastname"] . " " . $userInfo["name"]) : "Все пользователи"; ?>'],
+                    ['Класс', '<?php echo !empty($selected_class) ? htmlspecialchars($selected_class) : "Все классы"; ?>'],
+                    ['Дата от', '<?php echo !empty($date_from) ? date("d.m.Y", strtotime($date_from)) : "Не задана"; ?>'],
+                    ['Количество попыток', '<?php echo $detailedStats["attempts"]; ?>'],
+                    ['Уникальных пользователей', '<?php echo $detailedStats["unique_users"]; ?>'],
+                    ['Уникальных тестов', '<?php echo $detailedStats["unique_tests"]; ?>'],
+                    ['Средний балл (%)', '<?php echo isset($avgScore) ? $avgScore : 0; ?>'],
+                    ['Минимальный балл (%)', '<?php echo isset($minScore) ? $minScore : 0; ?>'],
+                    ['Максимальный балл (%)', '<?php echo isset($maxScore) ? $maxScore : 0; ?>'],
+                    ['Первая попытка', '<?php echo isset($firstAttempt) ? $firstAttempt : ""; ?>'],
+                    ['Последняя попытка', '<?php echo isset($lastAttempt) ? $lastAttempt : ""; ?>'],
+                    ['Средние правильные ответы', '<?php echo round($detailedStats["avg_correct"], 1); ?>'],
+                    ['Среднее всего вопросов', '<?php echo round($detailedStats["avg_total"], 1); ?>']
+                ];
+
+                const csvContent = csv.map(row =>
+                    row.map(cell => `"${cell}"`).join(',')
+                ).join('\n');
+
+                downloadCSV(csvContent, `статистика_<?php echo isset($userInfo) ? $userInfo["login"] : "all"; ?>_<?php echo date("Y-m-d"); ?>.csv`);
+            <?php else: ?>
+                alert('Нет данных для экспорта. Сначала сформируйте статистику.');
+            <?php endif; ?>
+        }
+
+        // Экспорт таблицы всех результатов в CSV
+        function exportAllResultsToCSV() {
+            const table = document.getElementById('allResultsTable');
+            if (!table) {
+                alert('Таблица не найдена');
+                return;
+            }
+            
+            let csv = [];
+            const rows = table.querySelectorAll('tr');
+            
+            // Заголовки
+            const headers = [];
+            table.querySelectorAll('th').forEach(header => {
+                // Убираем иконки сортировки
+                const text = header.textContent.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim();
+                headers.push(text);
+            });
+            csv.push(headers);
+            
+            // Данные
+            rows.forEach((row, rowIndex) => {
+                if (rowIndex === 0) return; // Пропускаем заголовок
+                
+                const rowData = [];
+                row.querySelectorAll('td').forEach((cell, cellIndex) => {
+                    // Пропускаем столбец с действиями (последний)
+                    if (cellIndex < row.cells.length - 1) {
+                        const text = cell.textContent.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim();
+                        rowData.push(text);
+                    }
+                });
+                csv.push(rowData);
+            });
+            
+            const csvContent = csv.map(row =>
+                row.map(cell => `"${cell}"`).join(',')
+            ).join('\n');
+            
+            downloadCSV(csvContent, `все_результаты_<?php echo date("Y-m-d"); ?>.csv`);
+        }
+
+        // Общая функция для скачивания CSV
+        function downloadCSV(csvContent, filename) {
+            const blob = new Blob(["\ufeff", csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+
+            link.setAttribute('href', url);
+            link.setAttribute('download', filename);
+            link.style.visibility = 'hidden';
+
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
         // Создание графика (если нужно)
         function createStatsChart() {
             const ctx = document.getElementById('statsChart');
@@ -1119,54 +1221,28 @@ $selected_date = isset($_GET['date_from']) ? $_GET['date_from'] : '';
         document.addEventListener('DOMContentLoaded', function () {
             createStatsChart();
 
-            // Переключение вкладок с сохранением состояния
-            const hash = window.location.hash;
-            if (hash) {
-                const tab = document.querySelector(`a[href="${hash}"]`);
-                if (tab) {
-                    tab.click();
-                }
-            }
-
-            // Обработчик изменения вкладок
+            // Обработчик изменения вкладок с сохранением параметров URL
             document.querySelectorAll('button[data-bs-toggle="tab"]').forEach(tab => {
                 tab.addEventListener('shown.bs.tab', function (event) {
-                    window.location.hash = event.target.getAttribute('data-bs-target');
+                    const tabId = event.target.getAttribute('data-bs-target').replace('#', '');
+                    const urlParams = new URLSearchParams(window.location.search);
+                    urlParams.set('tab', tabId);
+                    
+                    // Сохраняем параметры фильтрации для соответствующей вкладки
+                    if (tabId === 'detailed') {
+                        if (urlParams.has('user_id_all')) urlParams.delete('user_id_all');
+                        if (urlParams.has('class_all')) urlParams.delete('class_all');
+                        if (urlParams.has('date_from_all')) urlParams.delete('date_from_all');
+                    } else if (tabId === 'all-results') {
+                        if (urlParams.has('user_id')) urlParams.delete('user_id');
+                        if (urlParams.has('class')) urlParams.delete('class');
+                        if (urlParams.has('date_from')) urlParams.delete('date_from');
+                    }
+                    
+                    history.replaceState(null, '', '?' + urlParams.toString());
                 });
             });
         });
-
-        // Экспорт данных
-        function exportStatsToCSV() {
-            let csv = [
-                ['Параметр', 'Значение'],
-                ['Пользователь', '<?php echo $userInfo ? htmlspecialchars($userInfo["lastname"] . " " . $userInfo["name"]) : "Все пользователи"; ?>'],
-                ['Класс', '<?php echo !empty($selected_class) ? htmlspecialchars($selected_class) : "Все классы"; ?>'],
-                ['Дата с', '<?php echo !empty($selected_date) ? date("d.m.Y", strtotime($selected_date)) : "Не указана"; ?>'],
-                ['Количество попыток', '<?php echo isset($detailedStats["attempts"]) ? $detailedStats["attempts"] : 0; ?>'],
-                ['Средний балл (%)', '<?php echo isset($avgScore) ? $avgScore : 0; ?>'],
-                ['Минимальный балл (%)', '<?php echo isset($minScore) ? $minScore : 0; ?>'],
-                ['Максимальный балл (%)', '<?php echo isset($maxScore) ? $maxScore : 0; ?>'],
-                ['Первая попытка', '<?php echo isset($firstAttempt) ? $firstAttempt : ""; ?>'],
-                ['Последняя попытка', '<?php echo isset($lastAttempt) ? $lastAttempt : ""; ?>']
-            ];
-
-            const csvContent = csv.map(row =>
-                row.map(cell => `"${cell}"`).join(',')
-            ).join('\n');
-
-            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement('a');
-            const url = URL.createObjectURL(blob);
-
-            link.setAttribute('href', url);
-            link.setAttribute('download', `статистика_${new Date().toISOString().slice(0, 10)}.csv`);
-            link.style.visibility = 'hidden';
-
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
     </script>
 </body>
 
