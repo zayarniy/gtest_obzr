@@ -167,7 +167,7 @@ try {
                 tr.date,
                 ui.id AS user_id,
                 ui.login AS user_login,
-                ui.name AS user_name,
+                CONCAT_WS(' ', ui.lastname, ui.name, ui.surname) AS user_name,
                 ui.email AS user_email
             FROM
                 test_result tr
@@ -185,7 +185,8 @@ try {
         }
 
         if (!empty($_GET['user_name'])) {
-            $whereClauses[] = "(ui.name LIKE ? OR ui.login LIKE ?)";
+            $whereClauses[] = "(ui.name LIKE ? OR ui.login LIKE ? OR CONCAT_WS(' ', ui.lastname, ui.name, ui.surname) LIKE ?)";
+            $params[] = "%" . $_GET['user_name'] . "%";
             $params[] = "%" . $_GET['user_name'] . "%";
             $params[] = "%" . $_GET['user_name'] . "%";
         }
@@ -265,15 +266,13 @@ try {
                 <table class="table table-striped table-hover">
                     <thead class="table-dark">
                         <tr>
-                            <th class="sortable" onclick="sortTable(\'user_id\')">ID <i class="fas fa-sort sort-icon"></i></th>
-                            <th class="sortable" onclick="sortTable(\'user_login\')">Логин <i class="fas fa-sort sort-icon"></i></th>
-                            <th class="sortable" onclick="sortTable(\'user_name\')">Имя <i class="fas fa-sort sort-icon"></i></th>
-                            <th>Email</th>
-                            <th class="sortable" onclick="sortTable(\'test_name\')">Тест <i class="fas fa-sort sort-icon"></i></th>
-                            <th class="sortable" onclick="sortTable(\'correct_answers\')">Правильно <i class="fas fa-sort sort-icon"></i></th>
+                            <th>ID</th>
+                            <th>Пользователь</th>
+                            <th>Тест</th>
+                            <th>Правильно</th>
                             <th>Всего</th>
-                            <th class="sortable" onclick="sortTable(\'percent\')">Результат <i class="fas fa-sort sort-icon"></i></th>
-                            <th class="sortable" onclick="sortTable(\'date\')">Дата <i class="fas fa-sort sort-icon"></i></th>
+                            <th>Результат</th>
+                            <th>Дата</th>
                             <th>Детали</th>
                         </tr>
                     </thead>
@@ -296,9 +295,15 @@ try {
                 echo "
                     <tr>
                         <td>{$test['user_id']}</td>
-                        <td><strong>{$test['user_login']}</strong></td>
-                        <td>{$test['user_name']}</td>
-                        <td><small>{$test['user_email']}</small></td>
+                        <td>
+                            <a href='javascript:void(0);' 
+                               class='user-name-link' 
+                               data-login='" . htmlspecialchars($test['user_login']) . "'
+                               data-email='" . htmlspecialchars($test['user_email']) . "'
+                               onclick='showUserInfo(this)'>
+                                {$test['user_name']}
+                            </a>
+                        </td>
                         <td><span class='text-primary'>{$test['test_name']}</span></td>
                         <td><strong>{$test['correct_answers']}</strong></td>
                         <td>{$test['total_questions']}</td>
@@ -342,3 +347,82 @@ try {
     echo '<div class="alert alert-danger">Ошибка подключения к базе данных</div>';
 }
 ?>
+
+<!-- Модальное окно для отображения информации о пользователе -->
+<div class="modal fade" id="userInfoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Информация о пользователе</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="user-info-details">
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Логин:</label>
+                        <div class="user-info-value" id="user-info-login"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted">Email:</label>
+                        <div class="user-info-value" id="user-info-email"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Стили для модального окна и ссылок -->
+<style>
+    .user-name-link {
+        color: #0d6efd;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    
+    .user-name-link:hover {
+        color: #0a58ca;
+        text-decoration: underline;
+    }
+    
+    .user-info-details {
+        padding: 10px 0;
+    }
+    
+    .user-info-value {
+        padding: 8px 12px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        border: 1px solid #dee2e6;
+        font-weight: 500;
+    }
+</style>
+
+<!-- JavaScript для отображения информации о пользователе -->
+<script>
+function showUserInfo(element) {
+    // Получаем данные из data-атрибутов
+    const login = element.getAttribute('data-login');
+    const email = element.getAttribute('data-email');
+    
+    // Заполняем модальное окно
+    document.getElementById('user-info-login').textContent = login;
+    document.getElementById('user-info-email').textContent = email;
+    
+    // Показываем модальное окно
+    const modal = new bootstrap.Modal(document.getElementById('userInfoModal'));
+    modal.show();
+}
+
+// Функция для выбора всех тестов (оставлена для совместимости)
+function selectAllTests(select) {
+    const checkboxes = document.querySelectorAll('input[name="test_checkbox[]"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = select;
+    });
+}
+</script>
