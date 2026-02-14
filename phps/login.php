@@ -10,6 +10,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 $login = trim($data['login'] ?? '');
 $password = trim($data['password'] ?? '');
 
+
 logMessage("Received login: '$login', password length: " . strlen($password));
 
 if (empty($login) || empty($password)) {
@@ -20,7 +21,8 @@ if (empty($login) || empty($password)) {
 
 try {
     $pdo = getDbConnection();
-    $stmt = $pdo->prepare("SELECT id, login, password FROM user_info WHERE login = ?");
+    // Добавляем поля lastname, name, surname в запрос
+    $stmt = $pdo->prepare("SELECT id, login, password, lastname, name, surname FROM user_info WHERE login = ?");
     $stmt->execute([$login]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -29,8 +31,17 @@ try {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_login'] = $user['login'];
+            // Сохраняем ФИО в сессию
+            $_SESSION['user_lastname'] = $user['lastname'] ?? '';
+            $_SESSION['user_name'] = $user['name'] ?? '';
+            $_SESSION['user_surname'] = $user['surname'] ?? '';
+            
+            logMessage("Login successful for user: $login, FIO: " . 
+                      ($user['lastname'] ?? '') . ' ' . 
+                      ($user['name'] ?? '') . ' ' . 
+                      ($user['surname'] ?? ''));
+            
             echo json_encode(['status' => 'success', 'message' => 'Вход выполнен.']);
-            logMessage("Login successful for user: $login");
         } else {
             echo json_encode(['status' => 'error', 'message' => 'Неверный логин или пароль.']);
             logMessage("Wrong password for user: $login", "Error");

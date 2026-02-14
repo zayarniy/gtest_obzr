@@ -1,0 +1,2005 @@
+2025-10-06 19:16:55 [INFO] Start authentication
+2025-10-06 19:16:55 [Error] Invalid JSON data
+2025-10-06 19:16:55 [ERROR] Invalid JSON data
+2025-10-06 19:19:56 [INFO] Start authentication
+2025-10-06 19:19:56 [INFO] Authenticating user: tete
+2025-10-06 19:19:56 [INFO] Authentication successful for user: tete
+2025-10-06 19:25:20 [INFO] Start authentication
+2025-10-06 19:25:20 [INFO] Authenticating user: 1
+2025-10-06 19:25:20 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:25:20 [ERROR] Authentication failed: Invalid login or password
+2025-10-06 19:30:56 [INFO] Start authentication
+2025-10-06 19:30:56 [INFO] Authenticating user: 1
+2025-10-06 19:30:56 [INFO] Authentication successful for user: 1
+2025-10-06 19:31:03 [INFO] Start authentication
+2025-10-06 19:31:04 [INFO] Authenticating user: 1
+2025-10-06 19:31:04 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:31:22 [INFO] Start authentication
+2025-10-06 19:31:22 [INFO] Authenticating user: 1
+2025-10-06 19:31:22 [INFO] Authentication successful for user: 1
+2025-10-06 19:32:50 [INFO] Start authentication
+2025-10-06 19:32:50 [INFO] Authenticating user: 1
+2025-10-06 19:32:50 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:32:59 [INFO] Start authentication
+2025-10-06 19:32:59 [INFO] Authenticating user: 1
+2025-10-06 19:32:59 [Error] Authentication failed: Invalid login or password
+2025-10-06 19:33:05 [INFO] Start authentication
+2025-10-06 19:33:05 [INFO] Authenticating user: 1
+2025-10-06 19:33:05 [INFO] Authentication successful for user: 1
+2025-10-07 12:13:43 [INFO] Start authentication
+2025-10-07 12:13:43 [INFO] Authenticating user: 123
+2025-10-07 12:13:43 [Error] Authentication failed: Invalid login or password
+2025-10-07 12:13:56 [INFO] Start authentication
+2025-10-07 12:13:56 [INFO] Authenticating user: 1
+2025-10-07 12:13:56 [INFO] Authentication successful for user: 1
+2025-10-07 12:15:09 [INFO] Start authentication
+2025-10-07 12:15:09 [INFO] Authenticating user: 1
+2025-10-07 12:15:09 [INFO] Authentication successful for user: 1
+2025-10-08 13:20:07 [INFO] Start authentication
+2025-10-08 13:20:07 [INFO] Authenticating user: 1
+2025-10-08 13:20:07 [INFO] Authentication successful for user: 1
+2025-10-08 13:52:43 [INFO] Start registration
+2025-10-08 13:52:43 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 13:53:09 [INFO] Start registration
+2025-10-08 13:53:09 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 13:53:55 [INFO] Start registration
+2025-10-08 13:53:56 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 14:04:08 [INFO] Start registration
+2025-10-08 14:04:08 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 14:07:27 [INFO] Start registration
+2025-10-08 14:07:27 [ERROR] Unknown column 'surname' in 'field list'
+2025-10-08 14:10:03 [INFO] Start registration
+2025-10-08 14:10:03 [INFO] User registered successfully: ewq
+2025-10-08 14:17:31 [INFO] Start authentication
+2025-10-08 14:17:31 [INFO] Authenticating user: 1
+2025-10-08 14:17:31 [Error] Authentication failed: Invalid login or password
+2025-10-08 14:36:14 [INFO] Start registration
+2025-10-08 14:36:14 [INFO] User registered successfully: 11
+2025-10-08 14:36:31 [INFO] Start authentication
+2025-10-08 14:36:31 [INFO] Authenticating user: 1
+2025-10-08 14:36:31 [Error] Authentication failed: User not found
+2025-10-08 14:36:46 [INFO] Start authentication
+2025-10-08 14:36:46 [INFO] Authenticating user: 11
+2025-10-08 14:36:46 [INFO] Authentication successful for user: 11
+2025-10-08 14:39:45 [INFO] Start authentication
+2025-10-08 14:39:45 [INFO] Authenticating user: 11
+2025-10-08 14:39:45 [INFO] Authentication successful for user: 11
+2025-10-11 08:06:00 [INFO] Start registration
+2025-10-11 08:06:00 [Error] User with this login or email already exists
+2025-10-11 08:06:00 [ERROR] Пользователь с таким логином или почтой уже существует.
+2025-10-11 08:06:13 [INFO] Start registration
+2025-10-11 08:06:13 [INFO] User registered successfully: 1
+2025-10-11 08:18:00 [INFO] Start login
+2025-10-11 08:18:00 [Error] Login failed
+2025-10-11 08:20:07 [INFO] Start registration
+2025-10-11 08:20:07 [INFO] User registered successfully: 1
+2025-10-11 08:20:11 [INFO] Start login
+2025-10-11 08:20:11 [Error] Login failed. Wrong login or password
+2025-10-11 08:20:46 [INFO] Start registration
+2025-10-11 08:20:46 [INFO] User registered successfully: 1
+2025-10-11 08:20:54 [INFO] Start login
+2025-10-11 08:20:54 [Error] Login failed. Wrong login or password
+2025-10-11 08:23:37 [INFO] Start login
+2025-10-11 08:23:37 [Error] Login failed. Wrong login or password(1:.1
+2025-10-11 08:28:14 [INFO] Start login
+2025-10-11 08:28:14 [INFO] Array
+2025-10-11 08:28:14 [Error] Login failed. Wrong login or password(1:1)
+2025-10-11 08:29:13 [INFO] Start login
+2025-10-11 08:29:13 [Error] Login failed. Wrong login or password(1:1)
+2025-10-11 08:30:06 [INFO] Start login
+2025-10-11 08:30:06 [INFO] 1
+2025-10-11 08:30:06 [Error] Login failed. Wrong login or password(1:1)
+2025-10-11 08:41:14 [INFO] Start registration
+2025-10-11 08:41:14 [INFO] User registered successfully: 2
+2025-10-14 12:59:53 [INFO] Start registration
+2025-10-14 12:59:54 [INFO] User registered successfully: 3
+2025-10-15 13:16:16 [INFO] Start registration
+2025-10-15 13:16:19 [INFO] Start registration
+2025-10-15 13:16:20 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:16:23 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:16:32 [INFO] Start registration
+2025-10-15 13:16:36 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:16:40 [INFO] Start registration
+2025-10-15 13:16:44 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:17:04 [INFO] Start registration
+2025-10-15 13:17:08 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:17:35 [INFO] Start registration
+2025-10-15 13:17:39 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:17:47 [INFO] Start registration
+2025-10-15 13:17:51 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:24:51 [INFO] Start registration
+2025-10-15 13:24:55 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:27:00 [INFO] Start registration
+2025-10-15 13:27:04 [ERROR] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-15 13:27:27 [INFO] Start registration
+2025-10-15 13:27:27 [Error] User with this login or email already exists
+2025-10-15 13:27:41 [INFO] Start registration
+2025-10-15 13:27:41 [Error] User with this login or email already exists
+2025-10-15 13:28:04 [INFO] Start registration
+2025-10-15 13:28:04 [Error] User with this login or email already exists
+2025-10-15 13:29:13 [INFO] Start registration
+2025-10-15 13:29:13 [Error] User with this login or email already exists
+2025-10-15 13:29:13 [ERROR] Пользователь с таким логином или почтой уже существует.
+2025-10-15 13:32:28 [INFO] Start registration
+2025-10-15 13:32:29 [Error] User with this login or email already exists
+2025-10-15 14:06:18 [INFO] get_user_data.php started
+2025-10-15 14:07:14 [INFO] get_user_data.php started
+2025-10-15 14:07:14 [INFO]  = getDbConnection();
+2025-10-15 14:08:25 [INFO] get_user_data.php started
+2025-10-15 14:08:25 [INFO] !!!
+2025-10-15 14:08:57 [INFO] get_user_data.php started
+2025-10-15 14:10:05 [INFO] get_user_data.php started
+2025-10-15 14:11:29 [INFO] get_user_data.php started
+2025-10-15 14:12:56 [INFO] get_user_data.php started
+2025-10-15 14:13:47 [INFO] get_user_data.php started
+2025-10-15 14:13:47 [INFO] 5
+2025-10-15 14:14:26 [INFO] get_user_data.php started
+2025-10-15 14:14:26 [INFO] 5
+2025-10-15 14:15:40 [INFO] get_user_data.php started
+2025-10-15 14:17:26 [INFO] get_user_data.php started
+2025-10-15 14:20:50 [INFO] get_user_data.php started
+2025-10-15 14:20:50 [INFO] 5
+2025-10-15 14:23:25 [INFO] get_user_data.php started
+2025-10-15 14:23:25 [INFO] 5
+2025-10-15 14:25:21 [INFO] !!
+2025-10-15 14:25:44 [INFO] !!
+2025-10-15 14:26:23 [INFO] !!
+2025-10-15 14:29:07 [INFO] !!
+2025-10-18 07:46:08 [INFO] Start login attempt
+2025-10-18 07:46:08 [INFO] Received login: '3', password length: 1
+2025-10-18 07:46:08 [INFO] User found in DB. Checking password...
+2025-10-18 07:46:08 [INFO] Login successful for user: 3
+2025-10-18 07:46:20 [INFO] get_user_data.php started
+2025-10-18 07:46:20 [INFO] 7
+2025-10-18 08:05:10 [INFO] Start login attempt
+2025-10-18 08:05:10 [INFO] Received login: '1', password length: 1
+2025-10-18 08:05:10 [Error] User not found: 1
+2025-10-18 08:05:23 [INFO] Start login attempt
+2025-10-18 08:05:23 [INFO] Received login: '2', password length: 1
+2025-10-18 08:05:23 [INFO] User found in DB. Checking password...
+2025-10-18 08:05:23 [INFO] Login successful for user: 2
+2025-10-18 08:44:02 [INFO] Start saving test result
+2025-10-18 08:44:02 [INFO] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+2025-10-18 08:44:02 [INFO] Test result saved successfully
+2025-10-20 18:06:18 [INFO] Start login attempt
+2025-10-20 18:06:18 [INFO] Received login: '3', password length: 1
+2025-10-20 18:06:18 [INFO] User found in DB. Checking password...
+2025-10-20 18:06:18 [INFO] Login successful for user: 3
+2025-10-20 18:06:35 [INFO] Start saving test result
+2025-10-20 18:06:35 [INFO] Data: user_id=7, test_name=тест по С#, correct_answers=0, total_questions=20, attempts_left=2
+2025-10-20 18:06:35 [INFO] Test result saved successfully
+2025-10-20 18:06:40 [INFO] get_user_data.php started
+2025-10-20 18:06:40 [INFO] 7
+2025-10-21 12:06:48 [INFO] Start login attempt
+2025-10-21 12:06:48 [INFO] Received login: '3', password length: 1
+2025-10-21 12:06:48 [INFO] User found in DB. Checking password...
+2025-10-21 12:06:48 [INFO] Login successful for user: 3
+2025-10-21 12:07:03 [INFO] Start saving test result
+2025-10-21 12:07:03 [INFO] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+2025-10-21 12:07:03 [INFO] Test result saved successfully
+2025-10-21 12:07:08 [INFO] get_user_data.php started
+2025-10-21 12:07:08 [INFO] 7
+2025-10-21 12:36:27 [INFO] Start login attempt
+2025-10-21 12:36:27 [INFO] Received login: '3', password length: 1
+2025-10-21 12:36:27 [INFO] User found in DB. Checking password...
+2025-10-21 12:36:27 [INFO] Login successful for user: 3
+2025-10-21 12:36:44 [INFO] Start saving test result
+2025-10-21 12:36:44 [INFO] Data: user_id=7, test_name=тестовый, correct_answers=0, total_questions=11, attempts_left=2
+2025-10-21 12:36:44 [INFO] Test result saved successfully
+2025-10-21 12:36:48 [INFO] get_user_data.php started
+2025-10-21 12:36:48 [INFO] 7
+2025-10-21 12:36:55 [INFO] get_user_data.php started
+2025-10-21 12:36:55 [INFO] 7
+2025-10-21 12:41:58 [INFO] Start login attempt
+2025-10-21 12:41:58 [INFO] Received login: '3', password length: 1
+2025-10-21 12:41:58 [INFO] User found in DB. Checking password...
+2025-10-21 12:41:58 [INFO] Login successful for user: 3
+2025-10-22 13:20:07 [INFO] Start login attempt
+2025-10-22 13:20:07 [INFO] Received login: '1', password length: 1
+2025-10-22 13:20:07 [Error] User not found: 1
+2025-10-22 13:20:12 [INFO] Start login attempt
+2025-10-22 13:20:12 [INFO] Received login: '1', password length: 2
+2025-10-22 13:20:12 [Error] User not found: 1
+2025-10-22 13:20:28 [INFO] Start login attempt
+2025-10-22 13:20:28 [INFO] Received login: '2', password length: 1
+2025-10-22 13:20:28 [INFO] User found in DB. Checking password...
+2025-10-22 13:20:28 [INFO] Login successful for user: 2
+2025-10-22 13:20:35 [INFO] get_user_data.php started
+2025-10-22 13:20:35 [INFO] 6
+2025-10-22 13:30:55 [INFO] Start registration
+2025-10-22 13:30:55 [ERROR] Access denied for user 'root'@'localhost' (using password: NO)
+2025-10-22 13:32:29 [INFO] Start registration
+2025-10-22 13:32:29 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:33:28 [INFO] Start registration
+2025-10-22 13:33:28 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:37:45 [INFO] Start registration
+2025-10-22 13:37:45 [INFO] User registered successfully: admin
+2025-10-22 13:38:19 [INFO] Start registration
+2025-10-22 13:38:19 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:38:26 [INFO] Start registration
+2025-10-22 13:38:26 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:38:31 [INFO] Start registration
+2025-10-22 13:38:31 [ERROR] Access denied for user ''@'localhost' (using password: NO)
+2025-10-22 13:44:36 [INFO] Start registration
+2025-10-22 13:44:36 [INFO] User registered successfully: admin2
+2025-10-22 13:55:24 [INFO] Start login attempt
+2025-10-22 13:55:24 [INFO] Received login: 'admin', password length: 6
+2025-10-22 13:55:24 [INFO] User found in DB. Checking password...
+2025-10-22 13:55:24 [INFO] Login successful for user: admin
+2025-10-22 14:17:01 [INFO] get_user_data.php started
+2025-10-22 14:17:01 [INFO] 8
+2025-10-22 14:17:59 [INFO] Start login attempt
+2025-10-22 14:17:59 [INFO] Received login: '2', password length: 1
+2025-10-22 14:17:59 [INFO] User found in DB. Checking password...
+2025-10-22 14:18:00 [Error] Wrong password for user: 2
+2025-10-22 14:18:32 [INFO] Start login attempt
+2025-10-22 14:18:32 [INFO] Received login: '2', password length: 1
+2025-10-22 14:18:32 [INFO] User found in DB. Checking password...
+2025-10-22 14:18:32 [Error] Wrong password for user: 2
+2025-10-22 14:18:42 [INFO] Start login attempt
+2025-10-22 14:18:42 [INFO] Received login: '3', password length: 1
+2025-10-22 14:18:42 [INFO] User found in DB. Checking password...
+2025-10-22 14:18:42 [INFO] Login successful for user: 3
+2025-10-22 14:23:12 [INFO] Start login attempt
+2025-10-22 14:23:12 [INFO] Received login: 'admin', password length: 5
+2025-10-22 14:23:12 [INFO] User found in DB. Checking password...
+2025-10-22 14:23:12 [Error] Wrong password for user: admin
+2025-10-22 14:23:17 [INFO] Start login attempt
+2025-10-22 14:23:17 [INFO] Received login: 'admin', password length: 6
+2025-10-22 14:23:17 [INFO] User found in DB. Checking password...
+2025-10-22 14:23:17 [INFO] Login successful for user: admin
+2025-10-24 08:35:54 [INFO] Start login attempt
+2025-10-24 08:35:54 [INFO] Received login: '3', password length: 1
+2025-10-24 08:35:54 [INFO] User found in DB. Checking password...
+2025-10-24 08:35:55 [INFO] Login successful for user: 3
+2025-10-24 08:36:22 [INFO] Start login attempt
+2025-10-24 08:36:22 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:36:22 [INFO] User found in DB. Checking password...
+2025-10-24 08:36:22 [Error] Wrong password for user: admin
+2025-10-24 08:36:31 [INFO] Start login attempt
+2025-10-24 08:36:31 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:36:31 [INFO] User found in DB. Checking password...
+2025-10-24 08:36:31 [Error] Wrong password for user: admin
+2025-10-24 08:36:51 [INFO] Start login attempt
+2025-10-24 08:36:51 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:36:51 [INFO] User found in DB. Checking password...
+2025-10-24 08:36:51 [Error] Wrong password for user: admin
+2025-10-24 08:41:01 [INFO] Start registration
+2025-10-24 08:41:01 [Error] User with this login or email already exists
+2025-10-24 08:41:35 [INFO] Start registration
+2025-10-24 08:41:35 [Error] User with this login or email already exists
+2025-10-24 08:41:58 [INFO] Start registration
+2025-10-24 08:41:58 [Error] User with this login or email already exists
+2025-10-24 08:42:20 [INFO] Start login attempt
+2025-10-24 08:42:20 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:42:20 [INFO] User found in DB. Checking password...
+2025-10-24 08:42:20 [Error] Wrong password for user: admin
+2025-10-24 08:45:22 [INFO] Start login attempt
+2025-10-24 08:45:22 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:45:22 [INFO] User found in DB. Checking password...
+2025-10-24 08:45:23 [Error] Wrong password for user: admin
+2025-10-24 08:45:43 [INFO] Start login attempt
+2025-10-24 08:45:43 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:45:43 [INFO] User found in DB. Checking password...
+2025-10-24 08:45:43 [Error] Wrong password for user: admin
+2025-10-24 08:48:04 [INFO] Start login attempt
+2025-10-24 08:48:04 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:48:04 [INFO] User found in DB. Checking password...
+2025-10-24 08:48:04 [Error] Wrong password for user: admin
+2025-10-24 08:48:16 [INFO] Start login attempt
+2025-10-24 08:48:16 [INFO] Received login: 'admin', password length: 6
+2025-10-24 08:48:16 [INFO] User found in DB. Checking password...
+2025-10-24 08:48:16 [INFO] Login successful for user: admin
+2025-10-24 08:53:00 [INFO] Start login attempt
+2025-10-24 08:53:00 [INFO] Received login: 'admin', password length: 5
+2025-10-24 08:53:00 [INFO] User found in DB. Checking password...
+2025-10-24 08:53:00 [Error] Wrong password for user: admin
+2025-10-24 08:53:07 [INFO] Start login attempt
+2025-10-24 08:53:07 [INFO] Received login: 'admin', password length: 6
+2025-10-24 08:53:07 [INFO] User found in DB. Checking password...
+2025-10-24 08:53:08 [INFO] Login successful for user: admin
+2025-10-24 08:54:30 [INFO] Start login attempt
+2025-10-24 08:54:30 [INFO] Received login: '3', password length: 1
+2025-10-24 08:54:30 [INFO] User found in DB. Checking password...
+2025-10-24 08:54:31 [INFO] Login successful for user: 3
+2025-10-24 08:54:36 [INFO] get_user_data.php started
+2025-10-24 08:54:36 [INFO] 7
+2025-10-24 08:54:43 [INFO] get_user_data.php started
+2025-10-24 08:54:43 [INFO] 7
+2025-10-26 07:14:06 [INFO] Start login attempt
+2025-10-26 07:14:06 [INFO] Received login: 'admin', password length: 5
+2025-10-26 07:14:07 [INFO] User found in DB. Checking password...
+2025-10-26 07:14:07 [Error] Wrong password for user: admin
+2025-10-26 07:14:16 [INFO] Start login attempt
+2025-10-26 07:14:16 [INFO] Received login: 'admin', password length: 6
+2025-10-26 07:14:16 [INFO] User found in DB. Checking password...
+2025-10-26 07:14:16 [INFO] Login successful for user: admin
+2025-10-26 07:14:43 [INFO] get_user_data.php started
+2025-10-26 07:14:43 [INFO] 8
+2025-10-26 07:14:55 [INFO] get_user_data.php started
+2025-10-26 07:14:55 [INFO] 8
+2025-10-27 17:31:22 [INFO] Start login attempt
+2025-10-27 17:31:22 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:24 [INFO] Start login attempt
+2025-10-27 17:31:24 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:26 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:31:28 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:31:38 [INFO] Start login attempt
+2025-10-27 17:31:38 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:42 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:31:42 [INFO] Start login attempt
+2025-10-27 17:31:42 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:31:46 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:32:03 [INFO] Start login attempt
+2025-10-27 17:32:03 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:32:07 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:32:21 [INFO] Start login attempt
+2025-10-27 17:32:21 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:32:25 [Error] Database error: SQLSTATE[HY000] [2002] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+2025-10-27 17:35:01 [INFO] Start login attempt
+2025-10-27 17:35:01 [INFO] Received login: 'admin', password length: 6
+2025-10-27 17:35:02 [INFO] User found in DB. Checking password...
+2025-10-27 17:35:02 [INFO] Login successful for user: admin
+2025-11-01 00:03:00 [INFO] Start registration
+2025-11-01 00:03:00 [INFO] User registered successfully: admin
+2025-11-01 00:03:10 [INFO] Start login attempt
+2025-11-01 00:03:10 [INFO] Received login: 'admin', password length: 12
+2025-11-01 00:03:10 [INFO] User found in DB. Checking password...
+2025-11-01 00:03:10 [INFO] Login successful for user: admin
+2025-11-01 00:21:25 [INFO] Start saving test result
+2025-11-01 00:21:25 [INFO] Data: user_id=1, test_name=ОБЗР "Комплексная безопасность", correct_answers=19, total_questions=20, attempts_left=2
+2025-11-01 00:21:25 [Error] Database error: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'host1340522_gtests2025.test_result' doesn't exist
+2025-11-01 00:24:56 [INFO] Start saving test result
+2025-11-01 00:24:56 [INFO] Data: user_id=1, test_name=ОБЗР "Комплексная безопасность", correct_answers=19, total_questions=20, attempts_left=1
+2025-11-01 00:24:56 [INFO] Test result saved successfully
+2025-11-01 00:47:16 [INFO] Start saving test result
+2025-11-01 00:47:16 [INFO] Data: user_id=1, test_name=10-2. ОБЗР "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=1, total_questions=20, attempts_left=2
+2025-11-01 00:47:16 [INFO] Test result saved successfully
+2025-11-01 00:47:28 [INFO] Start saving test result
+2025-11-01 00:47:28 [INFO] Data: user_id=1, test_name=10-2. ОБЗР "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=2, total_questions=20, attempts_left=1
+2025-11-01 00:47:28 [INFO] Test result saved successfully
+2025-11-01 00:47:34 [INFO] Start saving test result
+2025-11-01 00:47:34 [INFO] Data: user_id=1, test_name=10-2. ОБЗР "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=3, total_questions=20, attempts_left=0
+2025-11-01 00:47:34 [INFO] Test result saved successfully
+2025-11-01 00:54:19 [INFO] Start login attempt
+2025-11-01 00:54:19 [INFO] Received login: 'admin', password length: 12
+2025-11-01 00:54:19 [INFO] User found in DB. Checking password...
+2025-11-01 00:54:19 [INFO] Login successful for user: admin
+2025-11-01 00:54:51 [INFO] Start login attempt
+2025-11-01 00:54:51 [INFO] Received login: 'admin', password length: 12
+2025-11-01 00:54:51 [INFO] User found in DB. Checking password...
+2025-11-01 00:54:51 [INFO] Login successful for user: admin
+2025-11-01 00:57:41 [INFO] Start registration
+2025-11-01 00:57:41 [Error] User with this login or email already exists
+2025-11-01 00:57:48 [INFO] Start registration
+2025-11-01 00:57:48 [INFO] User registered successfully: test
+2025-11-01 00:57:56 [INFO] Start login attempt
+2025-11-01 00:57:56 [INFO] Received login: 'test', password length: 4
+2025-11-01 00:57:56 [INFO] User found in DB. Checking password...
+2025-11-01 00:57:56 [INFO] Login successful for user: test
+2025-11-01 00:58:53 [INFO] Start saving test result
+2025-11-01 00:58:53 [INFO] Data: user_id=2, test_name=10-3. ОБЗР "Основы медицинских знаний и оказание первой медицинской помощи", correct_answers=19, total_questions=20, attempts_left=2
+2025-11-01 00:58:53 [INFO] Test result saved successfully
+2025-11-01 00:59:01 [INFO] get_user_data.php started
+2025-11-01 00:59:01 [INFO] 2
+2025-11-01 01:00:41 [INFO] Start login attempt
+2025-11-01 01:00:41 [INFO] Received login: 'admin', password length: 12
+2025-11-01 01:00:41 [INFO] User found in DB. Checking password...
+2025-11-01 01:00:41 [INFO] Login successful for user: admin
+2025-11-01 01:56:56 [INFO] Start saving test result
+2025-11-01 01:56:56 [INFO] Data: user_id=1, test_name=11-11. ОБЗР 11 класс "Терроризм и экстремизм: их причины и последствия, correct_answers=9, total_questions=20, attempts_left=2
+2025-11-01 01:56:56 [INFO] Test result saved successfully
+2025-11-01 01:58:12 [INFO] Start saving test result
+2025-11-01 01:58:12 [INFO] Data: user_id=1, test_name=11-12. ОБЗР 11 класс: "Курение убивает. Алкоголь разрушает личность", correct_answers=10, total_questions=20, attempts_left=2
+2025-11-01 01:58:12 [INFO] Test result saved successfully
+2025-11-01 01:59:22 [INFO] Start saving test result
+2025-11-01 01:59:22 [INFO] Data: user_id=1, test_name=11-13. ОБЗР 11 класс: Здоровье — условие благополучия человека. Правовые основы сохранения и укрепления репродуктивного здоровья. Факторы, разрушающие репродуктивное здоровье, correct_answers=20, total_questions=20, attempts_left=2
+2025-11-01 01:59:22 [INFO] Test result saved successfully
+2025-11-01 12:03:34 [INFO] Start login attempt
+2025-11-01 12:03:34 [INFO] Received login: 'admin', password length: 12
+2025-11-01 12:03:34 [INFO] User found in DB. Checking password...
+2025-11-01 12:03:34 [INFO] Login successful for user: admin
+2025-11-02 09:28:21 [INFO] Start login attempt
+2025-11-02 09:28:21 [INFO] Received login: 'admin', password length: 12
+2025-11-02 09:28:21 [INFO] User found in DB. Checking password...
+2025-11-02 09:28:22 [Error] Wrong password for user: admin
+2025-11-02 09:28:30 [INFO] Start login attempt
+2025-11-02 09:28:30 [INFO] Received login: 'admin', password length: 12
+2025-11-02 09:28:30 [INFO] User found in DB. Checking password...
+2025-11-02 09:28:30 [Error] Wrong password for user: admin
+2025-11-02 09:28:43 [INFO] Start login attempt
+2025-11-02 09:28:43 [INFO] Received login: 'test', password length: 4
+2025-11-02 09:28:43 [INFO] User found in DB. Checking password...
+2025-11-02 09:28:43 [INFO] Login successful for user: test
+2025-11-02 09:30:16 [INFO] get_user_data.php started
+2025-11-02 09:30:16 [INFO] 2
+2025-11-04 22:09:53 [INFO] Start login attempt
+2025-11-04 22:09:53 [INFO] Received login: 'est280109@gmail.com', password length: 12
+2025-11-04 22:09:53 [Error] User not found: est280109@gmail.com
+2025-11-07 12:49:18 [INFO] Start registration
+2025-11-07 12:49:18 [INFO] User registered successfully: shsh
+2025-11-07 12:49:29 [INFO] Start login attempt
+2025-11-07 12:49:29 [INFO] Received login: 'shsh', password length: 12
+2025-11-07 12:49:29 [INFO] User found in DB. Checking password...
+2025-11-07 12:49:29 [INFO] Login successful for user: shsh
+2025-11-07 13:07:20 [INFO] Start saving test result
+2025-11-07 13:07:20 [INFO] Data: user_id=3, test_name=10-13. ОБЗР 10 класс "Основы медицинских знаний и оказание первой медицинской помощи", correct_answers=20, total_questions=20, attempts_left=2
+2025-11-07 13:07:20 [INFO] Test result saved successfully
+2025-11-11 12:22:55 [INFO] Start login attempt
+2025-11-11 12:22:55 [INFO] Received login: 'admin', password length: 12
+2025-11-11 12:22:55 [INFO] User found in DB. Checking password...
+2025-11-11 12:22:55 [INFO] Login successful for user: admin
+2025-11-11 12:25:11 [INFO] Start login attempt
+2025-11-11 12:25:11 [INFO] Received login: 'Хоккайдо55', password length: 6
+2025-11-11 12:25:11 [Error] User not found: Хоккайдо55
+2025-11-14 13:00:34 [INFO] Start login attempt
+2025-11-14 13:00:34 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:00:34 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:01:37 [INFO] Start login attempt
+2025-11-14 13:01:37 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:01:37 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:01:47 [INFO] Start login attempt
+2025-11-14 13:01:47 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:01:47 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:02:59 [INFO] Start login attempt
+2025-11-14 13:02:59 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:02:59 [Error] User not found: redko.viktor@internet.ru
+2025-11-14 13:03:01 [INFO] Start login attempt
+2025-11-14 13:03:01 [INFO] Received login: 'redko.viktor@internet.ru', password length: 20
+2025-11-14 13:03:01 [Error] User not found: redko.viktor@internet.ru
+2025-11-18 19:45:05 [INFO] Start registration
+2025-11-18 19:45:05 [INFO] User registered successfully: tuturoilfull
+2025-11-18 19:45:25 [INFO] Start login attempt
+2025-11-18 19:45:25 [INFO] Received login: 'tuturoilfull', password length: 13
+2025-11-18 19:45:25 [INFO] User found in DB. Checking password...
+2025-11-18 19:45:25 [INFO] Login successful for user: tuturoilfull
+2025-11-18 19:51:25 [INFO] Start saving test result
+2025-11-18 19:51:25 [INFO] Data: user_id=4, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=19, total_questions=20, attempts_left=2
+2025-11-18 19:51:25 [INFO] Test result saved successfully
+2025-11-18 19:51:59 [INFO] Start login attempt
+2025-11-18 19:51:59 [INFO] Received login: 'tuturoilfull', password length: 13
+2025-11-18 19:51:59 [INFO] User found in DB. Checking password...
+2025-11-18 19:52:00 [INFO] Login successful for user: tuturoilfull
+2025-11-18 19:58:34 [INFO] Start saving test result
+2025-11-18 19:58:34 [INFO] Data: user_id=4, test_name=10-12. ОБЗР 10 класс "Защита населения Российской Федерации от чрезвычайных ситуаций", correct_answers=20, total_questions=20, attempts_left=2
+2025-11-18 19:58:34 [INFO] Test result saved successfully
+2025-11-18 19:59:31 [INFO] Start login attempt
+2025-11-18 19:59:31 [INFO] Received login: 'tuturoilfull', password length: 13
+2025-11-18 19:59:31 [INFO] User found in DB. Checking password...
+2025-11-18 19:59:31 [INFO] Login successful for user: tuturoilfull
+2025-11-18 20:06:06 [INFO] Start saving test result
+2025-11-18 20:06:06 [INFO] Data: user_id=4, test_name=10-13. ОБЗР 10 класс "Основы медицинских знаний и оказание первой медицинской помощи", correct_answers=20, total_questions=20, attempts_left=2
+2025-11-18 20:06:06 [INFO] Test result saved successfully
+2026-01-11 16:24:29 [INFO] Start login attempt
+2026-01-11 16:24:29 [INFO] Received login: 'admin', password length: 12
+2026-01-11 16:24:29 [INFO] User found in DB. Checking password...
+2026-01-11 16:24:29 [INFO] Login successful for user: admin
+2026-01-11 16:25:06 [INFO] Start saving test result
+2026-01-11 16:25:06 [INFO] Data: user_id=1, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=0, total_questions=20, attempts_left=2
+2026-01-11 16:25:06 [INFO] Test result saved successfully
+2026-01-11 17:17:04 [INFO] Start login attempt
+2026-01-11 17:17:04 [INFO] Received login: 'admin', password length: 12
+2026-01-11 17:17:04 [INFO] User found in DB. Checking password...
+2026-01-11 17:17:04 [INFO] Login successful for user: admin
+2026-01-11 17:20:21 [INFO] Start saving test result
+2026-01-11 17:20:21 [INFO] Data: user_id=1, test_name=11-11. ОБЗР 11 класс "Терроризм и экстремизм: их причины и последствия, correct_answers=7, total_questions=20, attempts_left=2
+2026-01-11 17:20:21 [INFO] Test result saved successfully
+2026-01-11 17:21:55 [INFO] Start saving test result
+2026-01-11 17:21:55 [INFO] Data: user_id=1, test_name=11-11. ОБЗР 11 класс "Терроризм и экстремизм: их причины и последствия, correct_answers=7, total_questions=20, attempts_left=1
+2026-01-11 17:21:55 [INFO] Test result saved successfully
+2026-01-11 17:22:19 [INFO] Start saving test result
+2026-01-11 17:22:19 [INFO] Data: user_id=1, test_name=11-11. ОБЗР 11 класс "Терроризм и экстремизм: их причины и последствия, correct_answers=8, total_questions=20, attempts_left=0
+2026-01-11 17:22:19 [INFO] Test result saved successfully
+2026-01-11 18:22:19 [INFO] Start saving test result
+2026-01-11 18:22:19 [INFO] Data: user_id=1, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=12, total_questions=20, attempts_left=2
+2026-01-11 18:22:19 [INFO] Test result saved successfully
+2026-01-11 18:31:57 [INFO] Start saving test result
+2026-01-11 18:31:57 [INFO] Data: user_id=1, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=9, total_questions=20, attempts_left=0
+2026-01-11 18:31:57 [INFO] Test result saved successfully
+2026-01-11 19:11:00 [INFO] Start saving test result
+2026-01-11 19:11:00 [INFO] Data: user_id=1, test_name=10-14. ОБЗР 10 класс "Тест по основам военной подготовки. Часть 1", correct_answers=20, total_questions=20, attempts_left=0
+2026-01-11 19:11:00 [INFO] Test result saved successfully
+2026-01-11 19:13:31 [INFO] Start login attempt
+2026-01-11 19:13:31 [INFO] Received login: 'admin', password length: 12
+2026-01-11 19:13:31 [INFO] User found in DB. Checking password...
+2026-01-11 19:13:31 [INFO] Login successful for user: admin
+2026-01-11 19:44:02 [INFO] Start saving test result
+2026-01-11 19:44:02 [INFO] Data: user_id=1, test_name=10-14. ОБЗР 10 класс "Тест по основам военной подготовки. Часть 1", correct_answers=0, total_questions=20, attempts_left=0
+2026-01-11 19:44:02 [INFO] Test result saved successfully
+2026-01-11 19:57:29 [INFO] Start registration
+2026-01-11 19:57:29 [Error] User with this login or email already exists
+2026-01-11 20:06:27 [INFO] Start login attempt
+2026-01-11 20:06:27 [INFO] Received login: 'admin', password length: 12
+2026-01-11 20:06:27 [INFO] User found in DB. Checking password...
+2026-01-11 20:06:27 [INFO] Login successful for user: admin
+2026-01-11 21:58:21 [INFO] Start login attempt
+2026-01-11 21:58:21 [INFO] Received login: 'admin', password length: 12
+2026-01-11 21:58:21 [INFO] User found in DB. Checking password...
+2026-01-11 21:58:22 [INFO] Login successful for user: admin
+2026-01-11 22:00:43 [INFO] Start saving test result
+2026-01-11 22:00:43 [INFO] Data: user_id=1, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=0, total_questions=6, attempts_left=0
+2026-01-11 22:00:43 [INFO] Test result saved successfully
+2026-01-11 22:23:04 [INFO] Start login attempt
+2026-01-11 22:23:04 [INFO] Received login: 'admin', password length: 12
+2026-01-11 22:23:04 [INFO] User found in DB. Checking password...
+2026-01-11 22:23:04 [INFO] Login successful for user: admin
+2026-01-12 00:11:00 [INFO] Start saving test result
+2026-01-12 00:11:00 [INFO] Data: user_id=1, test_name=10-11. ОБЗР 10 класс "Комплексная безопасность", correct_answers=17, total_questions=20, attempts_left=0
+2026-01-12 00:11:00 [INFO] Test result saved successfully
+2026-01-12 00:21:32 [INFO] Start login attempt
+2026-01-12 00:21:32 [INFO] Received login: 'admin', password length: 12
+2026-01-12 00:21:32 [INFO] User found in DB. Checking password...
+2026-01-12 00:21:32 [INFO] Login successful for user: admin
+2026-01-12 03:45:29 [INFO] Start saving test result
+2026-01-12 03:45:29 [INFO] Data: user_id=1, test_name=10-17. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-12 03:45:29 [INFO] Test result saved successfully
+2026-01-12 20:59:36 [INFO] Start login attempt
+2026-01-12 20:59:36 [INFO] Received login: 'admin', password length: 12
+2026-01-12 20:59:36 [INFO] User found in DB. Checking password...
+2026-01-12 20:59:36 [INFO] Login successful for user: admin
+2026-01-12 21:33:53 [INFO] Start saving test result
+2026-01-12 21:33:53 [INFO] Data: user_id=1, test_name=10-17. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-12 21:33:53 [INFO] Test result saved successfully
+2026-01-12 22:17:40 [INFO] Start registration
+2026-01-12 22:17:40 [Error] User with this login or email already exists
+2026-01-12 22:18:02 [INFO] Start registration
+2026-01-12 22:18:02 [INFO] User registered successfully: azayarniy
+2026-01-12 22:18:08 [INFO] Start login attempt
+2026-01-12 22:18:08 [INFO] Received login: 'azayarniy', password length: 6
+2026-01-12 22:18:08 [INFO] User found in DB. Checking password...
+2026-01-12 22:18:08 [INFO] Login successful for user: azayarniy
+2026-01-12 22:21:43 [INFO] get_user_data.php started
+2026-01-12 22:21:43 [INFO] 5
+2026-01-12 22:22:00 [INFO] get_user_data.php started
+2026-01-12 22:22:00 [INFO] 5
+2026-01-12 22:23:43 [INFO] Start login attempt
+2026-01-12 22:23:43 [INFO] Received login: 'azayarniy', password length: 6
+2026-01-12 22:23:43 [INFO] User found in DB. Checking password...
+2026-01-12 22:23:43 [INFO] Login successful for user: azayarniy
+2026-01-12 22:23:46 [INFO] get_user_data.php started
+2026-01-12 22:23:46 [INFO] 5
+2026-01-12 22:29:12 [INFO] get_user_data.php started
+2026-01-12 22:29:12 [INFO] 5
+2026-01-12 22:31:32 [INFO] get_user_data.php started
+2026-01-12 22:31:32 [INFO] 5
+2026-01-12 22:49:52 [INFO] Start login attempt
+2026-01-12 22:49:52 [INFO] Received login: 'azayarniy', password length: 6
+2026-01-12 22:49:52 [INFO] User found in DB. Checking password...
+2026-01-12 22:49:52 [INFO] Login successful for user: azayarniy
+2026-01-12 22:49:56 [INFO] get_user_data.php started
+2026-01-12 22:49:56 [INFO] 5
+2026-01-12 22:54:05 [INFO] Start login attempt
+2026-01-12 22:54:05 [INFO] Received login: 'azayarniy', password length: 6
+2026-01-12 22:54:05 [INFO] User found in DB. Checking password...
+2026-01-12 22:54:05 [Error] Wrong password for user: azayarniy
+2026-01-12 23:11:52 [INFO] Start login attempt
+2026-01-12 23:11:52 [INFO] Received login: 'azayarniy', password length: 6
+2026-01-12 23:11:52 [INFO] User found in DB. Checking password...
+2026-01-12 23:11:52 [Error] Wrong password for user: azayarniy
+2026-01-12 23:12:38 [INFO] Start registration
+2026-01-12 23:12:38 [INFO] User registered successfully: zayarniy
+2026-01-12 23:12:53 [INFO] Start login attempt
+2026-01-12 23:12:53 [INFO] Received login: 'zayarniy', password length: 6
+2026-01-12 23:12:53 [INFO] User found in DB. Checking password...
+2026-01-12 23:12:53 [INFO] Login successful for user: zayarniy
+2026-01-12 23:17:13 [INFO] Start login attempt
+2026-01-12 23:17:13 [INFO] Received login: 'zayarniy', password length: 6
+2026-01-12 23:17:13 [INFO] User found in DB. Checking password...
+2026-01-12 23:17:13 [INFO] Login successful for user: zayarniy
+2026-01-12 23:40:48 [INFO] Start saving test result
+2026-01-12 23:40:48 [INFO] Data: user_id=6, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=28, total_questions=30, attempts_left=0
+2026-01-12 23:40:48 [INFO] Test result saved successfully
+2026-01-12 23:47:43 [INFO] Start saving test result
+2026-01-12 23:47:43 [INFO] Data: user_id=6, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=23, total_questions=30, attempts_left=0
+2026-01-12 23:47:43 [INFO] Test result saved successfully
+2026-01-12 23:49:30 [INFO] Start login attempt
+2026-01-12 23:49:30 [INFO] Received login: 'admin', password length: 12
+2026-01-12 23:49:30 [INFO] User found in DB. Checking password...
+2026-01-12 23:49:30 [INFO] Login successful for user: admin
+2026-01-13 00:30:44 [Error] Failed to send reset email to: zaazaa@yandex.ru
+2026-01-13 00:30:56 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:31:04 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:46:58 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:48:11 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 00:49:52 [Security] Password reset requested for non-existent email: zayarni@gmail.com
+2026-01-13 00:50:07 [Security] Password reset requested for non-existent email: zayarni@gmail.com
+2026-01-13 00:50:15 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:23:40 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:23:40 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=aff11558409872ab0fdbfea40b66808e217353dad84f061e855bc5b4aeefb0c1
+2026-01-13 02:23:40 [Error] PHPMailer Error: Invalid address:  (From): 
+2026-01-13 02:23:40 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:28:11 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:28:11 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=975413a35cbef4d4069636474f3912b1ba87bb092fff9befaeb992ce929744a7
+2026-01-13 02:28:11 [Error] PHPMailer Error: Invalid address:  (From): 
+2026-01-13 02:28:11 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:28:23 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:28:23 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=dcb9e7bbf15998a60460c647c36473b6c0a83a34c28bb60aec55171732b974ce
+2026-01-13 02:28:23 [Error] PHPMailer Error: Invalid address:  (From): 
+2026-01-13 02:28:23 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:28:36 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:28:36 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=291d501cb24ed4d7bd5f1769aa8bcdf42a6981a690601eaa054c5d6c0aa2d759
+2026-01-13 02:28:36 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:28:36 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:29:58 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:29:58 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=46b7aa905bfe22d5ccb7b66268967dec1eac7b60bea3dcf1f3f64deda6cf49be
+2026-01-13 02:29:58 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:29:58 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:30:05 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:30:05 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=60704476a82ca0b4906e98bdb30dfa9122cf3a8f4d881c7874300554a5085a76
+2026-01-13 02:30:05 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:30:05 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:32:05 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:32:05 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=089ab4b402bcdcc277477100f266edfa57b2ba89bdab6bc5ccb6b23a01c8293c
+2026-01-13 02:32:05 [Error] PHPMailer Error: Invalid address:  (From): ваш_email@yandex.ru
+2026-01-13 02:32:05 [Error] Failed to send reset email to: zayarniy@gmail.com
+2026-01-13 02:33:45 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:33:45 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=86c4fa9882b0d0733c49c93203670ad61b9c27c39f4f8959deb7edce1386f20d
+2026-01-13 02:33:46 [INFO] Password reset link sent to: zayarniy@gmail.com, user_id: 6
+2026-01-13 02:35:36 [INFO] Password reset requested for user: zayarniy (zayarniy@gmail.com)
+2026-01-13 02:35:36 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=52bd167d4c8c81541c24a7ad99c099894cd436edd29d358a575dac7a97a7fde5
+2026-01-13 02:35:37 [INFO] Password reset link sent to: zayarniy@gmail.com, user_id: 6
+2026-01-13 02:37:02 [INFO] Start login attempt
+2026-01-13 02:37:02 [INFO] Received login: 'zayarniy', password length: 15
+2026-01-13 02:37:02 [INFO] User found in DB. Checking password...
+2026-01-13 02:37:02 [INFO] Login successful for user: zayarniy
+2026-01-13 02:37:52 [INFO] Start login attempt
+2026-01-13 02:37:52 [INFO] Received login: 'zayarniy', password length: 15
+2026-01-13 02:37:52 [INFO] User found in DB. Checking password...
+2026-01-13 02:37:52 [INFO] Login successful for user: zayarniy
+2026-01-13 03:00:03 [INFO] Start saving test result
+2026-01-13 03:00:03 [INFO] Data: user_id=6, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=24, total_questions=30, attempts_left=0
+2026-01-13 03:00:03 [INFO] Test result saved successfully
+2026-01-13 03:01:22 [INFO] get_user_data.php started
+2026-01-13 03:01:22 [INFO] 6
+2026-01-13 03:25:55 [INFO] Password reset requested for user: admin (zaazaa@yandex.ru)
+2026-01-13 03:25:55 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=edf431c034dc489852ccad0a91530af0cade35253e227ee585694c8cae981ddd
+2026-01-13 03:25:56 [INFO] Password reset link sent to: zaazaa@yandex.ru, user_id: 1
+2026-01-13 11:54:54 [INFO] Start login attempt
+2026-01-13 11:54:54 [INFO] Received login: 'admin', password length: 12
+2026-01-13 11:54:54 [INFO] User found in DB. Checking password...
+2026-01-13 11:54:54 [INFO] Login successful for user: admin
+2026-01-15 23:26:54 [INFO] Start login attempt
+2026-01-15 23:26:54 [INFO] Received login: 'admin', password length: 12
+2026-01-15 23:26:54 [INFO] User found in DB. Checking password...
+2026-01-15 23:26:54 [INFO] Login successful for user: admin
+2026-01-16 09:03:41 [INFO] Start login attempt
+2026-01-16 09:03:41 [INFO] Received login: 'admin', password length: 12
+2026-01-16 09:03:41 [INFO] User found in DB. Checking password...
+2026-01-16 09:03:42 [INFO] Login successful for user: admin
+2026-01-16 12:51:16 [INFO] Start registration
+2026-01-16 12:51:16 [INFO] User registered successfully: krylova
+2026-01-16 12:51:38 [INFO] Start login attempt
+2026-01-16 12:51:38 [INFO] Received login: 'krylova', password length: 10
+2026-01-16 12:51:38 [INFO] User found in DB. Checking password...
+2026-01-16 12:51:38 [INFO] Login successful for user: krylova
+2026-01-16 13:11:48 [INFO] Start saving test result
+2026-01-16 13:11:48 [INFO] Data: user_id=7, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=28, total_questions=30, attempts_left=0
+2026-01-16 13:11:48 [INFO] Test result saved successfully
+2026-01-19 09:21:15 [INFO] Start registration
+2026-01-19 09:21:15 [INFO] User registered successfully: Qmareux
+2026-01-19 09:21:26 [INFO] Start login attempt
+2026-01-19 09:21:26 [INFO] Received login: 'Qmareux', password length: 20
+2026-01-19 09:21:26 [INFO] User found in DB. Checking password...
+2026-01-19 09:21:26 [INFO] Login successful for user: Qmareux
+2026-01-19 09:29:46 [INFO] Start saving test result
+2026-01-19 09:29:46 [INFO] Data: user_id=8, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=29, total_questions=30, attempts_left=0
+2026-01-19 09:29:46 [INFO] Test result saved successfully
+2026-01-19 09:39:54 [INFO] Start saving test result
+2026-01-19 09:39:54 [INFO] Data: user_id=8, test_name=11-22. Первая помощь и основы физиологии, correct_answers=29, total_questions=30, attempts_left=0
+2026-01-19 09:39:54 [INFO] Test result saved successfully
+2026-01-19 09:45:20 [INFO] Start saving test result
+2026-01-19 09:45:20 [INFO] Data: user_id=8, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-19 09:45:20 [INFO] Test result saved successfully
+2026-01-19 09:49:58 [INFO] Start saving test result
+2026-01-19 09:49:58 [INFO] Data: user_id=8, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-19 09:49:58 [INFO] Test result saved successfully
+2026-01-19 09:55:19 [INFO] Start saving test result
+2026-01-19 09:55:19 [INFO] Data: user_id=8, test_name=11-22. Первая помощь и основы физиологии, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-19 09:55:19 [INFO] Test result saved successfully
+2026-01-19 20:37:03 [INFO] Start login attempt
+2026-01-19 20:37:03 [INFO] Received login: 'admin', password length: 12
+2026-01-19 20:37:03 [INFO] User found in DB. Checking password...
+2026-01-19 20:37:03 [INFO] Login successful for user: admin
+2026-01-20 11:53:36 [INFO] Start login attempt
+2026-01-20 11:53:36 [INFO] Received login: 'admin', password length: 12
+2026-01-20 11:53:36 [INFO] User found in DB. Checking password...
+2026-01-20 11:53:36 [INFO] Login successful for user: admin
+2026-01-20 11:53:39 [INFO] get_user_data.php started
+2026-01-20 11:53:39 [INFO] 1
+2026-01-20 17:11:02 [INFO] Start login attempt
+2026-01-20 17:11:02 [INFO] Received login: 'george201912@gmail.com', password length: 15
+2026-01-20 17:11:02 [Error] User not found: george201912@gmail.com
+2026-01-20 17:11:17 [Security] Password reset requested for non-existent email: george201912@gmail.com
+2026-01-20 17:12:09 [Security] Password reset requested for non-existent email: georgeqwerty442@gmail.com
+2026-01-20 17:13:14 [INFO] Start registration
+2026-01-20 17:13:14 [INFO] User registered successfully: George
+2026-01-20 17:13:20 [INFO] Start login attempt
+2026-01-20 17:13:20 [INFO] Received login: 'george201912@gmail.com', password length: 20
+2026-01-20 17:13:20 [Error] User not found: george201912@gmail.com
+2026-01-20 17:13:27 [INFO] Start login attempt
+2026-01-20 17:13:27 [INFO] Received login: 'George', password length: 20
+2026-01-20 17:13:27 [INFO] User found in DB. Checking password...
+2026-01-20 17:13:28 [INFO] Login successful for user: George
+2026-01-20 17:27:50 [INFO] Start saving test result
+2026-01-20 17:27:50 [INFO] Data: user_id=9, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-20 17:27:50 [INFO] Test result saved successfully
+2026-01-20 17:42:46 [INFO] Start saving test result
+2026-01-20 17:42:46 [INFO] Data: user_id=9, test_name=11-22. Первая помощь и основы физиологии, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-20 17:42:46 [INFO] Test result saved successfully
+2026-01-20 17:50:53 [INFO] Start login attempt
+2026-01-20 17:50:53 [INFO] Received login: 'George', password length: 20
+2026-01-20 17:50:53 [INFO] User found in DB. Checking password...
+2026-01-20 17:50:53 [INFO] Login successful for user: George
+2026-01-20 18:08:01 [INFO] Start saving test result
+2026-01-20 18:08:01 [INFO] Data: user_id=9, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-20 18:08:01 [INFO] Test result saved successfully
+2026-01-21 00:15:40 [INFO] Start registration
+2026-01-21 00:15:41 [INFO] User registered successfully: ArtGol
+2026-01-21 00:15:48 [INFO] Start login attempt
+2026-01-21 00:15:48 [INFO] Received login: 'amg1804@yandex.ru', password length: 20
+2026-01-21 00:15:48 [Error] User not found: amg1804@yandex.ru
+2026-01-21 00:15:56 [INFO] Start login attempt
+2026-01-21 00:15:56 [INFO] Received login: 'ArtGol', password length: 20
+2026-01-21 00:15:56 [INFO] User found in DB. Checking password...
+2026-01-21 00:15:56 [INFO] Login successful for user: ArtGol
+2026-01-21 00:17:16 [INFO] Start login attempt
+2026-01-21 00:17:16 [INFO] Received login: 'ArtGol', password length: 20
+2026-01-21 00:17:16 [INFO] User found in DB. Checking password...
+2026-01-21 00:17:16 [INFO] Login successful for user: ArtGol
+2026-01-21 00:17:43 [INFO] Start login attempt
+2026-01-21 00:17:43 [INFO] Received login: 'ArtGol', password length: 20
+2026-01-21 00:17:43 [INFO] User found in DB. Checking password...
+2026-01-21 00:17:43 [INFO] Login successful for user: ArtGol
+2026-01-21 00:31:25 [INFO] Start saving test result
+2026-01-21 00:31:25 [INFO] Data: user_id=10, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-21 00:31:25 [INFO] Test result saved successfully
+2026-01-21 16:59:28 [INFO] Start login attempt
+2026-01-21 16:59:28 [INFO] Received login: 'admin', password length: 12
+2026-01-21 16:59:28 [INFO] User found in DB. Checking password...
+2026-01-21 16:59:28 [INFO] Login successful for user: admin
+2026-01-22 11:46:06 [INFO] Start registration
+2026-01-22 11:46:06 [INFO] User registered successfully: Stepanova
+2026-01-22 11:47:12 [INFO] Start login attempt
+2026-01-22 11:47:12 [INFO] Received login: 'Stepanova', password length: 8
+2026-01-22 11:47:12 [INFO] User found in DB. Checking password...
+2026-01-22 11:47:12 [INFO] Login successful for user: Stepanova
+2026-01-22 14:10:25 [INFO] Start registration
+2026-01-22 14:10:25 [INFO] User registered successfully: SophiaGrinevich
+2026-01-22 14:10:40 [INFO] Start login attempt
+2026-01-22 14:10:40 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:10:40 [INFO] User found in DB. Checking password...
+2026-01-22 14:10:40 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:11:32 [INFO] Start login attempt
+2026-01-22 14:11:32 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:11:32 [INFO] User found in DB. Checking password...
+2026-01-22 14:11:32 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:11:45 [INFO] Start login attempt
+2026-01-22 14:11:45 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:11:45 [INFO] User found in DB. Checking password...
+2026-01-22 14:11:45 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:12:17 [INFO] Start login attempt
+2026-01-22 14:12:17 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:12:17 [INFO] User found in DB. Checking password...
+2026-01-22 14:12:17 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:12:27 [INFO] Start login attempt
+2026-01-22 14:12:27 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:12:27 [INFO] User found in DB. Checking password...
+2026-01-22 14:12:27 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:13:01 [INFO] Start login attempt
+2026-01-22 14:13:01 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:13:01 [INFO] User found in DB. Checking password...
+2026-01-22 14:13:01 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:13:21 [INFO] Start login attempt
+2026-01-22 14:13:21 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:13:21 [INFO] User found in DB. Checking password...
+2026-01-22 14:13:21 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:14:21 [INFO] Start login attempt
+2026-01-22 14:14:21 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:14:21 [INFO] User found in DB. Checking password...
+2026-01-22 14:14:21 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:38:01 [INFO] Start login attempt
+2026-01-22 14:38:01 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:38:01 [INFO] User found in DB. Checking password...
+2026-01-22 14:38:01 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 14:52:04 [INFO] Start login attempt
+2026-01-22 14:52:04 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-22 14:52:04 [INFO] User found in DB. Checking password...
+2026-01-22 14:52:04 [INFO] Login successful for user: SophiaGrinevich
+2026-01-22 15:57:06 [INFO] Start registration
+2026-01-22 15:57:06 [INFO] User registered successfully: redkoviktor
+2026-01-22 15:57:32 [INFO] Start login attempt
+2026-01-22 15:57:32 [INFO] Received login: 'redkoviktor', password length: 11
+2026-01-22 15:57:32 [INFO] User found in DB. Checking password...
+2026-01-22 15:57:32 [INFO] Login successful for user: redkoviktor
+2026-01-22 16:13:22 [INFO] Start saving test result
+2026-01-22 16:13:22 [INFO] Data: user_id=13, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=23, total_questions=30, attempts_left=0
+2026-01-22 16:13:22 [INFO] Test result saved successfully
+2026-01-22 22:12:41 [INFO] Start login attempt
+2026-01-22 22:12:41 [INFO] Received login: 'redkoviktor', password length: 11
+2026-01-22 22:12:41 [INFO] User found in DB. Checking password...
+2026-01-22 22:12:41 [INFO] Login successful for user: redkoviktor
+2026-01-23 09:04:46 [INFO] Start login attempt
+2026-01-23 09:04:46 [INFO] Received login: 'admin', password length: 12
+2026-01-23 09:04:46 [INFO] User found in DB. Checking password...
+2026-01-23 09:04:46 [INFO] Login successful for user: admin
+2026-01-23 09:17:21 [INFO] Start registration
+2026-01-23 09:17:21 [INFO] User registered successfully: dsokolov
+2026-01-23 09:17:32 [INFO] Start login attempt
+2026-01-23 09:17:32 [INFO] Received login: 'dsokolov', password length: 6
+2026-01-23 09:17:32 [INFO] User found in DB. Checking password...
+2026-01-23 09:17:32 [INFO] Login successful for user: dsokolov
+2026-01-23 09:39:59 [INFO] Start saving test result
+2026-01-23 09:39:59 [INFO] Data: user_id=14, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-01-23 09:39:59 [INFO] Test result saved successfully
+2026-01-23 09:40:41 [INFO] get_user_data.php started
+2026-01-23 09:40:41 [INFO] 14
+2026-01-23 19:33:23 [INFO] Start login attempt
+2026-01-23 19:33:23 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-23 19:33:23 [INFO] User found in DB. Checking password...
+2026-01-23 19:33:23 [INFO] Login successful for user: SophiaGrinevich
+2026-01-23 19:34:21 [INFO] get_user_data.php started
+2026-01-23 19:34:21 [INFO] 12
+2026-01-23 19:36:29 [INFO] Start login attempt
+2026-01-23 19:36:29 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-23 19:36:29 [INFO] User found in DB. Checking password...
+2026-01-23 19:36:29 [INFO] Login successful for user: SophiaGrinevich
+2026-01-23 19:50:37 [INFO] Start saving test result
+2026-01-23 19:50:37 [INFO] Data: user_id=12, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-23 19:50:37 [INFO] Test result saved successfully
+2026-01-23 19:51:07 [INFO] Start login attempt
+2026-01-23 19:51:07 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-23 19:51:07 [INFO] User found in DB. Checking password...
+2026-01-23 19:51:07 [INFO] Login successful for user: SophiaGrinevich
+2026-01-23 20:27:47 [INFO] Start saving test result
+2026-01-23 20:27:47 [INFO] Data: user_id=12, test_name=11-22. Первая помощь и основы физиологии, correct_answers=29, total_questions=30, attempts_left=0
+2026-01-23 20:27:47 [INFO] Test result saved successfully
+2026-01-23 22:12:12 [INFO] Start login attempt
+2026-01-23 22:12:12 [INFO] Received login: 'SophiaGrinevich', password length: 14
+2026-01-23 22:12:12 [INFO] User found in DB. Checking password...
+2026-01-23 22:12:12 [INFO] Login successful for user: SophiaGrinevich
+2026-01-23 22:33:26 [INFO] Start saving test result
+2026-01-23 22:33:26 [INFO] Data: user_id=12, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-23 22:33:26 [INFO] Test result saved successfully
+2026-01-24 12:35:56 [INFO] Start registration
+2026-01-24 12:35:56 [INFO] User registered successfully: opolav2008
+2026-01-24 12:36:01 [INFO] Start login attempt
+2026-01-24 12:36:01 [INFO] Received login: 'opolav2008', password length: 19
+2026-01-24 12:36:01 [INFO] User found in DB. Checking password...
+2026-01-24 12:36:01 [INFO] Login successful for user: opolav2008
+2026-01-24 12:39:31 [INFO] Start login attempt
+2026-01-24 12:39:31 [INFO] Received login: 'opolav2008', password length: 19
+2026-01-24 12:39:31 [INFO] User found in DB. Checking password...
+2026-01-24 12:39:31 [INFO] Login successful for user: opolav2008
+2026-01-24 12:39:50 [INFO] Start login attempt
+2026-01-24 12:39:50 [INFO] Received login: 'opolav2008', password length: 19
+2026-01-24 12:39:50 [INFO] User found in DB. Checking password...
+2026-01-24 12:39:50 [INFO] Login successful for user: opolav2008
+2026-01-24 12:45:15 [INFO] Start saving test result
+2026-01-24 12:45:15 [INFO] Data: user_id=15, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-24 12:45:15 [INFO] Test result saved successfully
+2026-01-24 12:46:22 [INFO] Start login attempt
+2026-01-24 12:46:22 [INFO] Received login: 'opolav2008', password length: 19
+2026-01-24 12:46:22 [INFO] User found in DB. Checking password...
+2026-01-24 12:46:22 [INFO] Login successful for user: opolav2008
+2026-01-24 16:40:06 [INFO] Start registration
+2026-01-24 16:40:06 [INFO] User registered successfully: risakov
+2026-01-24 16:40:19 [INFO] Start login attempt
+2026-01-24 16:40:19 [INFO] Received login: 'risakov', password length: 10
+2026-01-24 16:40:19 [INFO] User found in DB. Checking password...
+2026-01-24 16:40:19 [INFO] Login successful for user: risakov
+2026-01-25 11:27:03 [INFO] Start login attempt
+2026-01-25 11:27:03 [INFO] Received login: 'opolav2008', password length: 19
+2026-01-25 11:27:03 [INFO] User found in DB. Checking password...
+2026-01-25 11:27:03 [INFO] Login successful for user: opolav2008
+2026-01-25 17:51:47 [INFO] Start login attempt
+2026-01-25 17:51:47 [INFO] Received login: 'ArtGol', password length: 20
+2026-01-25 17:51:47 [INFO] User found in DB. Checking password...
+2026-01-25 17:51:47 [INFO] Login successful for user: ArtGol
+2026-01-25 18:04:14 [INFO] Start saving test result
+2026-01-25 18:04:14 [INFO] Data: user_id=10, test_name=11-22. Первая помощь и основы физиологии, correct_answers=28, total_questions=30, attempts_left=0
+2026-01-25 18:04:14 [INFO] Test result saved successfully
+2026-01-25 18:04:28 [INFO] get_user_data.php started
+2026-01-25 18:04:28 [INFO] 10
+2026-01-25 18:21:22 [INFO] Start saving test result
+2026-01-25 18:21:22 [INFO] Data: user_id=10, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=27, total_questions=30, attempts_left=0
+2026-01-25 18:21:22 [INFO] Test result saved successfully
+2026-01-25 18:31:52 [INFO] Start registration
+2026-01-25 18:31:52 [INFO] User registered successfully: bor03122008372020
+2026-01-25 18:32:29 [INFO] Start login attempt
+2026-01-25 18:32:29 [INFO] Received login: 'bor03122008372020', password length: 6
+2026-01-25 18:32:29 [INFO] User found in DB. Checking password...
+2026-01-25 18:32:29 [INFO] Login successful for user: bor03122008372020
+2026-01-25 18:38:52 [INFO] get_user_data.php started
+2026-01-25 18:38:52 [INFO] 17
+2026-01-26 00:03:15 [Security] Password reset requested for non-existent email: zubenkodan@yandex.ru
+2026-01-26 00:04:49 [Security] Password reset requested for non-existent email: zubenkodan@yandex.ru
+2026-01-26 00:13:51 [Security] Password reset requested for non-existent email: zubenkodan@yandex.ru
+2026-01-26 20:57:55 [INFO] Start login attempt
+2026-01-26 20:57:55 [INFO] Received login: 'Stepanova', password length: 8
+2026-01-26 20:57:55 [INFO] User found in DB. Checking password...
+2026-01-26 20:57:55 [INFO] Login successful for user: Stepanova
+2026-01-26 21:19:35 [INFO] Start saving test result
+2026-01-26 21:19:35 [INFO] Data: user_id=11, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-26 21:19:35 [INFO] Test result saved successfully
+2026-01-27 09:31:28 [INFO] Start login attempt
+2026-01-27 09:31:28 [INFO] Received login: 'Stepanova', password length: 8
+2026-01-27 09:31:28 [INFO] User found in DB. Checking password...
+2026-01-27 09:31:28 [INFO] Login successful for user: Stepanova
+2026-01-27 10:03:35 [INFO] Start saving test result
+2026-01-27 10:03:35 [INFO] Data: user_id=11, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=30, total_questions=30, attempts_left=0
+2026-01-27 10:03:35 [INFO] Test result saved successfully
+2026-01-27 11:56:52 [INFO] Start registration
+2026-01-27 11:56:52 [INFO] User registered successfully: AirbusA380800
+2026-01-27 11:57:12 [INFO] Start login attempt
+2026-01-27 11:57:12 [INFO] Received login: 'AirbusA380800', password length: 10
+2026-01-27 11:57:12 [INFO] User found in DB. Checking password...
+2026-01-27 11:57:12 [INFO] Login successful for user: AirbusA380800
+2026-01-27 12:11:58 [INFO] Start saving test result
+2026-01-27 12:11:58 [INFO] Data: user_id=18, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-27 12:11:58 [INFO] Test result saved successfully
+2026-01-27 12:29:57 [INFO] Start saving test result
+2026-01-27 12:29:57 [INFO] Data: user_id=18, test_name=11-22. Первая помощь и основы физиологии, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-27 12:29:57 [INFO] Test result saved successfully
+2026-01-27 14:11:23 [INFO] Start login attempt
+2026-01-27 14:11:23 [INFO] Received login: 'AirbusA380800', password length: 10
+2026-01-27 14:11:23 [INFO] User found in DB. Checking password...
+2026-01-27 14:11:23 [INFO] Login successful for user: AirbusA380800
+2026-01-27 14:21:05 [INFO] Start saving test result
+2026-01-27 14:21:05 [INFO] Data: user_id=18, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-27 14:21:05 [INFO] Test result saved successfully
+2026-01-27 20:49:05 [INFO] Start login attempt
+2026-01-27 20:49:05 [INFO] Received login: 'admin', password length: 12
+2026-01-27 20:49:05 [INFO] User found in DB. Checking password...
+2026-01-27 20:49:05 [INFO] Login successful for user: admin
+2026-01-28 08:48:22 [INFO] Start login attempt
+2026-01-28 08:48:22 [INFO] Received login: 'Stepanova', password length: 8
+2026-01-28 08:48:22 [INFO] User found in DB. Checking password...
+2026-01-28 08:48:22 [INFO] Login successful for user: Stepanova
+2026-01-28 13:49:08 [INFO] Start login attempt
+2026-01-28 13:49:08 [INFO] Received login: 'admin', password length: 12
+2026-01-28 13:49:08 [INFO] User found in DB. Checking password...
+2026-01-28 13:49:08 [INFO] Login successful for user: admin
+2026-01-28 17:36:23 [INFO] Start registration
+2026-01-28 17:36:23 [INFO] User registered successfully: sofiapliss_1
+2026-01-28 17:36:41 [INFO] Start login attempt
+2026-01-28 17:36:41 [INFO] Received login: 'sofiapliss_1', password length: 9
+2026-01-28 17:36:41 [INFO] User found in DB. Checking password...
+2026-01-28 17:36:41 [INFO] Login successful for user: sofiapliss_1
+2026-01-28 17:38:07 [INFO] Start login attempt
+2026-01-28 17:38:07 [INFO] Received login: 'sofiapliss_1', password length: 9
+2026-01-28 17:38:07 [INFO] User found in DB. Checking password...
+2026-01-28 17:38:07 [INFO] Login successful for user: sofiapliss_1
+2026-01-28 17:43:07 [INFO] Start saving test result
+2026-01-28 17:43:07 [INFO] Data: user_id=19, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-28 17:43:07 [INFO] Test result saved successfully
+2026-01-28 17:52:44 [INFO] Start saving test result
+2026-01-28 17:52:44 [INFO] Data: user_id=19, test_name=11-22. Первая помощь и основы физиологии, correct_answers=29, total_questions=30, attempts_left=0
+2026-01-28 17:52:44 [INFO] Test result saved successfully
+2026-01-28 19:06:02 [INFO] Start login attempt
+2026-01-28 19:06:02 [INFO] Received login: 'admin', password length: 12
+2026-01-28 19:06:02 [INFO] User found in DB. Checking password...
+2026-01-28 19:06:02 [INFO] Login successful for user: admin
+2026-01-28 20:54:46 [INFO] Start login attempt
+2026-01-28 20:54:46 [INFO] Received login: 'sofiapliss_1', password length: 9
+2026-01-28 20:54:46 [INFO] User found in DB. Checking password...
+2026-01-28 20:54:46 [INFO] Login successful for user: sofiapliss_1
+2026-01-28 21:00:23 [INFO] Start saving test result
+2026-01-28 21:00:23 [INFO] Data: user_id=19, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-28 21:00:23 [INFO] Test result saved successfully
+2026-01-29 19:17:21 [INFO] Start login attempt
+2026-01-29 19:17:21 [INFO] Received login: 'Stepanova', password length: 8
+2026-01-29 19:17:21 [INFO] User found in DB. Checking password...
+2026-01-29 19:17:21 [INFO] Login successful for user: Stepanova
+2026-01-29 19:49:52 [INFO] Start saving test result
+2026-01-29 19:49:52 [INFO] Data: user_id=11, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=29, total_questions=30, attempts_left=0
+2026-01-29 19:49:52 [INFO] Test result saved successfully
+2026-01-30 09:06:12 [INFO] Start login attempt
+2026-01-30 09:06:12 [INFO] Received login: 'dsokolov', password length: 6
+2026-01-30 09:06:12 [INFO] User found in DB. Checking password...
+2026-01-30 09:06:12 [INFO] Login successful for user: dsokolov
+2026-01-30 09:24:28 [INFO] Start saving test result
+2026-01-30 09:24:28 [INFO] Data: user_id=14, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-30 09:24:28 [INFO] Test result saved successfully
+2026-01-30 09:30:45 [INFO] Start registration
+2026-01-30 09:30:45 [INFO] User registered successfully: mrspo
+2026-01-30 09:30:56 [INFO] Start login attempt
+2026-01-30 09:30:56 [INFO] Received login: 'mrspo', password length: 9
+2026-01-30 09:30:56 [INFO] User found in DB. Checking password...
+2026-01-30 09:30:56 [INFO] Login successful for user: mrspo
+2026-01-30 09:31:39 [INFO] Start login attempt
+2026-01-30 09:31:39 [INFO] Received login: 'mrspo', password length: 9
+2026-01-30 09:31:39 [INFO] User found in DB. Checking password...
+2026-01-30 09:31:39 [INFO] Login successful for user: mrspo
+2026-01-30 09:48:25 [INFO] Start saving test result
+2026-01-30 09:48:25 [INFO] Data: user_id=14, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=27, total_questions=30, attempts_left=0
+2026-01-30 09:48:25 [INFO] Test result saved successfully
+2026-01-30 09:48:32 [INFO] get_user_data.php started
+2026-01-30 09:48:32 [INFO] 14
+2026-01-30 11:16:46 [INFO] Start registration
+2026-01-30 11:16:46 [INFO] User registered successfully: arthur_akopian
+2026-01-30 11:16:52 [INFO] Start login attempt
+2026-01-30 11:16:52 [INFO] Received login: 'arthur_akopian', password length: 22
+2026-01-30 11:16:52 [INFO] User found in DB. Checking password...
+2026-01-30 11:16:52 [INFO] Login successful for user: arthur_akopian
+2026-01-30 11:17:27 [INFO] Start login attempt
+2026-01-30 11:17:27 [INFO] Received login: 'arthur_akopian', password length: 22
+2026-01-30 11:17:27 [INFO] User found in DB. Checking password...
+2026-01-30 11:17:27 [INFO] Login successful for user: arthur_akopian
+2026-01-30 11:17:43 [INFO] Start login attempt
+2026-01-30 11:17:43 [INFO] Received login: 'arthur_akopian', password length: 22
+2026-01-30 11:17:43 [INFO] User found in DB. Checking password...
+2026-01-30 11:17:43 [INFO] Login successful for user: arthur_akopian
+2026-01-30 11:18:22 [INFO] get_user_data.php started
+2026-01-30 11:18:22 [INFO] 21
+2026-01-30 11:28:38 [INFO] Start saving test result
+2026-01-30 11:28:38 [INFO] Data: user_id=21, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=28, total_questions=30, attempts_left=0
+2026-01-30 11:28:38 [INFO] Test result saved successfully
+2026-01-30 11:35:52 [INFO] Start saving test result
+2026-01-30 11:35:52 [INFO] Data: user_id=21, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=26, total_questions=30, attempts_left=0
+2026-01-30 11:35:52 [INFO] Test result saved successfully
+2026-01-30 11:44:51 [INFO] Start saving test result
+2026-01-30 11:44:51 [INFO] Data: user_id=21, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=28, total_questions=30, attempts_left=0
+2026-01-30 11:44:51 [INFO] Test result saved successfully
+2026-01-30 11:56:31 [INFO] Start login attempt
+2026-01-30 11:56:31 [INFO] Received login: 'admin', password length: 12
+2026-01-30 11:56:31 [INFO] User found in DB. Checking password...
+2026-01-30 11:56:31 [INFO] Login successful for user: admin
+2026-01-30 12:40:47 [INFO] Start login attempt
+2026-01-30 12:40:47 [INFO] Received login: 'barneytopp@gmail.com', password length: 13
+2026-01-30 12:40:47 [Error] User not found: barneytopp@gmail.com
+2026-01-30 12:41:09 [Security] Password reset requested for non-existent email: barneytopp@gmail.com
+2026-01-30 12:41:51 [INFO] Start login attempt
+2026-01-30 12:41:51 [INFO] Received login: 'mrspo', password length: 9
+2026-01-30 12:41:51 [INFO] User found in DB. Checking password...
+2026-01-30 12:41:51 [INFO] Login successful for user: mrspo
+2026-01-30 12:42:42 [Security] Password reset requested for non-existent email: barneytopp@gmail.com
+2026-01-30 12:43:44 [Security] Password reset requested for non-existent email: barneytopp@gmail.com
+2026-01-30 12:45:17 [INFO] Start registration
+2026-01-30 12:45:17 [INFO] User registered successfully: Gorshkowv
+2026-01-30 12:45:28 [INFO] Start login attempt
+2026-01-30 12:45:28 [INFO] Received login: 'Gorshkowv', password length: 13
+2026-01-30 12:45:28 [INFO] User found in DB. Checking password...
+2026-01-30 12:45:28 [INFO] Login successful for user: Gorshkowv
+2026-01-30 13:00:31 [INFO] Start saving test result
+2026-01-30 13:00:31 [INFO] Data: user_id=20, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-01-30 13:00:31 [INFO] Test result saved successfully
+2026-01-30 13:00:54 [INFO] Start saving test result
+2026-01-30 13:00:54 [INFO] Data: user_id=22, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-01-30 13:00:54 [INFO] Test result saved successfully
+2026-01-30 13:21:14 [INFO] Start saving test result
+2026-01-30 13:21:14 [INFO] Data: user_id=20, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-30 13:21:14 [INFO] Test result saved successfully
+2026-01-30 13:21:16 [INFO] Start saving test result
+2026-01-30 13:21:16 [INFO] Data: user_id=22, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=26, total_questions=30, attempts_left=0
+2026-01-30 13:21:16 [INFO] Test result saved successfully
+2026-01-30 13:22:51 [INFO] Start login attempt
+2026-01-30 13:22:51 [INFO] Received login: 'admin', password length: 12
+2026-01-30 13:22:51 [INFO] User found in DB. Checking password...
+2026-01-30 13:22:51 [INFO] Login successful for user: admin
+2026-01-31 09:50:07 [INFO] Start login attempt
+2026-01-31 09:50:07 [INFO] Received login: 'bor03122008372020', password length: 6
+2026-01-31 09:50:07 [INFO] User found in DB. Checking password...
+2026-01-31 09:50:07 [INFO] Login successful for user: bor03122008372020
+2026-01-31 10:02:53 [INFO] Start saving test result
+2026-01-31 10:02:53 [INFO] Data: user_id=17, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-31 10:02:53 [INFO] Test result saved successfully
+2026-01-31 10:03:02 [INFO] Start registration
+2026-01-31 10:03:02 [INFO] User registered successfully: kastrjulka
+2026-01-31 10:03:11 [INFO] Start login attempt
+2026-01-31 10:03:11 [INFO] Received login: 'kastrjulka', password length: 17
+2026-01-31 10:03:11 [INFO] User found in DB. Checking password...
+2026-01-31 10:03:11 [INFO] Login successful for user: kastrjulka
+2026-01-31 10:04:51 [INFO] Start login attempt
+2026-01-31 10:04:51 [INFO] Received login: 'bor03122008372020', password length: 6
+2026-01-31 10:04:51 [INFO] User found in DB. Checking password...
+2026-01-31 10:04:51 [INFO] Login successful for user: bor03122008372020
+2026-01-31 10:27:35 [INFO] Start saving test result
+2026-01-31 10:27:35 [INFO] Data: user_id=17, test_name=11-22. Первая помощь и основы физиологии, correct_answers=27, total_questions=30, attempts_left=0
+2026-01-31 10:27:35 [INFO] Test result saved successfully
+2026-01-31 10:28:55 [INFO] Start login attempt
+2026-01-31 10:28:55 [INFO] Received login: 'bor03122008372020', password length: 6
+2026-01-31 10:28:55 [INFO] User found in DB. Checking password...
+2026-01-31 10:28:55 [INFO] Login successful for user: bor03122008372020
+2026-01-31 11:56:25 [INFO] Start login attempt
+2026-01-31 11:56:25 [INFO] Received login: '89258340107', password length: 13
+2026-01-31 11:56:25 [Error] User not found: 89258340107
+2026-01-31 11:58:15 [INFO] Start registration
+2026-01-31 11:58:15 [INFO] User registered successfully: Mane23
+2026-01-31 11:58:35 [INFO] Start login attempt
+2026-01-31 11:58:35 [INFO] Received login: 'Mane23', password length: 11
+2026-01-31 11:58:35 [INFO] User found in DB. Checking password...
+2026-01-31 11:58:35 [INFO] Login successful for user: Mane23
+2026-01-31 12:00:00 [INFO] Start login attempt
+2026-01-31 12:00:00 [INFO] Received login: 'Mane23', password length: 11
+2026-01-31 12:00:00 [INFO] User found in DB. Checking password...
+2026-01-31 12:00:00 [INFO] Login successful for user: Mane23
+2026-01-31 12:10:56 [INFO] Start saving test result
+2026-01-31 12:10:56 [INFO] Data: user_id=24, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-01-31 12:10:56 [INFO] Test result saved successfully
+2026-01-31 12:11:31 [INFO] Start login attempt
+2026-01-31 12:11:31 [INFO] Received login: 'Mane23', password length: 11
+2026-01-31 12:11:31 [INFO] User found in DB. Checking password...
+2026-01-31 12:11:31 [INFO] Login successful for user: Mane23
+2026-01-31 12:20:33 [INFO] Start saving test result
+2026-01-31 12:20:33 [INFO] Data: user_id=24, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=29, total_questions=30, attempts_left=0
+2026-01-31 12:20:33 [INFO] Test result saved successfully
+2026-01-31 12:36:15 [INFO] Start saving test result
+2026-01-31 12:36:15 [INFO] Data: user_id=24, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-31 12:36:15 [INFO] Test result saved successfully
+2026-01-31 15:52:22 [INFO] Start saving test result
+2026-01-31 15:52:22 [INFO] Data: user_id=17, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-01-31 15:52:22 [INFO] Test result saved successfully
+2026-01-31 15:53:03 [INFO] Start login attempt
+2026-01-31 15:53:03 [INFO] Received login: 'bor03122008372020', password length: 6
+2026-01-31 15:53:03 [INFO] User found in DB. Checking password...
+2026-01-31 15:53:03 [INFO] Login successful for user: bor03122008372020
+2026-01-31 17:10:09 [INFO] Start login attempt
+2026-01-31 17:10:09 [INFO] Received login: 'kastrjulka', password length: 17
+2026-01-31 17:10:09 [INFO] User found in DB. Checking password...
+2026-01-31 17:10:10 [INFO] Login successful for user: kastrjulka
+2026-01-31 18:09:06 [INFO] Start login attempt
+2026-01-31 18:09:06 [INFO] Received login: 'kastrjulka', password length: 17
+2026-01-31 18:09:06 [INFO] User found in DB. Checking password...
+2026-01-31 18:09:07 [INFO] Login successful for user: kastrjulka
+2026-01-31 18:30:46 [INFO] Start saving test result
+2026-01-31 18:30:46 [INFO] Data: user_id=23, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-01-31 18:30:46 [INFO] Test result saved successfully
+2026-01-31 19:08:50 [INFO] Start login attempt
+2026-01-31 19:08:50 [INFO] Received login: 'kastrjulka', password length: 17
+2026-01-31 19:08:50 [INFO] User found in DB. Checking password...
+2026-01-31 19:08:50 [INFO] Login successful for user: kastrjulka
+2026-01-31 19:20:59 [INFO] Start registration
+2026-01-31 19:20:59 [INFO] User registered successfully: sitnickovplaton
+2026-01-31 19:21:04 [INFO] Start login attempt
+2026-01-31 19:21:04 [INFO] Received login: 'sitnickovplaton06@yandex.ru', password length: 20
+2026-01-31 19:21:04 [Error] User not found: sitnickovplaton06@yandex.ru
+2026-01-31 19:21:19 [INFO] Start login attempt
+2026-01-31 19:21:19 [INFO] Received login: 'sitnickovplaton', password length: 20
+2026-01-31 19:21:19 [INFO] User found in DB. Checking password...
+2026-01-31 19:21:19 [INFO] Login successful for user: sitnickovplaton
+2026-01-31 19:51:28 [INFO] Start saving test result
+2026-01-31 19:51:28 [INFO] Data: user_id=23, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=25, total_questions=30, attempts_left=0
+2026-01-31 19:51:28 [INFO] Test result saved successfully
+2026-01-31 20:03:45 [INFO] Start login attempt
+2026-01-31 20:03:45 [INFO] Received login: 'sitnickovplaton', password length: 20
+2026-01-31 20:03:45 [INFO] User found in DB. Checking password...
+2026-01-31 20:03:45 [INFO] Login successful for user: sitnickovplaton
+2026-01-31 20:28:48 [INFO] Start saving test result
+2026-01-31 20:28:48 [INFO] Data: user_id=25, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=30, total_questions=30, attempts_left=0
+2026-01-31 20:28:48 [INFO] Test result saved successfully
+2026-01-31 20:52:27 [INFO] Start saving test result
+2026-01-31 20:52:27 [INFO] Data: user_id=25, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=26, total_questions=30, attempts_left=0
+2026-01-31 20:52:27 [INFO] Test result saved successfully
+2026-01-31 21:33:47 [INFO] Start saving test result
+2026-01-31 21:33:47 [INFO] Data: user_id=25, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=30, total_questions=30, attempts_left=0
+2026-01-31 21:33:47 [INFO] Test result saved successfully
+2026-01-31 21:34:32 [INFO] Start login attempt
+2026-01-31 21:34:32 [INFO] Received login: 'sitnickovplaton', password length: 20
+2026-01-31 21:34:32 [INFO] User found in DB. Checking password...
+2026-01-31 21:34:32 [INFO] Login successful for user: sitnickovplaton
+2026-02-01 12:02:04 [INFO] Start registration
+2026-02-01 12:02:04 [INFO] User registered successfully: DilyaraSin
+2026-02-01 12:02:13 [INFO] Start login attempt
+2026-02-01 12:02:13 [INFO] Received login: 'DilyaraSin', password length: 13
+2026-02-01 12:02:13 [INFO] User found in DB. Checking password...
+2026-02-01 12:02:13 [INFO] Login successful for user: DilyaraSin
+2026-02-01 12:19:10 [INFO] Start saving test result
+2026-02-01 12:19:10 [INFO] Data: user_id=26, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-01 12:19:10 [INFO] Test result saved successfully
+2026-02-01 12:35:48 [INFO] Start saving test result
+2026-02-01 12:35:48 [INFO] Data: user_id=26, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-01 12:35:48 [INFO] Test result saved successfully
+2026-02-01 12:56:33 [INFO] Start saving test result
+2026-02-01 12:56:33 [INFO] Data: user_id=26, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=30, total_questions=30, attempts_left=0
+2026-02-01 12:56:33 [INFO] Test result saved successfully
+2026-02-01 16:51:33 [INFO] Start login attempt
+2026-02-01 16:51:33 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 10
+2026-02-01 16:51:33 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 16:51:37 [INFO] Start login attempt
+2026-02-01 16:51:37 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 11
+2026-02-01 16:51:37 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 16:52:09 [Security] Password reset requested for non-existent email: vahram.grig.09@mail.ru
+2026-02-01 16:53:06 [INFO] Start login attempt
+2026-02-01 16:53:06 [INFO] Received login: 'vahram.grigoryan.09@mail.ru', password length: 10
+2026-02-01 16:53:06 [Error] User not found: vahram.grigoryan.09@mail.ru
+2026-02-01 16:53:08 [INFO] Start login attempt
+2026-02-01 16:53:08 [INFO] Received login: 'vahram.grigoryan.09@mail.ru', password length: 10
+2026-02-01 16:53:08 [Error] User not found: vahram.grigoryan.09@mail.ru
+2026-02-01 17:00:20 [INFO] Start registration
+2026-02-01 17:00:20 [INFO] User registered successfully: Zzzzzz
+2026-02-01 17:00:27 [INFO] Start login attempt
+2026-02-01 17:00:27 [INFO] Received login: 'vahram.grigoryan.09@mail.ru', password length: 10
+2026-02-01 17:00:27 [Error] User not found: vahram.grigoryan.09@mail.ru
+2026-02-01 17:58:28 [INFO] Start registration
+2026-02-01 17:58:28 [INFO] User registered successfully: matvienko
+2026-02-01 17:58:51 [INFO] Start login attempt
+2026-02-01 17:58:51 [INFO] Received login: 'matvienko', password length: 9
+2026-02-01 17:58:51 [INFO] User found in DB. Checking password...
+2026-02-01 17:58:51 [INFO] Login successful for user: matvienko
+2026-02-01 18:00:08 [INFO] get_user_data.php started
+2026-02-01 18:00:08 [INFO] 28
+2026-02-01 18:00:35 [INFO] get_user_data.php started
+2026-02-01 18:00:35 [INFO] 28
+2026-02-01 18:18:16 [INFO] Start saving test result
+2026-02-01 18:18:16 [INFO] Data: user_id=28, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-01 18:18:16 [INFO] Test result saved successfully
+2026-02-01 18:37:00 [INFO] Start saving test result
+2026-02-01 18:37:00 [INFO] Data: user_id=28, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-01 18:37:00 [INFO] Test result saved successfully
+2026-02-01 18:54:17 [INFO] Start saving test result
+2026-02-01 18:54:17 [INFO] Data: user_id=28, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-01 18:54:17 [INFO] Test result saved successfully
+2026-02-01 19:23:21 [INFO] Start registration
+2026-02-01 19:23:21 [INFO] User registered successfully: oganesyan
+2026-02-01 19:23:34 [INFO] Start login attempt
+2026-02-01 19:23:34 [INFO] Received login: 'oganesyan', password length: 12
+2026-02-01 19:23:34 [INFO] User found in DB. Checking password...
+2026-02-01 19:23:34 [INFO] Login successful for user: oganesyan
+2026-02-01 19:44:30 [INFO] Start saving test result
+2026-02-01 19:44:30 [INFO] Data: user_id=29, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-01 19:44:30 [INFO] Test result saved successfully
+2026-02-01 19:53:25 [INFO] Start login attempt
+2026-02-01 19:53:25 [INFO] Received login: 'oganesyan', password length: 12
+2026-02-01 19:53:25 [INFO] User found in DB. Checking password...
+2026-02-01 19:53:25 [INFO] Login successful for user: oganesyan
+2026-02-01 20:11:30 [INFO] Start saving test result
+2026-02-01 20:11:30 [INFO] Data: user_id=29, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-01 20:11:30 [INFO] Test result saved successfully
+2026-02-01 20:26:37 [INFO] Start login attempt
+2026-02-01 20:26:37 [INFO] Received login: 'vahram.grigoryan.09@mail.ru', password length: 3
+2026-02-01 20:26:37 [Error] User not found: vahram.grigoryan.09@mail.ru
+2026-02-01 20:26:45 [INFO] Start login attempt
+2026-02-01 20:26:45 [INFO] Received login: 'vahram.grigoryan.09@mail.ru', password length: 3
+2026-02-01 20:26:45 [Error] User not found: vahram.grigoryan.09@mail.ru
+2026-02-01 20:28:23 [INFO] Start registration
+2026-02-01 20:28:23 [Error] User with this login or email already exists
+2026-02-01 20:28:54 [INFO] Start registration
+2026-02-01 20:28:54 [INFO] User registered successfully: VahramGrigoryan
+2026-02-01 20:28:57 [INFO] Start login attempt
+2026-02-01 20:28:57 [INFO] Received login: 'vahram.grigoryan.09@mail.ru', password length: 3
+2026-02-01 20:28:57 [Error] User not found: vahram.grigoryan.09@mail.ru
+2026-02-01 20:29:31 [INFO] Start login attempt
+2026-02-01 20:29:31 [INFO] Received login: 'vahram.grig09@mail.ru', password length: 20
+2026-02-01 20:29:31 [Error] User not found: vahram.grig09@mail.ru
+2026-02-01 20:30:39 [INFO] Start login attempt
+2026-02-01 20:30:39 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 20
+2026-02-01 20:30:39 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 20:31:00 [INFO] Password reset requested for user: VahramGrigoryan (vahram.grig.09@mail.ru)
+2026-02-01 20:31:00 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=ac865e4e6734e22772200b3c2ec60d5c40eb70ef9264ba30caafff84f088c501
+2026-02-01 20:31:01 [INFO] Password reset link sent to: vahram.grig.09@mail.ru, user_id: 30
+2026-02-01 20:32:30 [INFO] Start login attempt
+2026-02-01 20:32:30 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 10
+2026-02-01 20:32:30 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 20:32:40 [INFO] Start login attempt
+2026-02-01 20:32:40 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 10
+2026-02-01 20:32:40 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 20:33:06 [INFO] Start login attempt
+2026-02-01 20:33:06 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 10
+2026-02-01 20:33:06 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 20:33:54 [INFO] Start login attempt
+2026-02-01 20:33:54 [INFO] Received login: 'vahram.grig.09@mail.ru', password length: 20
+2026-02-01 20:33:54 [Error] User not found: vahram.grig.09@mail.ru
+2026-02-01 20:35:26 [INFO] Start registration
+2026-02-01 20:35:26 [INFO] User registered successfully: Vahram2009
+2026-02-01 20:35:49 [INFO] Start login attempt
+2026-02-01 20:35:49 [INFO] Received login: 'v.v.g.2009@mail.ru', password length: 10
+2026-02-01 20:35:49 [Error] User not found: v.v.g.2009@mail.ru
+2026-02-01 20:36:00 [INFO] Start login attempt
+2026-02-01 20:36:00 [INFO] Received login: 'v.v.g.2009@mail.ru', password length: 10
+2026-02-01 20:36:00 [Error] User not found: v.v.g.2009@mail.ru
+2026-02-01 20:36:11 [INFO] Start login attempt
+2026-02-01 20:36:11 [INFO] Received login: 'v.v.g.2009@mail.ru', password length: 10
+2026-02-01 20:36:11 [Error] User not found: v.v.g.2009@mail.ru
+2026-02-01 20:36:43 [INFO] Start login attempt
+2026-02-01 20:36:43 [INFO] Received login: 'Vahram2009', password length: 10
+2026-02-01 20:36:43 [INFO] User found in DB. Checking password...
+2026-02-01 20:36:43 [INFO] Login successful for user: Vahram2009
+2026-02-01 20:51:06 [INFO] Start saving test result
+2026-02-01 20:51:06 [INFO] Data: user_id=31, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-01 20:51:06 [INFO] Test result saved successfully
+2026-02-01 20:51:24 [INFO] get_user_data.php started
+2026-02-01 20:51:24 [INFO] 31
+2026-02-01 20:52:02 [INFO] Start login attempt
+2026-02-01 20:52:02 [INFO] Received login: 'Vahram2009', password length: 10
+2026-02-01 20:52:02 [INFO] User found in DB. Checking password...
+2026-02-01 20:52:02 [INFO] Login successful for user: Vahram2009
+2026-02-01 23:45:14 [INFO] get_user_data.php started
+2026-02-01 23:45:14 [INFO] 31
+2026-02-02 00:41:55 [INFO] Start registration
+2026-02-02 00:41:56 [INFO] User registered successfully: BelovaDasha
+2026-02-02 00:42:46 [INFO] Start login attempt
+2026-02-02 00:42:46 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:42:46 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 00:42:59 [INFO] Start login attempt
+2026-02-02 00:42:59 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:42:59 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 00:43:06 [INFO] Start login attempt
+2026-02-02 00:43:06 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:43:06 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 00:43:35 [INFO] Start login attempt
+2026-02-02 00:43:35 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:43:35 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 00:43:45 [INFO] Password reset requested for user: BelovaDasha (belova.daria28@gmail.com)
+2026-02-02 00:43:45 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=2e3fa61a210b5d7d322dd050e47293e3d0787a56b146fa9c999cb52b53a35609
+2026-02-02 00:43:46 [INFO] Password reset link sent to: belova.daria28@gmail.com, user_id: 32
+2026-02-02 00:44:33 [INFO] Password reset requested for user: BelovaDasha (belova.daria28@gmail.com)
+2026-02-02 00:44:33 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=991d51e7d13e6343a008651a774198066c2b989d8cfae95a224198bd4a66e64d
+2026-02-02 00:44:34 [INFO] Password reset link sent to: belova.daria28@gmail.com, user_id: 32
+2026-02-02 00:45:31 [INFO] Start login attempt
+2026-02-02 00:45:31 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:45:32 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 00:45:39 [INFO] Start login attempt
+2026-02-02 00:45:39 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:45:39 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 00:45:47 [INFO] Start login attempt
+2026-02-02 00:45:47 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-02 00:45:47 [Error] User not found: belova.daria28@gmail.com
+2026-02-02 01:02:10 [INFO] Start registration
+2026-02-02 01:02:10 [INFO] User registered successfully: Dasha
+2026-02-02 01:02:39 [INFO] Start login attempt
+2026-02-02 01:02:39 [INFO] Received login: 'belovad2807@gmail.com', password length: 13
+2026-02-02 01:02:39 [Error] User not found: belovad2807@gmail.com
+2026-02-02 01:03:08 [INFO] Start login attempt
+2026-02-02 01:03:08 [INFO] Received login: 'belovad2807@gmail.com', password length: 13
+2026-02-02 01:03:08 [Error] User not found: belovad2807@gmail.com
+2026-02-02 01:03:17 [INFO] Start login attempt
+2026-02-02 01:03:17 [INFO] Received login: 'Dasha', password length: 13
+2026-02-02 01:03:17 [INFO] User found in DB. Checking password...
+2026-02-02 01:03:17 [INFO] Login successful for user: Dasha
+2026-02-02 01:08:06 [INFO] Start saving test result
+2026-02-02 01:08:06 [INFO] Data: user_id=31, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=24, total_questions=30, attempts_left=0
+2026-02-02 01:08:06 [INFO] Test result saved successfully
+2026-02-02 01:09:04 [INFO] get_user_data.php started
+2026-02-02 01:09:04 [INFO] 31
+2026-02-02 01:09:17 [INFO] Start login attempt
+2026-02-02 01:09:17 [INFO] Received login: 'Vahram2009', password length: 10
+2026-02-02 01:09:17 [INFO] User found in DB. Checking password...
+2026-02-02 01:09:17 [INFO] Login successful for user: Vahram2009
+2026-02-02 01:15:18 [INFO] Start saving test result
+2026-02-02 01:15:18 [INFO] Data: user_id=31, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-02 01:15:18 [INFO] Test result saved successfully
+2026-02-02 19:24:56 [INFO] Start registration
+2026-02-02 19:24:56 [INFO] User registered successfully: Paris878
+2026-02-02 19:25:03 [INFO] Start login attempt
+2026-02-02 19:25:03 [INFO] Received login: 'alinakimmm@inbox.ru', password length: 20
+2026-02-02 19:25:03 [Error] User not found: alinakimmm@inbox.ru
+2026-02-02 19:25:08 [INFO] Start login attempt
+2026-02-02 19:25:08 [INFO] Received login: 'alinakimmm@inbox.ru', password length: 20
+2026-02-02 19:25:08 [Error] User not found: alinakimmm@inbox.ru
+2026-02-02 19:25:19 [INFO] Start login attempt
+2026-02-02 19:25:19 [INFO] Received login: 'Paris878', password length: 20
+2026-02-02 19:25:19 [INFO] User found in DB. Checking password...
+2026-02-02 19:25:19 [INFO] Login successful for user: Paris878
+2026-02-02 19:25:29 [INFO] get_user_data.php started
+2026-02-02 19:25:29 [INFO] 34
+2026-02-02 19:43:03 [INFO] Start saving test result
+2026-02-02 19:43:03 [INFO] Data: user_id=34, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-02 19:43:03 [INFO] Test result saved successfully
+2026-02-02 23:13:11 [INFO] Start login attempt
+2026-02-02 23:13:11 [INFO] Received login: 'Paris878', password length: 20
+2026-02-02 23:13:11 [INFO] User found in DB. Checking password...
+2026-02-02 23:13:11 [INFO] Login successful for user: Paris878
+2026-02-02 23:24:01 [INFO] Start saving test result
+2026-02-02 23:24:01 [INFO] Data: user_id=34, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-02 23:24:01 [INFO] Test result saved successfully
+2026-02-02 23:34:00 [INFO] Start saving test result
+2026-02-02 23:34:00 [INFO] Data: user_id=34, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-02 23:34:01 [INFO] Test result saved successfully
+2026-02-03 00:03:20 [INFO] Password reset requested for user: admin (zaazaa@yandex.ru)
+2026-02-03 00:03:20 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=d4e1a6d2cab7858f0735fc0485a713e907aef8a3820f23af2597e669b9c46c22
+2026-02-03 00:03:20 [INFO] Password reset link sent to: zaazaa@yandex.ru, user_id: 1
+2026-02-03 00:03:44 [INFO] Start login attempt
+2026-02-03 00:03:44 [INFO] Received login: 'admin', password length: 12
+2026-02-03 00:03:44 [INFO] User found in DB. Checking password...
+2026-02-03 00:03:44 [INFO] Login successful for user: admin
+2026-02-03 10:47:30 [INFO] Start login attempt
+2026-02-03 10:47:30 [INFO] Received login: 'admin', password length: 12
+2026-02-03 10:47:30 [INFO] User found in DB. Checking password...
+2026-02-03 10:47:30 [INFO] Login successful for user: admin
+2026-02-04 18:51:48 [INFO] Start login attempt
+2026-02-04 18:51:48 [INFO] Received login: 'oganeysan', password length: 12
+2026-02-04 18:51:48 [Error] User not found: oganeysan
+2026-02-04 18:51:55 [INFO] Start login attempt
+2026-02-04 18:51:55 [INFO] Received login: 'Oganesyan', password length: 12
+2026-02-04 18:51:55 [INFO] User found in DB. Checking password...
+2026-02-04 18:51:55 [INFO] Login successful for user: Oganesyan
+2026-02-04 19:12:50 [INFO] Start saving test result
+2026-02-04 19:12:50 [INFO] Data: user_id=29, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-04 19:12:50 [INFO] Test result saved successfully
+2026-02-04 22:04:21 [INFO] Start login attempt
+2026-02-04 22:04:21 [INFO] Received login: 'matveyivan2009@mail.ru', password length: 9
+2026-02-04 22:04:21 [Error] User not found: matveyivan2009@mail.ru
+2026-02-04 22:04:30 [Security] Password reset requested for non-existent email: matveyivan2009@mail.ru
+2026-02-04 22:05:32 [INFO] Start login attempt
+2026-02-04 22:05:32 [INFO] Received login: 'matveyivan2009@mail.ru', password length: 9
+2026-02-04 22:05:32 [Error] User not found: matveyivan2009@mail.ru
+2026-02-04 22:05:53 [Security] Password reset requested for non-existent email: matveyivan2009@mail.ru
+2026-02-04 22:11:14 [INFO] Start login attempt
+2026-02-04 22:11:14 [INFO] Received login: 'matveyivan2009@mail.ru', password length: 10
+2026-02-04 22:11:14 [Error] User not found: matveyivan2009@mail.ru
+2026-02-04 22:11:31 [Security] Password reset requested for non-existent email: matveyivan2009@mail.ru
+2026-02-04 22:16:04 [INFO] Start registration
+2026-02-04 22:16:04 [INFO] User registered successfully: matveyivan
+2026-02-04 22:16:14 [INFO] Start login attempt
+2026-02-04 22:16:14 [INFO] Received login: 'matveyivan', password length: 9
+2026-02-04 22:16:14 [INFO] User found in DB. Checking password...
+2026-02-04 22:16:14 [INFO] Login successful for user: matveyivan
+2026-02-04 22:38:18 [INFO] Start saving test result
+2026-02-04 22:38:18 [INFO] Data: user_id=35, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=24, total_questions=30, attempts_left=0
+2026-02-04 22:38:18 [INFO] Test result saved successfully
+2026-02-05 14:41:54 [INFO] Start registration
+2026-02-05 14:41:54 [INFO] User registered successfully: dealwithdorsi
+2026-02-05 14:42:19 [INFO] Start login attempt
+2026-02-05 14:42:19 [INFO] Received login: 'dealwithdorsi', password length: 16
+2026-02-05 14:42:19 [INFO] User found in DB. Checking password...
+2026-02-05 14:42:19 [INFO] Login successful for user: dealwithdorsi
+2026-02-05 14:53:24 [INFO] Start saving test result
+2026-02-05 14:53:24 [INFO] Data: user_id=36, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-05 14:53:24 [INFO] Test result saved successfully
+2026-02-05 15:05:07 [INFO] Start saving test result
+2026-02-05 15:05:07 [INFO] Data: user_id=36, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=25, total_questions=30, attempts_left=0
+2026-02-05 15:05:07 [INFO] Test result saved successfully
+2026-02-05 22:51:25 [INFO] Start login attempt
+2026-02-05 22:51:25 [INFO] Received login: 'matveyivan', password length: 9
+2026-02-05 22:51:25 [INFO] User found in DB. Checking password...
+2026-02-05 22:51:25 [Error] Wrong password for user: matveyivan
+2026-02-05 22:51:30 [INFO] Start login attempt
+2026-02-05 22:51:30 [INFO] Received login: 'Matveyivan', password length: 9
+2026-02-05 22:51:30 [INFO] User found in DB. Checking password...
+2026-02-05 22:51:30 [Error] Wrong password for user: Matveyivan
+2026-02-05 22:51:47 [INFO] Start login attempt
+2026-02-05 22:51:47 [INFO] Received login: 'matveyivan', password length: 10
+2026-02-05 22:51:47 [INFO] User found in DB. Checking password...
+2026-02-05 22:51:47 [Error] Wrong password for user: matveyivan
+2026-02-05 22:51:53 [INFO] Password reset requested for user: matveyivan (matveyivan2009@mail.ru)
+2026-02-05 22:51:53 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=42d61a7317759abf6eb3a527d1a83315430ca42bff41a1a29070218e4a2319e2
+2026-02-05 22:51:54 [INFO] Password reset link sent to: matveyivan2009@mail.ru, user_id: 35
+2026-02-05 22:52:48 [INFO] Start login attempt
+2026-02-05 22:52:48 [INFO] Received login: 'matveyivan', password length: 10
+2026-02-05 22:52:48 [INFO] User found in DB. Checking password...
+2026-02-05 22:52:48 [INFO] Login successful for user: matveyivan
+2026-02-05 23:08:18 [INFO] Start saving test result
+2026-02-05 23:08:18 [INFO] Data: user_id=35, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-05 23:08:18 [INFO] Test result saved successfully
+2026-02-05 23:08:35 [INFO] get_user_data.php started
+2026-02-05 23:08:35 [INFO] 35
+2026-02-05 23:23:11 [INFO] Start saving test result
+2026-02-05 23:23:11 [INFO] Data: user_id=35, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-05 23:23:11 [INFO] Test result saved successfully
+2026-02-05 23:36:32 [INFO] Start saving test result
+2026-02-05 23:36:32 [INFO] Data: user_id=35, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-05 23:36:32 [INFO] Test result saved successfully
+2026-02-06 01:34:23 [INFO] Start registration
+2026-02-06 01:34:23 [INFO] User registered successfully: KisTe
+2026-02-06 01:34:47 [INFO] Start login attempt
+2026-02-06 01:34:47 [INFO] Received login: 'KisTe', password length: 9
+2026-02-06 01:34:47 [INFO] User found in DB. Checking password...
+2026-02-06 01:34:47 [Error] Wrong password for user: KisTe
+2026-02-06 01:35:00 [INFO] Start login attempt
+2026-02-06 01:35:00 [INFO] Received login: 'KisTe', password length: 11
+2026-02-06 01:35:00 [INFO] User found in DB. Checking password...
+2026-02-06 01:35:00 [INFO] Login successful for user: KisTe
+2026-02-06 01:35:20 [INFO] get_user_data.php started
+2026-02-06 01:35:20 [INFO] 37
+2026-02-06 01:35:41 [INFO] get_user_data.php started
+2026-02-06 01:35:41 [INFO] 37
+2026-02-06 01:51:19 [INFO] Start saving test result
+2026-02-06 01:51:19 [INFO] Data: user_id=37, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-06 01:51:19 [INFO] Test result saved successfully
+2026-02-06 08:42:51 [INFO] Start login attempt
+2026-02-06 08:42:51 [INFO] Received login: 'barneytopp@gmail.com', password length: 13
+2026-02-06 08:42:51 [Error] User not found: barneytopp@gmail.com
+2026-02-06 08:42:59 [INFO] Start login attempt
+2026-02-06 08:42:59 [INFO] Received login: 'barney2k', password length: 13
+2026-02-06 08:42:59 [Error] User not found: barney2k
+2026-02-06 08:43:31 [INFO] Start login attempt
+2026-02-06 08:43:31 [INFO] Received login: 'Gorshkowv', password length: 13
+2026-02-06 08:43:31 [INFO] User found in DB. Checking password...
+2026-02-06 08:43:31 [INFO] Login successful for user: Gorshkowv
+2026-02-06 08:54:57 [INFO] Start saving test result
+2026-02-06 08:54:57 [INFO] Data: user_id=22, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-06 08:54:57 [INFO] Test result saved successfully
+2026-02-06 09:05:31 [INFO] Start login attempt
+2026-02-06 09:05:31 [INFO] Received login: 'dsokolov', password length: 6
+2026-02-06 09:05:31 [INFO] User found in DB. Checking password...
+2026-02-06 09:05:31 [INFO] Login successful for user: dsokolov
+2026-02-06 11:54:16 [INFO] Start registration
+2026-02-06 11:54:16 [INFO] User registered successfully: MilaAstapchik
+2026-02-06 11:54:28 [INFO] Start login attempt
+2026-02-06 11:54:28 [INFO] Received login: 'MilaAstapchik', password length: 9
+2026-02-06 11:54:28 [INFO] User found in DB. Checking password...
+2026-02-06 11:54:28 [INFO] Login successful for user: MilaAstapchik
+2026-02-06 11:54:43 [INFO] Start login attempt
+2026-02-06 11:54:43 [INFO] Received login: 'MilaAstapchik', password length: 9
+2026-02-06 11:54:43 [INFO] User found in DB. Checking password...
+2026-02-06 11:54:43 [INFO] Login successful for user: MilaAstapchik
+2026-02-06 12:02:36 [INFO] Start saving test result
+2026-02-06 12:02:36 [INFO] Data: user_id=38, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 12:02:36 [INFO] Test result saved successfully
+2026-02-06 12:11:24 [INFO] Start login attempt
+2026-02-06 12:11:24 [INFO] Received login: 'admin', password length: 12
+2026-02-06 12:11:24 [INFO] User found in DB. Checking password...
+2026-02-06 12:11:24 [INFO] Login successful for user: admin
+2026-02-06 12:11:54 [INFO] Start saving test result
+2026-02-06 12:11:54 [INFO] Data: user_id=38, test_name=11-22. Первая помощь и основы физиологии, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 12:11:54 [INFO] Test result saved successfully
+2026-02-06 12:13:01 [INFO] Start registration
+2026-02-06 12:13:01 [INFO] User registered successfully: liapinkirill
+2026-02-06 12:13:26 [INFO] Start login attempt
+2026-02-06 12:13:26 [INFO] Received login: 'liapinkirill', password length: 10
+2026-02-06 12:13:26 [INFO] User found in DB. Checking password...
+2026-02-06 12:13:26 [INFO] Login successful for user: liapinkirill
+2026-02-06 12:17:42 [INFO] Start saving test result
+2026-02-06 12:17:42 [INFO] Data: user_id=38, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 12:17:42 [INFO] Test result saved successfully
+2026-02-06 12:20:05 [INFO] Start saving test result
+2026-02-06 12:20:05 [INFO] Data: user_id=39, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 12:20:05 [INFO] Test result saved successfully
+2026-02-06 12:29:01 [INFO] Start saving test result
+2026-02-06 12:29:01 [INFO] Data: user_id=39, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-06 12:29:01 [INFO] Test result saved successfully
+2026-02-06 12:37:15 [INFO] Start login attempt
+2026-02-06 12:37:15 [INFO] Received login: 'shsh', password length: 12
+2026-02-06 12:37:15 [INFO] User found in DB. Checking password...
+2026-02-06 12:37:15 [INFO] Login successful for user: shsh
+2026-02-06 12:51:37 [INFO] Start registration
+2026-02-06 12:51:37 [INFO] User registered successfully: 9637557560
+2026-02-06 12:51:38 [INFO] Start registration
+2026-02-06 12:51:38 [INFO] User registered successfully: milanasib
+2026-02-06 12:52:01 [INFO] Start login attempt
+2026-02-06 12:52:01 [INFO] Received login: '9637557560', password length: 10
+2026-02-06 12:52:01 [INFO] User found in DB. Checking password...
+2026-02-06 12:52:02 [INFO] Login successful for user: 9637557560
+2026-02-06 12:52:31 [INFO] Start login attempt
+2026-02-06 12:52:31 [INFO] Received login: 'milanasib', password length: 10
+2026-02-06 12:52:31 [INFO] User found in DB. Checking password...
+2026-02-06 12:52:31 [INFO] Login successful for user: milanasib
+2026-02-06 12:53:29 [INFO] Start login attempt
+2026-02-06 12:53:29 [INFO] Received login: 'mrspo', password length: 9
+2026-02-06 12:53:29 [INFO] User found in DB. Checking password...
+2026-02-06 12:53:29 [INFO] Login successful for user: mrspo
+2026-02-06 12:53:35 [INFO] Start login attempt
+2026-02-06 12:53:35 [INFO] Received login: 'msy.01@mail.ru', password length: 10
+2026-02-06 12:53:35 [Error] User not found: msy.01@mail.ru
+2026-02-06 12:53:48 [INFO] Start login attempt
+2026-02-06 12:53:48 [INFO] Received login: '89661112858', password length: 10
+2026-02-06 12:53:48 [Error] User not found: 89661112858
+2026-02-06 12:54:04 [INFO] Password reset requested for user: krylova (msy.01@mail.ru)
+2026-02-06 12:54:04 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=d2f8e5127b5fc69135eca9f824ae0443501c7645902342f7e1f94dfce5ff00e8
+2026-02-06 12:54:06 [INFO] Password reset link sent to: msy.01@mail.ru, user_id: 7
+2026-02-06 12:54:32 [INFO] Start registration
+2026-02-06 12:54:32 [INFO] User registered successfully: Polytime18
+2026-02-06 12:55:04 [INFO] Start login attempt
+2026-02-06 12:55:04 [INFO] Received login: 'Polytime18', password length: 8
+2026-02-06 12:55:04 [INFO] User found in DB. Checking password...
+2026-02-06 12:55:04 [INFO] Login successful for user: Polytime18
+2026-02-06 12:55:38 [INFO] Start login attempt
+2026-02-06 12:55:38 [INFO] Received login: 'msy.01@maik.ru', password length: 10
+2026-02-06 12:55:38 [Error] User not found: msy.01@maik.ru
+2026-02-06 12:55:44 [INFO] Start login attempt
+2026-02-06 12:55:44 [INFO] Received login: 'msy.01@mail.ru', password length: 10
+2026-02-06 12:55:44 [Error] User not found: msy.01@mail.ru
+2026-02-06 12:55:45 [INFO] Start login attempt
+2026-02-06 12:55:45 [INFO] Received login: 'msy.01@mail.ru', password length: 10
+2026-02-06 12:55:45 [Error] User not found: msy.01@mail.ru
+2026-02-06 12:56:01 [INFO] Start login attempt
+2026-02-06 12:56:01 [INFO] Received login: 'msy.01@mail.ru', password length: 10
+2026-02-06 12:56:01 [Error] User not found: msy.01@mail.ru
+2026-02-06 12:56:24 [INFO] Start login attempt
+2026-02-06 12:56:24 [INFO] Received login: 'msy.01@mail.ru', password length: 10
+2026-02-06 12:56:24 [Error] User not found: msy.01@mail.ru
+2026-02-06 12:56:27 [INFO] Start login attempt
+2026-02-06 12:56:27 [INFO] Received login: 'msy.01@mail.ru', password length: 10
+2026-02-06 12:56:27 [Error] User not found: msy.01@mail.ru
+2026-02-06 12:56:53 [Security] Password reset requested for non-existent email: msy.01@maik.ru
+2026-02-06 12:56:59 [INFO] Start login attempt
+2026-02-06 12:56:59 [INFO] Received login: 'msy.01@maik.ru', password length: 10
+2026-02-06 12:56:59 [Error] User not found: msy.01@maik.ru
+2026-02-06 12:59:11 [INFO] Start saving test result
+2026-02-06 12:59:11 [INFO] Data: user_id=3, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 12:59:11 [INFO] Test result saved successfully
+2026-02-06 12:59:42 [INFO] get_user_data.php started
+2026-02-06 12:59:42 [INFO] 3
+2026-02-06 12:59:43 [INFO] Start saving test result
+2026-02-06 12:59:43 [INFO] Data: user_id=41, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 12:59:43 [INFO] Test result saved successfully
+2026-02-06 13:00:35 [INFO] Start login attempt
+2026-02-06 13:00:35 [INFO] Received login: 'milanasib', password length: 10
+2026-02-06 13:00:35 [INFO] User found in DB. Checking password...
+2026-02-06 13:00:35 [INFO] Login successful for user: milanasib
+2026-02-06 13:00:49 [INFO] Start login attempt
+2026-02-06 13:00:49 [INFO] Received login: 'krylova', password length: 10
+2026-02-06 13:00:49 [INFO] User found in DB. Checking password...
+2026-02-06 13:00:49 [INFO] Login successful for user: krylova
+2026-02-06 13:03:18 [INFO] Start saving test result
+2026-02-06 13:03:18 [INFO] Data: user_id=40, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 13:03:18 [INFO] Test result saved successfully
+2026-02-06 13:03:37 [INFO] Start login attempt
+2026-02-06 13:03:37 [INFO] Received login: '9637557560', password length: 10
+2026-02-06 13:03:37 [INFO] User found in DB. Checking password...
+2026-02-06 13:03:37 [INFO] Login successful for user: 9637557560
+2026-02-06 13:06:56 [INFO] Start saving test result
+2026-02-06 13:06:56 [INFO] Data: user_id=41, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 13:06:56 [INFO] Test result saved successfully
+2026-02-06 13:07:18 [INFO] Start login attempt
+2026-02-06 13:07:18 [INFO] Received login: 'milanasib', password length: 10
+2026-02-06 13:07:18 [INFO] User found in DB. Checking password...
+2026-02-06 13:07:18 [INFO] Login successful for user: milanasib
+2026-02-06 13:08:32 [INFO] Start saving test result
+2026-02-06 13:08:32 [INFO] Data: user_id=40, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=25, total_questions=30, attempts_left=0
+2026-02-06 13:08:32 [INFO] Test result saved successfully
+2026-02-06 13:08:46 [INFO] Start login attempt
+2026-02-06 13:08:46 [INFO] Received login: '9637557560', password length: 10
+2026-02-06 13:08:46 [INFO] User found in DB. Checking password...
+2026-02-06 13:08:46 [INFO] Login successful for user: 9637557560
+2026-02-06 13:10:20 [INFO] Start saving test result
+2026-02-06 13:10:20 [INFO] Data: user_id=20, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=29, total_questions=30, attempts_left=0
+2026-02-06 13:10:20 [INFO] Test result saved successfully
+2026-02-06 13:12:25 [INFO] Start saving test result
+2026-02-06 13:12:25 [INFO] Data: user_id=41, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 13:12:25 [INFO] Test result saved successfully
+2026-02-06 13:12:35 [INFO] Start login attempt
+2026-02-06 13:12:35 [INFO] Received login: 'KisTe', password length: 11
+2026-02-06 13:12:35 [INFO] User found in DB. Checking password...
+2026-02-06 13:12:35 [INFO] Login successful for user: KisTe
+2026-02-06 13:12:50 [INFO] Start saving test result
+2026-02-06 13:12:50 [INFO] Data: user_id=40, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 13:12:50 [INFO] Test result saved successfully
+2026-02-06 13:16:32 [INFO] Start saving test result
+2026-02-06 13:16:32 [INFO] Data: user_id=7, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-06 13:16:32 [INFO] Test result saved successfully
+2026-02-06 13:27:48 [INFO] Start saving test result
+2026-02-06 13:27:48 [INFO] Data: user_id=37, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=26, total_questions=30, attempts_left=0
+2026-02-06 13:27:48 [INFO] Test result saved successfully
+2026-02-06 13:33:10 [INFO] Start saving test result
+2026-02-06 13:33:10 [INFO] Data: user_id=7, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 13:33:10 [INFO] Test result saved successfully
+2026-02-06 16:20:04 [INFO] Start registration
+2026-02-06 16:20:04 [INFO] User registered successfully: passionfruit
+2026-02-06 16:20:28 [INFO] Start login attempt
+2026-02-06 16:20:28 [INFO] Received login: 'elizabet-averina@mail.ru', password length: 20
+2026-02-06 16:20:28 [Error] User not found: elizabet-averina@mail.ru
+2026-02-06 16:20:39 [INFO] Start login attempt
+2026-02-06 16:20:39 [INFO] Received login: 'passionfruit', password length: 20
+2026-02-06 16:20:39 [INFO] User found in DB. Checking password...
+2026-02-06 16:20:39 [INFO] Login successful for user: passionfruit
+2026-02-06 16:32:02 [INFO] Start login attempt
+2026-02-06 16:32:02 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-06 16:32:02 [Error] User not found: belova.daria28@gmail.com
+2026-02-06 16:32:41 [INFO] Password reset requested for user: BelovaDasha (belova.daria28@gmail.com)
+2026-02-06 16:32:41 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=ae50a82644311e8958f0421be5bbd5515600b126185891e89c08b646126db973
+2026-02-06 16:32:42 [INFO] Password reset link sent to: belova.daria28@gmail.com, user_id: 32
+2026-02-06 16:32:47 [INFO] Start login attempt
+2026-02-06 16:32:47 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-06 16:32:47 [Error] User not found: belova.daria28@gmail.com
+2026-02-06 16:33:32 [INFO] Start login attempt
+2026-02-06 16:33:32 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-06 16:33:32 [Error] User not found: belova.daria28@gmail.com
+2026-02-06 16:33:42 [INFO] Start login attempt
+2026-02-06 16:33:42 [INFO] Received login: 'belova.daria28@gmail.com', password length: 9
+2026-02-06 16:33:42 [Error] User not found: belova.daria28@gmail.com
+2026-02-06 16:33:51 [INFO] Start login attempt
+2026-02-06 16:33:51 [INFO] Received login: 'Dasha', password length: 9
+2026-02-06 16:33:51 [INFO] User found in DB. Checking password...
+2026-02-06 16:33:51 [Error] Wrong password for user: Dasha
+2026-02-06 16:34:56 [INFO] Start login attempt
+2026-02-06 16:34:56 [INFO] Received login: 'Dasha', password length: 18
+2026-02-06 16:34:56 [INFO] User found in DB. Checking password...
+2026-02-06 16:34:56 [Error] Wrong password for user: Dasha
+2026-02-06 16:35:18 [INFO] Start login attempt
+2026-02-06 16:35:18 [INFO] Received login: 'Dasha', password length: 13
+2026-02-06 16:35:18 [INFO] User found in DB. Checking password...
+2026-02-06 16:35:18 [INFO] Login successful for user: Dasha
+2026-02-06 16:53:04 [INFO] Start saving test result
+2026-02-06 16:53:04 [INFO] Data: user_id=33, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-06 16:53:04 [INFO] Test result saved successfully
+2026-02-06 17:01:05 [INFO] Start login attempt
+2026-02-06 17:01:05 [INFO] Received login: 'passionfruit', password length: 20
+2026-02-06 17:01:05 [INFO] User found in DB. Checking password...
+2026-02-06 17:01:05 [INFO] Login successful for user: passionfruit
+2026-02-06 17:22:41 [INFO] Start saving test result
+2026-02-06 17:22:41 [INFO] Data: user_id=43, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 17:22:41 [INFO] Test result saved successfully
+2026-02-06 17:45:43 [INFO] Start saving test result
+2026-02-06 17:45:43 [INFO] Data: user_id=43, test_name=11-22. Первая помощь и основы физиологии, correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 17:45:43 [INFO] Test result saved successfully
+2026-02-06 18:04:05 [INFO] Start saving test result
+2026-02-06 18:04:05 [INFO] Data: user_id=43, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 18:04:05 [INFO] Test result saved successfully
+2026-02-06 19:05:00 [INFO] Start registration
+2026-02-06 19:05:00 [INFO] User registered successfully: Lily_2804
+2026-02-06 19:05:28 [INFO] Start login attempt
+2026-02-06 19:05:28 [INFO] Received login: 'Lily_2804', password length: 11
+2026-02-06 19:05:28 [INFO] User found in DB. Checking password...
+2026-02-06 19:05:28 [INFO] Login successful for user: Lily_2804
+2026-02-06 19:21:20 [INFO] Start saving test result
+2026-02-06 19:21:20 [INFO] Data: user_id=44, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-06 19:21:20 [INFO] Test result saved successfully
+2026-02-06 19:21:28 [INFO] get_user_data.php started
+2026-02-06 19:21:28 [INFO] 44
+2026-02-06 19:22:34 [INFO] Start login attempt
+2026-02-06 19:22:34 [INFO] Received login: 'Lily_2804', password length: 11
+2026-02-06 19:22:34 [INFO] User found in DB. Checking password...
+2026-02-06 19:22:34 [INFO] Login successful for user: Lily_2804
+2026-02-06 19:36:00 [INFO] Start saving test result
+2026-02-06 19:36:00 [INFO] Data: user_id=44, test_name=11-22. Первая помощь и основы физиологии, correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 19:36:00 [INFO] Test result saved successfully
+2026-02-06 19:36:30 [INFO] Start login attempt
+2026-02-06 19:36:30 [INFO] Received login: 'Lily_2804', password length: 11
+2026-02-06 19:36:30 [INFO] User found in DB. Checking password...
+2026-02-06 19:36:30 [INFO] Login successful for user: Lily_2804
+2026-02-06 19:44:18 [INFO] Start saving test result
+2026-02-06 19:44:18 [INFO] Data: user_id=44, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=27, total_questions=30, attempts_left=0
+2026-02-06 19:44:18 [INFO] Test result saved successfully
+2026-02-07 09:54:16 [INFO] Start login attempt
+2026-02-07 09:54:16 [INFO] Received login: 'admin', password length: 12
+2026-02-07 09:54:16 [INFO] User found in DB. Checking password...
+2026-02-07 09:54:16 [INFO] Login successful for user: admin
+2026-02-07 13:37:02 [INFO] Start login attempt
+2026-02-07 13:37:02 [INFO] Received login: 'opolav2008', password length: 19
+2026-02-07 13:37:02 [INFO] User found in DB. Checking password...
+2026-02-07 13:37:02 [INFO] Login successful for user: opolav2008
+2026-02-07 13:54:22 [INFO] Start saving test result
+2026-02-07 13:54:22 [INFO] Data: user_id=15, test_name=11-22. Первая помощь и основы физиологии, correct_answers=28, total_questions=30, attempts_left=0
+2026-02-07 13:54:22 [INFO] Test result saved successfully
+2026-02-07 14:17:28 [INFO] Start saving test result
+2026-02-07 14:17:28 [INFO] Data: user_id=15, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=28, total_questions=30, attempts_left=0
+2026-02-07 14:17:28 [INFO] Test result saved successfully
+2026-02-07 16:03:44 [INFO] Start registration
+2026-02-07 16:03:44 [INFO] User registered successfully: Renat930
+2026-02-07 16:03:46 [INFO] Start registration
+2026-02-07 16:03:46 [Error] User with this login or email already exists
+2026-02-07 16:03:46 [INFO] Start registration
+2026-02-07 16:03:46 [Error] User with this login or email already exists
+2026-02-07 16:03:47 [INFO] Start registration
+2026-02-07 16:03:47 [Error] User with this login or email already exists
+2026-02-07 16:03:50 [INFO] Start registration
+2026-02-07 16:03:50 [Error] User with this login or email already exists
+2026-02-07 16:03:50 [INFO] Start registration
+2026-02-07 16:03:50 [Error] User with this login or email already exists
+2026-02-07 16:03:50 [INFO] Start registration
+2026-02-07 16:03:50 [Error] User with this login or email already exists
+2026-02-07 16:03:50 [INFO] Start registration
+2026-02-07 16:03:50 [Error] User with this login or email already exists
+2026-02-07 16:03:50 [INFO] Start registration
+2026-02-07 16:03:50 [Error] User with this login or email already exists
+2026-02-07 16:03:50 [INFO] Start registration
+2026-02-07 16:03:50 [Error] User with this login or email already exists
+2026-02-07 16:03:55 [INFO] Start registration
+2026-02-07 16:03:55 [Error] User with this login or email already exists
+2026-02-07 16:03:55 [INFO] Start registration
+2026-02-07 16:03:55 [Error] User with this login or email already exists
+2026-02-07 16:03:55 [INFO] Start registration
+2026-02-07 16:03:55 [Error] User with this login or email already exists
+2026-02-07 16:03:55 [INFO] Start registration
+2026-02-07 16:03:55 [Error] User with this login or email already exists
+2026-02-07 16:03:56 [INFO] Start registration
+2026-02-07 16:03:56 [Error] User with this login or email already exists
+2026-02-07 16:03:56 [INFO] Start registration
+2026-02-07 16:03:56 [Error] User with this login or email already exists
+2026-02-07 16:03:57 [INFO] Start registration
+2026-02-07 16:03:57 [Error] User with this login or email already exists
+2026-02-07 16:03:57 [INFO] Start registration
+2026-02-07 16:03:57 [Error] User with this login or email already exists
+2026-02-07 16:03:58 [INFO] Start registration
+2026-02-07 16:03:58 [Error] User with this login or email already exists
+2026-02-07 16:03:58 [INFO] Start registration
+2026-02-07 16:03:58 [Error] User with this login or email already exists
+2026-02-07 16:03:58 [INFO] Start registration
+2026-02-07 16:03:58 [Error] User with this login or email already exists
+2026-02-07 16:03:58 [INFO] Start registration
+2026-02-07 16:03:58 [Error] User with this login or email already exists
+2026-02-07 16:05:49 [INFO] Start registration
+2026-02-07 16:05:49 [Error] User with this login or email already exists
+2026-02-07 16:06:01 [INFO] Start login attempt
+2026-02-07 16:06:01 [INFO] Received login: 'Renat930', password length: 14
+2026-02-07 16:06:01 [INFO] User found in DB. Checking password...
+2026-02-07 16:06:01 [INFO] Login successful for user: Renat930
+2026-02-07 16:06:14 [INFO] Start login attempt
+2026-02-07 16:06:14 [INFO] Received login: 'Renat930', password length: 14
+2026-02-07 16:06:14 [INFO] User found in DB. Checking password...
+2026-02-07 16:06:14 [INFO] Login successful for user: Renat930
+2026-02-07 16:19:19 [INFO] Start saving test result
+2026-02-07 16:19:19 [INFO] Data: user_id=45, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=30, total_questions=30, attempts_left=0
+2026-02-07 16:19:19 [INFO] Test result saved successfully
+2026-02-07 17:08:59 [INFO] Start login attempt
+2026-02-07 17:08:59 [INFO] Received login: 'admin', password length: 12
+2026-02-07 17:08:59 [INFO] User found in DB. Checking password...
+2026-02-07 17:08:59 [INFO] Login successful for user: admin
+2026-02-07 17:18:58 [INFO] Start login attempt
+2026-02-07 17:18:58 [INFO] Received login: 'Renat930', password length: 14
+2026-02-07 17:18:58 [INFO] User found in DB. Checking password...
+2026-02-07 17:18:58 [INFO] Login successful for user: Renat930
+2026-02-07 17:26:57 [INFO] Start registration
+2026-02-07 17:26:57 [INFO] User registered successfully: AnnaK
+2026-02-07 17:27:11 [INFO] Start login attempt
+2026-02-07 17:27:11 [INFO] Received login: 'AnnaK', password length: 13
+2026-02-07 17:27:11 [INFO] User found in DB. Checking password...
+2026-02-07 17:27:11 [INFO] Login successful for user: AnnaK
+2026-02-07 17:35:00 [INFO] Start registration
+2026-02-07 17:35:00 [Error] Missing required field: birthdate
+2026-02-07 17:35:00 [Error] Отсутствует обязательное поле: birthdate
+2026-02-07 17:35:40 [INFO] Start registration
+2026-02-07 17:35:40 [Error] Missing required field: birthdate
+2026-02-07 17:35:40 [Error] Отсутствует обязательное поле: birthdate
+2026-02-07 17:44:02 [INFO] Start registration
+2026-02-07 17:44:02 [Error] Missing required field: birthdate
+2026-02-07 17:44:02 [Error] Отсутствует обязательное поле: birthdate
+2026-02-07 17:46:47 [INFO] Start registration
+2026-02-07 17:46:47 [Error] Missing required field: birthdate
+2026-02-07 17:46:47 [Error] Отсутствует обязательное поле: birthdate
+2026-02-07 17:48:12 [INFO] Start registration
+2026-02-07 17:48:12 [Error] Missing required field: birthdate
+2026-02-07 17:48:12 [Error] Отсутствует обязательное поле: birthdate
+2026-02-07 17:50:01 [INFO] Start registration
+2026-02-07 17:50:01 [Error] Missing required field: birthdate
+2026-02-07 17:50:01 [Error] Отсутствует обязательное поле: birthdate
+2026-02-07 17:50:15 [INFO] Start registration
+2026-02-07 17:50:15 [Error] User with this login or email already exists
+2026-02-07 17:50:22 [INFO] Start registration
+2026-02-07 17:50:22 [Error] User with this login or email already exists
+2026-02-07 17:50:25 [INFO] Start saving test result
+2026-02-07 17:50:25 [INFO] Data: user_id=45, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-07 17:50:25 [INFO] Test result saved successfully
+2026-02-07 17:50:27 [INFO] Start registration
+2026-02-07 17:50:27 [INFO] User registered successfully: test3
+2026-02-07 17:52:01 [INFO] Start login attempt
+2026-02-07 17:52:01 [INFO] Received login: 'Renat930', password length: 14
+2026-02-07 17:52:01 [INFO] User found in DB. Checking password...
+2026-02-07 17:52:01 [INFO] Login successful for user: Renat930
+2026-02-07 18:00:59 [INFO] Start login attempt
+2026-02-07 18:00:59 [INFO] Received login: 'admin', password length: 12
+2026-02-07 18:00:59 [INFO] User found in DB. Checking password...
+2026-02-07 18:00:59 [INFO] Login successful for user: admin
+2026-02-07 18:17:37 [INFO] Start saving test result
+2026-02-07 18:17:37 [INFO] Data: user_id=45, test_name=11-22. Первая помощь и основы физиологии, correct_answers=28, total_questions=30, attempts_left=0
+2026-02-07 18:17:37 [INFO] Test result saved successfully
+2026-02-07 19:01:26 [INFO] Start login attempt
+2026-02-07 19:01:26 [INFO] Received login: 'kastrjulka', password length: 17
+2026-02-07 19:01:26 [INFO] User found in DB. Checking password...
+2026-02-07 19:01:26 [INFO] Login successful for user: kastrjulka
+2026-02-07 19:20:57 [INFO] Start saving test result
+2026-02-07 19:20:57 [INFO] Data: user_id=23, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-07 19:20:57 [INFO] Test result saved successfully
+2026-02-07 20:04:39 [INFO] Start login attempt
+2026-02-07 20:04:39 [INFO] Received login: 'admin', password length: 12
+2026-02-07 20:04:39 [INFO] User found in DB. Checking password...
+2026-02-07 20:04:39 [INFO] Login successful for user: admin
+2026-02-07 23:04:32 [INFO] Start login attempt
+2026-02-07 23:04:32 [INFO] Received login: 'Renat930', password length: 14
+2026-02-07 23:04:32 [INFO] User found in DB. Checking password...
+2026-02-07 23:04:32 [INFO] Login successful for user: Renat930
+2026-02-07 23:04:32 [INFO] Start login attempt
+2026-02-07 23:04:32 [INFO] Received login: 'Renat930', password length: 14
+2026-02-07 23:04:32 [INFO] User found in DB. Checking password...
+2026-02-07 23:04:32 [INFO] Login successful for user: Renat930
+2026-02-07 23:27:40 [INFO] Start saving test result
+2026-02-07 23:27:40 [INFO] Data: user_id=45, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=30, total_questions=30, attempts_left=0
+2026-02-07 23:27:40 [INFO] Test result saved successfully
+2026-02-08 10:34:02 [INFO] Start registration
+2026-02-08 10:34:02 [INFO] User registered successfully: Ne_vasilissaa
+2026-02-08 10:34:08 [INFO] Start login attempt
+2026-02-08 10:34:08 [INFO] Received login: 'ne.vasilissa@mail.ru', password length: 20
+2026-02-08 10:34:08 [Error] User not found: ne.vasilissa@mail.ru
+2026-02-08 10:34:24 [INFO] Password reset requested for user: Ne_vasilissaa (ne.vasilissa@mail.ru)
+2026-02-08 10:34:24 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=dd8c16e392093fec1e6b7e2a444bf67351d976c5403466030d0760d0a119e7b4
+2026-02-08 10:34:25 [INFO] Password reset link sent to: ne.vasilissa@mail.ru, user_id: 48
+2026-02-08 10:34:57 [INFO] Start login attempt
+2026-02-08 10:34:57 [INFO] Received login: 'ne.vasilissa@mail.ru', password length: 8
+2026-02-08 10:34:57 [Error] User not found: ne.vasilissa@mail.ru
+2026-02-08 10:35:05 [INFO] Start login attempt
+2026-02-08 10:35:05 [INFO] Received login: 'ne.vasilissa@mail.ru', password length: 8
+2026-02-08 10:35:05 [Error] User not found: ne.vasilissa@mail.ru
+2026-02-08 10:35:36 [INFO] Start login attempt
+2026-02-08 10:35:36 [INFO] Received login: 'Ne.vasilissa@mail.ru', password length: 8
+2026-02-08 10:35:36 [Error] User not found: Ne.vasilissa@mail.ru
+2026-02-08 10:35:57 [INFO] Password reset requested for user: Ne_vasilissaa (ne.vasilissa@mail.ru)
+2026-02-08 10:35:57 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=e775d4051afb80fba1a76726b7f6ebe6d142664e4f8bb87cd0524c3f9cf65ca1
+2026-02-08 10:35:57 [INFO] Password reset link sent to: ne.vasilissa@mail.ru, user_id: 48
+2026-02-08 10:36:32 [INFO] Start login attempt
+2026-02-08 10:36:32 [INFO] Received login: 'Ne_vasilissaa', password length: 8
+2026-02-08 10:36:32 [INFO] User found in DB. Checking password...
+2026-02-08 10:36:32 [INFO] Login successful for user: Ne_vasilissaa
+2026-02-08 10:38:16 [INFO] Start login attempt
+2026-02-08 10:38:16 [INFO] Received login: 'Ne_vasilissaa', password length: 8
+2026-02-08 10:38:16 [INFO] User found in DB. Checking password...
+2026-02-08 10:38:16 [INFO] Login successful for user: Ne_vasilissaa
+2026-02-08 11:02:13 [INFO] Start saving test result
+2026-02-08 11:02:13 [INFO] Data: user_id=48, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=27, total_questions=30, attempts_left=0
+2026-02-08 11:02:13 [INFO] Test result saved successfully
+2026-02-08 13:29:24 [INFO] Start registration
+2026-02-08 13:29:24 [INFO] User registered successfully: Mirax
+2026-02-08 13:29:49 [INFO] Start login attempt
+2026-02-08 13:29:49 [INFO] Received login: 'Mirax', password length: 12
+2026-02-08 13:29:49 [INFO] User found in DB. Checking password...
+2026-02-08 13:29:49 [INFO] Login successful for user: Mirax
+2026-02-08 13:37:54 [INFO] Start saving test result
+2026-02-08 13:37:54 [INFO] Data: user_id=49, test_name=11-21. Здоровый образ жизни и профилактика, correct_answers=29, total_questions=30, attempts_left=0
+2026-02-08 13:37:54 [INFO] Test result saved successfully
+2026-02-08 13:51:44 [INFO] Start saving test result
+2026-02-08 13:51:44 [INFO] Data: user_id=49, test_name=11-22. Первая помощь и основы физиологии, correct_answers=28, total_questions=30, attempts_left=0
+2026-02-08 13:51:44 [INFO] Test result saved successfully
+2026-02-08 14:13:35 [INFO] Start saving test result
+2026-02-08 14:13:35 [INFO] Data: user_id=49, test_name=11-23. Первая помощь: ожоги, отравления, СЛР, correct_answers=29, total_questions=30, attempts_left=0
+2026-02-08 14:13:35 [INFO] Test result saved successfully
+2026-02-08 14:19:39 [INFO] Start login attempt
+2026-02-08 14:19:39 [INFO] Received login: 'ПСКЕМ19', password length: 6
+2026-02-08 14:19:39 [Error] User not found: ПСКЕМ19
+2026-02-08 14:19:47 [INFO] Start login attempt
+2026-02-08 14:19:47 [INFO] Received login: 'Пскем19', password length: 6
+2026-02-08 14:19:47 [Error] User not found: Пскем19
+2026-02-08 17:27:21 [INFO] Start registration
+2026-02-08 17:27:21 [INFO] User registered successfully: Boss_kachalki228
+2026-02-08 17:29:41 [INFO] Start login attempt
+2026-02-08 17:29:41 [INFO] Received login: 'Boss_kachalki228', password length: 8
+2026-02-08 17:29:41 [INFO] User found in DB. Checking password...
+2026-02-08 17:29:41 [INFO] Login successful for user: Boss_kachalki228
+2026-02-08 17:43:56 [INFO] Start saving test result
+2026-02-08 17:43:56 [INFO] Data: user_id=50, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=25, total_questions=30, attempts_left=0
+2026-02-08 17:43:56 [INFO] Test result saved successfully
+2026-02-08 18:18:01 [INFO] Start login attempt
+2026-02-08 18:18:01 [INFO] Received login: 'Boss_Kachalki228', password length: 8
+2026-02-08 18:18:01 [INFO] User found in DB. Checking password...
+2026-02-08 18:18:01 [INFO] Login successful for user: Boss_Kachalki228
+2026-02-08 21:23:00 [INFO] Start login attempt
+2026-02-08 21:23:00 [INFO] Received login: 'Boss_kachalki228', password length: 8
+2026-02-08 21:23:00 [INFO] User found in DB. Checking password...
+2026-02-08 21:23:01 [INFO] Login successful for user: Boss_kachalki228
+2026-02-08 21:47:06 [INFO] Start saving test result
+2026-02-08 21:47:06 [INFO] Data: user_id=50, test_name=10-23. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций - 2", correct_answers=28, total_questions=30, attempts_left=0
+2026-02-08 21:47:06 [INFO] Test result saved successfully
+2026-02-08 22:07:11 [INFO] Start saving test result
+2026-02-08 22:07:11 [INFO] Data: user_id=50, test_name=10-22. ОБЗР. 10 класс "Защита населения РФ от опасных и чрезвычайных ситуаций", correct_answers=24, total_questions=30, attempts_left=0
+2026-02-08 22:07:11 [INFO] Test result saved successfully
+2026-02-09 13:54:44 [INFO] Password reset requested for user: admin (zaazaa@yandex.ru)
+2026-02-09 13:54:44 [INFO] Reset URL generated: https://mgimo.xn--80ahlrjqm6azc.xn--p1ai/gtests/phps/reset_password.php?token=0a66f27b83cebbb3ac064d0d4b352860849c67678bb6feb962a981f0a7453a90
+2026-02-09 13:54:44 [INFO] Password reset link sent to: zaazaa@yandex.ru, user_id: 1
+2026-02-09 14:12:46 [INFO] Start login attempt
+2026-02-09 14:12:46 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:12:46 [INFO] User found in DB. Checking password...
+2026-02-09 14:12:46 [INFO] Login successful for user: admin
+2026-02-09 14:13:34 [INFO] Start registration
+2026-02-09 14:13:34 [INFO] User registered successfully: mt
+2026-02-09 14:13:48 [INFO] Start login attempt
+2026-02-09 14:13:48 [INFO] Received login: 'mt', password length: 15
+2026-02-09 14:13:48 [INFO] User found in DB. Checking password...
+2026-02-09 14:13:48 [INFO] Login successful for user: mt
+2026-02-09 14:19:43 [INFO] Start login attempt
+2026-02-09 14:19:43 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:19:43 [INFO] User found in DB. Checking password...
+2026-02-09 14:19:43 [INFO] Login successful for user: admin
+2026-02-09 14:21:07 [INFO] Start saving test result
+2026-02-09 14:21:07 [INFO] Data: user_id=51, test_name=10-21. ОБЗР. 10 класс "Основы военной подготовки", correct_answers=29, total_questions=30, attempts_left=0
+2026-02-09 14:21:07 [INFO] Test result saved successfully
+2026-02-09 14:31:29 [INFO] Start login attempt
+2026-02-09 14:31:29 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:31:29 [INFO] User found in DB. Checking password...
+2026-02-09 14:31:29 [INFO] Login successful for user: admin
+2026-02-09 14:31:45 [INFO] Start login attempt
+2026-02-09 14:31:45 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:31:45 [INFO] User found in DB. Checking password...
+2026-02-09 14:31:45 [INFO] Login successful for user: admin
+2026-02-09 14:31:52 [INFO] get_user_data.php started
+2026-02-09 14:31:52 [INFO] 1
+2026-02-09 14:32:15 [INFO] Start login attempt
+2026-02-09 14:32:15 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:32:15 [INFO] User found in DB. Checking password...
+2026-02-09 14:32:15 [INFO] Login successful for user: admin
+2026-02-09 14:32:40 [INFO] get_user_data.php started
+2026-02-09 14:32:40 [INFO] 1
+2026-02-09 14:33:24 [INFO] get_user_data.php started
+2026-02-09 14:33:24 [INFO] 1
+2026-02-09 14:38:13 [INFO] Start login attempt
+2026-02-09 14:38:13 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:38:13 [INFO] User found in DB. Checking password...
+2026-02-09 14:38:13 [INFO] Login successful for user: admin, FIO: Заярный Андрей Александрович
+2026-02-09 14:38:32 [INFO] Start login attempt
+2026-02-09 14:38:32 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:38:32 [INFO] User found in DB. Checking password...
+2026-02-09 14:38:32 [INFO] Login successful for user: admin, FIO: Заярный Андрей Александрович
+2026-02-09 14:38:37 [INFO] get_user_data.php started
+2026-02-09 14:38:37 [INFO] 1
+2026-02-09 14:39:49 [INFO] Start login attempt
+2026-02-09 14:39:49 [INFO] Received login: 'admin', password length: 12
+2026-02-09 14:39:49 [INFO] User found in DB. Checking password...
+2026-02-09 14:39:49 [INFO] Login successful for user: admin, FIO: Заярный Андрей Александрович

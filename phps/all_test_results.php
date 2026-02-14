@@ -11,6 +11,71 @@ if (!isset($_SESSION['user_login']) || $_SESSION['user_login'] !== 'admin') {
 // Подключаемся к базе данных
 require_once 'db_connect.php';
 
+// Обработка AJAX запросов на редактирование пользователя
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
+    header('Content-Type: application/json');
+    
+    try {
+        $pdo = getDbConnection();
+        
+        if ($_POST['action'] === 'get_user_data') {
+            $user_id = intval($_POST['user_id']);
+            $stmt = $pdo->prepare("SELECT id, login, name, lastname, email, class, birthdate FROM user_info WHERE id = ?");
+            $stmt->execute([$user_id]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($user) {
+                echo json_encode(['success' => true, 'user' => $user]);
+            } else {
+                echo json_encode(['success' => false, 'error' => 'Пользователь не найден']);
+            }
+            exit();
+        }
+        
+        if ($_POST['action'] === 'update_user') {
+            $user_id = intval($_POST['user_id']);
+            $login = trim($_POST['login']);
+            $name = trim($_POST['name']);
+            $lastname = trim($_POST['lastname']);
+            $email = trim($_POST['email']);
+            $class = trim($_POST['class']);
+            $birthdate = !empty($_POST['birthdate']) ? $_POST['birthdate'] : null;
+            
+            // Проверка на существование логина (исключая текущего пользователя)
+            $checkStmt = $pdo->prepare("SELECT id FROM user_info WHERE login = ? AND id != ?");
+            $checkStmt->execute([$login, $user_id]);
+            if ($checkStmt->fetch()) {
+                echo json_encode(['success' => false, 'error' => 'Пользователь с таким логином уже существует']);
+                exit();
+            }
+            
+            // Проверка на существование email (исключая текущего пользователя)
+            if (!empty($email)) {
+                $checkEmailStmt = $pdo->prepare("SELECT id FROM user_info WHERE email = ? AND id != ?");
+                $checkEmailStmt->execute([$email, $user_id]);
+                if ($checkEmailStmt->fetch()) {
+                    echo json_encode(['success' => false, 'error' => 'Пользователь с таким email уже существует']);
+                    exit();
+                }
+            }
+            
+            $sql = "UPDATE user_info SET login = ?, name = ?, lastname = ?, email = ?, class = ?, birthdate = ? WHERE id = ?";
+            $stmt = $pdo->prepare($sql);
+            $result = $stmt->execute([$login, $name, $lastname, $email, $class, $birthdate, $user_id]);
+            
+            if ($result) {
+                echo json_encode(['success' => true, 'message' => 'Данные пользователя успешно обновлены']);
+            } else {
+                echo json_encode(['success' => false, 'error' => 'Ошибка при обновлении данных']);
+            }
+            exit();
+        }
+    } catch (PDOException $e) {
+        echo json_encode(['success' => false, 'error' => 'Ошибка базы данных: ' . $e->getMessage()]);
+        exit();
+    }
+}
+
 // Заголовок страницы
 $pageTitle = "Статистика тестов пользователей";
 
@@ -188,6 +253,29 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
         .export-buttons {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .edit-user-btn {
+            margin-left: 5px;
+            color: #6c757d;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .edit-user-btn:hover {
+            color: #0d6efd;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        
+        .user-name-with-edit {
+            display: flex;
+            align-items: center;
             flex-wrap: wrap;
         }
     </style>
@@ -421,8 +509,11 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                     <i class="fas fa-chart-pie me-2"></i>
                                     Общая статистика
                                     <?php if ($userInfo): ?>
-                                        для пользователя: <span
-                                            class="text-primary"><?php echo htmlspecialchars($userInfo['lastname'] . ' ' . $userInfo['name']); ?></span>
+                                        для пользователя: 
+                                        <span class="text-primary user-name-with-edit">
+                                            <?php echo htmlspecialchars($userInfo['lastname'] . ' ' . $userInfo['name']); ?>
+                                            <i class="fas fa-edit edit-user-btn ms-2" onclick="editUser(<?php echo $userInfo['id']; ?>)" title="Редактировать данные пользователя"></i>
+                                        </span>
                                     <?php endif; ?>
                                     <?php if (!empty($selected_class)): ?>
                                         по классу: <span class="text-primary"><?php echo htmlspecialchars($selected_class); ?></span>
@@ -602,9 +693,14 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                         <?php if ($userInfo): ?>
                                             <div class="card user-details-card mt-3">
                                                 <div class="card-body">
-                                                    <h6 class="card-title">
-                                                        <i class="fas fa-user me-2"></i>Информация о пользователе
-                                                    </h6>
+                                                    <div class="d-flex justify-content-between align-items-start">
+                                                        <h6 class="card-title">
+                                                            <i class="fas fa-user me-2"></i>Информация о пользователе
+                                                        </h6>
+                                                        <button class="btn btn-sm btn-outline-primary" onclick="editUser(<?php echo $userInfo['id']; ?>)">
+                                                            <i class="fas fa-edit"></i> Редактировать
+                                                        </button>
+                                                    </div>
                                                     <p class="mb-1"><strong>Логин:</strong>
                                                         <?php echo htmlspecialchars($userInfo['login']); ?></p>
                                                     <p class="mb-1"><strong>ФИО:</strong>
@@ -665,9 +761,11 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                                         <td><?php echo $attemptDate; ?></td>
                                                         <?php if (!$selected_user_id): ?>
                                                             <td>
-                                                                <?php echo htmlspecialchars($attempt['user_lastname'] . ' ' . $attempt['user_name']); ?>
-                                                                <br><small
-                                                                    class="text-muted"><?php echo htmlspecialchars($attempt['user_login']); ?></small>
+                                                                <div class="user-name-with-edit">
+                                                                    <?php echo htmlspecialchars($attempt['user_lastname'] . ' ' . $attempt['user_name']); ?>
+                                                                    <i class="fas fa-edit edit-user-btn ms-1" onclick="editUser(<?php echo $attempt['user_id']; ?>)" title="Редактировать данные пользователя"></i>
+                                                                    <br><small class="text-muted"><?php echo htmlspecialchars($attempt['user_login']); ?></small>
+                                                                </div>
                                                             </td>
                                                         <?php endif; ?>
                                                         <td><?php echo htmlspecialchars($attempt['test_name']); ?></td>
@@ -682,14 +780,14 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                                             </span>
                                                         </td>
                                                         <td>
-                                                            <button  class="btn btn-sm btn-outline-info"
-                                                                onclick="showAttemptDetails(<?php echo $attempt['id']; ?>)">
-                                                                <i class="fas fa-eye"></i>
-                                                            </button>
-                                                            <button class="btn btn-sm btn-outline-primary ms-1"
-                                                                onclick="showUserStats(<?php echo $attempt['user_id']; ?>)">
-                                                                <i class="fas fa-eye"></i>
-                                                            </button>
+                                                            <div class="action-buttons">
+                                                                <button class="btn btn-sm btn-outline-primary" onclick="showAttemptDetails(<?php echo $attempt['id']; ?>)">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </button>
+                                                                <button class="btn btn-sm btn-outline-secondary" onclick="editUser(<?php echo $attempt['user_id']; ?>)">
+                                                                    <i class="fas fa-user-edit"></i>
+                                                                </button>
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach; ?>
@@ -901,8 +999,11 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                         <td><?php echo $index + 1; ?></td>
                                         <td><?php echo date("d.m.Y H:i", strtotime($row['date'])); ?></td>
                                         <td>
-                                            <?php echo htmlspecialchars($row['user_lastname'] . ' ' . $row['user_name']); ?>
-                                            <br><small class="text-muted"><?php echo htmlspecialchars($row['user_login']); ?></small>
+                                            <div class="user-name-with-edit">
+                                                <?php echo htmlspecialchars($row['user_lastname'] . ' ' . $row['user_name']); ?>
+                                                <i class="fas fa-edit edit-user-btn ms-1" onclick="editUser(<?php echo $row['user_id']; ?>)" title="Редактировать данные пользователя"></i>
+                                                <br><small class="text-muted"><?php echo htmlspecialchars($row['user_login']); ?></small>
+                                            </div>
                                         </td>
                                         <td><?php echo htmlspecialchars($row['user_class'] ?: 'Не указан'); ?></td>
                                         <td><?php echo htmlspecialchars($row['test_name']); ?></td>
@@ -914,14 +1015,14 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                                             </span>
                                         </td>
                                         <td>
-                                            <button class="btn btn-sm btn-outline-info"
-                                                onclick="showAttemptDetails(<?php echo $row['id']; ?>)">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                            <button class="btn btn-sm btn-outline-primary ms-1"
-                                                onclick="showUserStats(<?php echo $row['user_id']; ?>)">
-                                                <i class="fas fa-user-chart"></i>
-                                            </button>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-sm btn-outline-primary" onclick="showAttemptDetails(<?php echo $row['id']; ?>)">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-secondary" onclick="editUser(<?php echo $row['user_id']; ?>)">
+                                                    <i class="fas fa-user-edit"></i>
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -957,10 +1058,70 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                 </div>
             </div>
         </div>
+
+        <!-- Модальное окно для редактирования пользователя -->
+        <div class="modal fade" id="editUserModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-user-edit me-2"></i>Редактирование данных пользователя
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editUserForm">
+                            <input type="hidden" id="edit_user_id" name="user_id">
+                            
+                            <div class="mb-3">
+                                <label for="edit_login" class="form-label">Логин *</label>
+                                <input type="text" class="form-control" id="edit_login" name="login" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="edit_lastname" class="form-label">Фамилия *</label>
+                                <input type="text" class="form-control" id="edit_lastname" name="lastname" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="edit_name" class="form-label">Имя *</label>
+                                <input type="text" class="form-control" id="edit_name" name="name" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="edit_email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="edit_email" name="email">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="edit_class" class="form-label">Класс</label>
+                                <input type="text" class="form-control" id="edit_class" name="class">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="edit_birthdate" class="form-label">Дата рождения</label>
+                                <input type="date" class="form-control" id="edit_birthdate" name="birthdate">
+                            </div>
+                            
+                            <div class="alert alert-danger d-none" id="editUserError"></div>
+                            <div class="alert alert-success d-none" id="editUserSuccess"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                        <button type="button" class="btn btn-primary" onclick="saveUserChanges()">
+                            <i class="fas fa-save me-2"></i>Сохранить изменения
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Подключаем Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Подключаем jQuery (необходим для Select2) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Подключаем Select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- Подключаем Chart.js для графиков -->
@@ -1006,6 +1167,81 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
                     const modal = new bootstrap.Modal(document.getElementById('attemptDetailsModal'));
                     modal.show();
                 });
+        }
+
+        // Функция для редактирования пользователя
+        function editUser(userId) {
+            // Скрываем предыдущие сообщения
+            document.getElementById('editUserError').classList.add('d-none');
+            document.getElementById('editUserSuccess').classList.add('d-none');
+            
+            // Загружаем данные пользователя
+            fetch(window.location.href, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=get_user_data&user_id=' + userId
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Заполняем форму данными
+                    document.getElementById('edit_user_id').value = data.user.id;
+                    document.getElementById('edit_login').value = data.user.login;
+                    document.getElementById('edit_name').value = data.user.name;
+                    document.getElementById('edit_lastname').value = data.user.lastname;
+                    document.getElementById('edit_email').value = data.user.email || '';
+                    document.getElementById('edit_class').value = data.user.class || '';
+                    document.getElementById('edit_birthdate').value = data.user.birthdate || '';
+                    
+                    // Показываем модальное окно
+                    const modal = new bootstrap.Modal(document.getElementById('editUserModal'));
+                    modal.show();
+                } else {
+                    alert('Ошибка загрузки данных пользователя: ' + (data.error || 'Неизвестная ошибка'));
+                }
+            })
+            .catch(error => {
+                alert('Ошибка при загрузке данных: ' + error.message);
+            });
+        }
+
+        // Функция для сохранения изменений пользователя
+        function saveUserChanges() {
+            const form = document.getElementById('editUserForm');
+            const formData = new FormData(form);
+            formData.append('action', 'update_user');
+            
+            // Скрываем предыдущие сообщения
+            document.getElementById('editUserError').classList.add('d-none');
+            document.getElementById('editUserSuccess').classList.add('d-none');
+            
+            fetch(window.location.href, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Показываем сообщение об успехе
+                    document.getElementById('editUserSuccess').textContent = data.message;
+                    document.getElementById('editUserSuccess').classList.remove('d-none');
+                    
+                    // Обновляем страницу через 1.5 секунды
+                    setTimeout(() => {
+                        location.reload();
+                    }, 1500);
+                } else {
+                    // Показываем ошибку
+                    document.getElementById('editUserError').textContent = data.error || 'Ошибка при сохранении';
+                    document.getElementById('editUserError').classList.remove('d-none');
+                }
+            })
+            .catch(error => {
+                document.getElementById('editUserError').textContent = 'Ошибка соединения: ' + error.message;
+                document.getElementById('editUserError').classList.remove('d-none');
+            });
         }
 
         // Функция для показа статистики пользователя

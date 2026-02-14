@@ -164,7 +164,7 @@ function sendResetEmailPHPMailer($to, $userName, $reset_url) {
         $mail->Host = 'smtp.yandex.ru';           // SMTP сервер
         $mail->SMTPAuth = true;
         $mail->Username = 'zaazaa@yandex.ru';  // Ваш полный email
-        $mail->Password = 'nfztswiuiqgysefd'; // Пароль приложения
+        $mail->Password = ''; // Пароль приложения
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
         $mail->Port = 465;                        // 465 для SSL
         

@@ -42,6 +42,11 @@ try {
     }
 
     echo json_encode(['status' => 'success', 'message' => 'Данные успешно обновлены.']);
+
+    // Обновить данные в сессии
+    $_SESSION['user_lastname'] = $lastname;
+    $_SESSION['user_name'] = $name;
+    $_SESSION['user_surname'] = $surname;
 } catch (PDOException $e) {
     echo json_encode(['status' => 'error', 'message' => 'Ошибка сервера.']);
 }

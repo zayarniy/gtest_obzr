@@ -54,15 +54,24 @@ $_SESSION['last_activity'] = time();
                         тестов</button></a>
             </div>
         </div>
-        <h1>Добро пожаловать,
+        <h3>Добро пожаловать,
             <?php
-            if (isset($_SESSION['user_login'])) {
+            if (isset($_SESSION['user_lastname']) && isset($_SESSION['user_name'])) {
+                // Выводим Фамилию и Имя
+                echo htmlspecialchars($_SESSION['user_lastname'] . ' ' . $_SESSION['user_name']);
+
+                // Добавляем Отчество, если оно есть
+                if (isset($_SESSION['user_surname']) && !empty($_SESSION['user_surname'])) {
+                    echo ' ' . htmlspecialchars($_SESSION['user_surname']);
+                }
+            } elseif (isset($_SESSION['user_login'])) {
+                // Если ФИО нет в сессии, показываем логин
                 echo htmlspecialchars($_SESSION['user_login']);
             } else {
                 echo "Гость";
             }
             ?>!
-        </h1>
+        </h3>
 
         <!-- Блок загрузки списка тестов -->
         <div id="mainTests" style="visibility:visible;">
@@ -257,10 +266,26 @@ $_SESSION['last_activity'] = time();
                                 confirmButtonText: 'OK'
                             });
                             // Обновляем приветствие
-                            document.querySelector('h1').innerHTML = `
-                    Добро пожаловать, ${lastname} ${name}!
-                    <button id="profile-button" class="btn btn-sm btn-outline-secondary ms-3">Личный кабинет</button>
-                `;
+                            // Обновляем приветствие
+                            let greeting = `Добро пожаловать, ${lastname} ${name}`;
+                            if (surname && surname.trim() !== '') {
+                                greeting += ` ${surname}`;
+                            }
+                            greeting += `!`;
+
+                            // Обновляем заголовок, сохраняя кнопку профиля
+                            const header = document.querySelector('h1');
+                            header.innerHTML = `
+    ${greeting}
+    <button id="profile-button" class="btn btn-sm btn-outline-secondary ms-3">Личный кабинет</button>
+`;
+
+                            // Перепривязываем обработчик события к кнопке профиля
+                            document.getElementById('profile-button').addEventListener('click', () => {
+                                loadUserData();
+                                const modal = new bootstrap.Modal(document.getElementById('profileModal'));
+                                modal.show();
+                            });
                         } else {
                             Swal.fire({
                                 title: 'Ошибка!',
