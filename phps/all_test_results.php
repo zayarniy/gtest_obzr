@@ -91,6 +91,7 @@ $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">    
     <!-- Подключаем Bootstrap для стилей -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Подключаем Font Awesome для иконок -->

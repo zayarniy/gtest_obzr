@@ -30,6 +30,7 @@ $_SESSION['last_activity'] = time();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный кабинет</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <!-- Подключаем Bootstrap 5 -->
     <script src="libs/sweetalert2@11.js"></script>
     <script src="script.js" defer></script>
